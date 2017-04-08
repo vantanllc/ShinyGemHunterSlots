@@ -1,67 +1,104 @@
-# Customise this file, documentation can be found here:
-# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
-# All available actions: https://docs.fastlane.tools/actions
-# can also be listed using the `fastlane actions` command
-
-# Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
-
-# This is the minimum version number required.
-# Update this, if you use features of a newer version
-fastlane_version "2.14.2"
+fastlane_version "2.26.0"
 
 default_platform :ios
 
 platform :ios do
   before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    
-    
   end
 
   desc "Runs all the tests"
   lane :test do
-    scan
+    cocoapods
+    scan(
+      scheme: "ShinyGemHunterSlots",
+      workspace: "ShinyGemHunterSlots.xcworkspace",
+      clean: true,
+      code_coverage: true,
+      skip_slack: true,
+      sdk: "iphonesimulator10.2",
+      devices: ["iPhone 5s", "iPhone 6s", "iPad Air 2"]
+    )
   end
 
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
+  desc "Creating a code signing certificate and provisioning profile"
+  lane :provision do
+    produce(
+      app_name: "ShinyGemHunterSlots",
+      language: "English",
+      app_version: "1.0",
+      sku: "com.vantanllc.ShinyGemHunterSlots"
+      )
+
+    cert
+
+    sigh(force: true)
+  end
+
+  desc "Create ipa"
+  lane :build do
+    cocoapods
+    create_keychain(
+      name: ENV["SIGNING_KEYCHAIN"],
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: true,
+      password: ENV["SIGNING_KEYCHAIN_PASSWORD"],
+      add_to_search_list: true
+    )
+
+    import_certificate(
+      certificate_path: "vantan.llc.ios.distribution.p12",
+      certificate_password: ENV["DISTRIBUTION_CERTIFICATE_PASSWORD"],
+      keychain_name: ENV["SIGNING_KEYCHAIN"]
+    )
+
+    sh("security set-key-partition-list -S apple-tool:,apple: -s -k $SIGNING_KEYCHAIN_PASSWORD $SIGNING_KEYCHAIN")
+
+    sigh
+
+    current_build_number = latest_testflight_build_number(initial_build_number: 1)
+    increment_build_number(build_number: current_build_number + 1)
+
+    gym(
+      scheme: "ShinyGemHunterSlots",
+      clean: true,
+      include_bitcode: false,
+      include_symbols: true,
+    )
+
+    delete_keychain(name: ENV["SIGNING_KEYCHAIN"])
+  end
+
+  desc "Upload to App Store"
+  lane :upload_metadata do
+    deliver(
+      force: true,
+      skip_binary_upload: true,
+      price_tier: 0,
+      app_rating_config_path: './fastlane/metadata/itunes_rating_config.json',
+      automatic_release: true,
+      overwrite_screenshots: true,
+      app_icon: './icon/Icon-Original.png'
+    )
+  end
+
+  desc "Deploy to Testflight"
   lane :beta do
-    # match(type: "appstore") # more information: https://codesigning.guide
-    gym(scheme: "ShinyGemHunterSlots") # Build your app - more options available
-    pilot
-
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
+    testflight(
+      wait_processing_interval: 30,
+      skip_submission: true,
+      skip_waiting_for_build_processing: true
+    )
   end
 
-  desc "Deploy a new version to the App Store"
-  lane :release do
-    # match(type: "appstore")
-    # snapshot
-    gym(scheme: "ShinyGemHunterSlots") # Build your app - more options available
-    deliver(force: true)
-    # frameit
-  end
-
-  # You can define as many lanes as you want
-
-  after_all do |lane|
-    # This block is called, only if the executed lane was successful
-
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
-  end
-
-  error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
+  desc "Calculate test code coverage score. Need to run test beforehand."
+  lane :report_test_coverage do
+    xcov(
+      workspace: "ShinyGemHunterSlots.xcworkspace",
+      scheme: "ShinyGemHunterSlots",
+      output_directory: "xcov_output"
+    )
   end
 end
 
