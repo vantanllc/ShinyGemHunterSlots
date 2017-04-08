@@ -1,4 +1,4 @@
-if [ $TRAVIS_BRANCH = "production-release" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then
+if [ $TRAVIS_BRANCH = "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then
   fastlane ios build
   fastlane ios upload_metadata
   fastlane ios beta
