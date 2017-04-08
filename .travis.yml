@@ -1,0 +1,22 @@
+language: objective-c
+cache: cocoapods
+osx_image: xcode8.2
+
+notifications:
+  email: false
+  on_success: never
+  on_failure: never
+
+before_install:
+  - gem install xcov --no-ri --no-rdoc --no-document
+  - gem update fastlane --no-ri --no-rdoc --no-document
+  - gem install aws-sdk --no-ri --no-rdoc --no-document
+
+install:
+  - travis/install_swiftlint.sh
+  - ruby travis/get_certs_from_s3.rb
+  - openssl aes-256-cbc -k $VANTAN_IOS_DISTRIBUTION_ENCRYPTION_PASSWORD -in vantan.llc.ios.distribution.p12.enc -d -a -out vantan.llc.ios.distribution.p12
+
+script:
+  - swiftlint
+  - travis/script.sh
