@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851E2D8B19709D4360C312BA /* Pods_ShinyGemHunterSlots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29F5F5E154EDD61EBFAB54C /* Pods_ShinyGemHunterSlots.framework */; };
 		8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE133FD1E973E69004B7169 /* AppDelegate.swift */; };
 		8BE134041E973E69004B7169 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134031E973E69004B7169 /* GameScene.swift */; };
 		8BE134061E973E69004B7169 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134051E973E69004B7169 /* GameViewController.swift */; };
@@ -17,6 +18,12 @@
 		8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */; };
 		8BE134261E973F35004B7169 /* GameSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134251E973F35004B7169 /* GameSceneDelegate.swift */; };
 		8BE134281E973F63004B7169 /* GameViewController+GameSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134271E973F63004B7169 /* GameViewController+GameSceneDelegate.swift */; };
+		8BE1342A1E974262004B7169 /* SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134291E974262004B7169 /* SlotMachine.swift */; };
+		8BE1342C1E974570004B7169 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1342B1E974570004B7169 /* ButtonNode.swift */; };
+		8BE1342E1E9745D4004B7169 /* GameScene+ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1342D1E9745D4004B7169 /* GameScene+ButtonNode.swift */; };
+		8BE134301E97465F004B7169 /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1342F1E97465F004B7169 /* ButtonFactory.swift */; };
+		8BE134321E9746C8004B7169 /* NodeZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134311E9746C8004B7169 /* NodeZPosition.swift */; };
+		A7CDBD16F4620D1E76FC9F51 /* Pods_ShinyGemHunterSlotsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7C5B978199551218D5F9C3 /* Pods_ShinyGemHunterSlotsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B7EEDD1A6C0039DDC204058 /* Pods-ShinyGemHunterSlotsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlotsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlotsTests/Pods-ShinyGemHunterSlotsTests.release.xcconfig"; sourceTree = "<group>"; };
+		61E228A4C0CC4566474BB13D /* Pods-ShinyGemHunterSlots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlots.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlots/Pods-ShinyGemHunterSlots.debug.xcconfig"; sourceTree = "<group>"; };
+		7C7C5B978199551218D5F9C3 /* Pods_ShinyGemHunterSlotsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShinyGemHunterSlotsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE133FA1E973E69004B7169 /* ShinyGemHunterSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyGemHunterSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE133FD1E973E69004B7169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE134031E973E69004B7169 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -44,6 +54,14 @@
 		8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController+GameScene.swift"; sourceTree = "<group>"; };
 		8BE134251E973F35004B7169 /* GameSceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneDelegate.swift; sourceTree = "<group>"; };
 		8BE134271E973F63004B7169 /* GameViewController+GameSceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController+GameSceneDelegate.swift"; sourceTree = "<group>"; };
+		8BE134291E974262004B7169 /* SlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachine.swift; sourceTree = "<group>"; };
+		8BE1342B1E974570004B7169 /* ButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		8BE1342D1E9745D4004B7169 /* GameScene+ButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+ButtonNode.swift"; sourceTree = "<group>"; };
+		8BE1342F1E97465F004B7169 /* ButtonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
+		8BE134311E9746C8004B7169 /* NodeZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeZPosition.swift; sourceTree = "<group>"; };
+		A26F3E60C858DDA343338C5E /* Pods-ShinyGemHunterSlotsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlotsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlotsTests/Pods-ShinyGemHunterSlotsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A29F5F5E154EDD61EBFAB54C /* Pods_ShinyGemHunterSlots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShinyGemHunterSlots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC63CD98E7384DCC1A197F38 /* Pods-ShinyGemHunterSlots.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlots.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlots/Pods-ShinyGemHunterSlots.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851E2D8B19709D4360C312BA /* Pods_ShinyGemHunterSlots.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,18 +77,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CDBD16F4620D1E76FC9F51 /* Pods_ShinyGemHunterSlotsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7CE5394CECFCE484E028442D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61E228A4C0CC4566474BB13D /* Pods-ShinyGemHunterSlots.debug.xcconfig */,
+				AC63CD98E7384DCC1A197F38 /* Pods-ShinyGemHunterSlots.release.xcconfig */,
+				A26F3E60C858DDA343338C5E /* Pods-ShinyGemHunterSlotsTests.debug.xcconfig */,
+				2B7EEDD1A6C0039DDC204058 /* Pods-ShinyGemHunterSlotsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8BE133F11E973E69004B7169 = {
 			isa = PBXGroup;
 			children = (
 				8BE133FC1E973E69004B7169 /* ShinyGemHunterSlots */,
 				8BE134171E973E69004B7169 /* ShinyGemHunterSlotsTests */,
 				8BE133FB1E973E69004B7169 /* Products */,
+				7CE5394CECFCE484E028442D /* Pods */,
+				EAA1FCC6D36DA7C4FA8E1070 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +121,7 @@
 				8BE133FD1E973E69004B7169 /* AppDelegate.swift */,
 				8BE134031E973E69004B7169 /* GameScene.swift */,
 				8BE134051E973E69004B7169 /* GameViewController.swift */,
+				8BE134291E974262004B7169 /* SlotMachine.swift */,
 				8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */,
 				8BE134271E973F63004B7169 /* GameViewController+GameSceneDelegate.swift */,
 				8BE134251E973F35004B7169 /* GameSceneDelegate.swift */,
@@ -95,6 +129,10 @@
 				8BE1340A1E973E69004B7169 /* Assets.xcassets */,
 				8BE1340C1E973E69004B7169 /* LaunchScreen.storyboard */,
 				8BE1340F1E973E69004B7169 /* Info.plist */,
+				8BE1342B1E974570004B7169 /* ButtonNode.swift */,
+				8BE1342D1E9745D4004B7169 /* GameScene+ButtonNode.swift */,
+				8BE1342F1E97465F004B7169 /* ButtonFactory.swift */,
+				8BE134311E9746C8004B7169 /* NodeZPosition.swift */,
 			);
 			path = ShinyGemHunterSlots;
 			sourceTree = "<group>";
@@ -108,6 +146,15 @@
 			path = ShinyGemHunterSlotsTests;
 			sourceTree = "<group>";
 		};
+		EAA1FCC6D36DA7C4FA8E1070 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A29F5F5E154EDD61EBFAB54C /* Pods_ShinyGemHunterSlots.framework */,
+				7C7C5B978199551218D5F9C3 /* Pods_ShinyGemHunterSlotsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BE1341D1E973E69004B7169 /* Build configuration list for PBXNativeTarget "ShinyGemHunterSlots" */;
 			buildPhases = (
+				B806060E4F0340081FA8C38A /* [CP] Check Pods Manifest.lock */,
 				8BE133F61E973E69004B7169 /* Sources */,
 				8BE133F71E973E69004B7169 /* Frameworks */,
 				8BE133F81E973E69004B7169 /* Resources */,
+				2077FA4B4C7E9A7886F57FE2 /* [CP] Embed Pods Frameworks */,
+				817281D5AD4A3B5EE82ED56B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BE134201E973E69004B7169 /* Build configuration list for PBXNativeTarget "ShinyGemHunterSlotsTests" */;
 			buildPhases = (
+				D622714AE2164ED03696D1A3 /* [CP] Check Pods Manifest.lock */,
 				8BE134101E973E69004B7169 /* Sources */,
 				8BE134111E973E69004B7169 /* Frameworks */,
 				8BE134121E973E69004B7169 /* Resources */,
+				764F9E8765CBEB533B5E92FD /* [CP] Embed Pods Frameworks */,
+				3CBB0E8577F40B45C872CAAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,12 +211,13 @@
 				TargetAttributes = {
 					8BE133F91E973E69004B7169 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = SNXMW75MBJ;
 						ProvisioningStyle = Manual;
 					};
 					8BE134131E973E69004B7169 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SNXMW75MBJ;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 8BE133F91E973E69004B7169;
 					};
 				};
@@ -207,6 +261,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2077FA4B4C7E9A7886F57FE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShinyGemHunterSlots/Pods-ShinyGemHunterSlots-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CBB0E8577F40B45C872CAAC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShinyGemHunterSlotsTests/Pods-ShinyGemHunterSlotsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		764F9E8765CBEB533B5E92FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShinyGemHunterSlotsTests/Pods-ShinyGemHunterSlotsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		817281D5AD4A3B5EE82ED56B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShinyGemHunterSlots/Pods-ShinyGemHunterSlots-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B806060E4F0340081FA8C38A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D622714AE2164ED03696D1A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8BE133F61E973E69004B7169 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -215,7 +362,12 @@
 				8BE134261E973F35004B7169 /* GameSceneDelegate.swift in Sources */,
 				8BE134041E973E69004B7169 /* GameScene.swift in Sources */,
 				8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */,
+				8BE1342A1E974262004B7169 /* SlotMachine.swift in Sources */,
+				8BE1342E1E9745D4004B7169 /* GameScene+ButtonNode.swift in Sources */,
+				8BE134321E9746C8004B7169 /* NodeZPosition.swift in Sources */,
 				8BE134061E973E69004B7169 /* GameViewController.swift in Sources */,
+				8BE134301E97465F004B7169 /* ButtonFactory.swift in Sources */,
+				8BE1342C1E974570004B7169 /* ButtonNode.swift in Sources */,
 				8BE134281E973F63004B7169 /* GameViewController+GameSceneDelegate.swift in Sources */,
 				8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */,
 			);
@@ -280,9 +432,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SNXMW75MBJ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -302,6 +456,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = Automatic;
+				PROVISIONING_PROFILE_SPECIFIER = Automatic;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -330,9 +486,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SNXMW75MBJ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -345,6 +503,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = Automatic;
+				PROVISIONING_PROFILE_SPECIFIER = Automatic;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,34 +514,45 @@
 		};
 		8BE1341E1E973E69004B7169 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E228A4C0CC4566474BB13D /* Pods-ShinyGemHunterSlots.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
+				DEVELOPMENT_TEAM = SNXMW75MBJ;
 				INFOPLIST_FILE = ShinyGemHunterSlots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vantan.LLC.ShinyGemHunterSlots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b636b65e-bc95-4469-9a34-6f35ff9d471c";
+				PROVISIONING_PROFILE_SPECIFIER = "com.Vantan.LLC.ShinyGemHunterSlots AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8BE1341F1E973E69004B7169 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC63CD98E7384DCC1A197F38 /* Pods-ShinyGemHunterSlots.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
+				DEVELOPMENT_TEAM = SNXMW75MBJ;
 				INFOPLIST_FILE = ShinyGemHunterSlots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vantan.LLC.ShinyGemHunterSlots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b636b65e-bc95-4469-9a34-6f35ff9d471c";
+				PROVISIONING_PROFILE_SPECIFIER = "com.Vantan.LLC.ShinyGemHunterSlots AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		8BE134211E973E69004B7169 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A26F3E60C858DDA343338C5E /* Pods-ShinyGemHunterSlotsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -390,6 +561,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vantan.LLC.ShinyGemHunterSlotsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShinyGemHunterSlots.app/ShinyGemHunterSlots";
 			};
@@ -397,6 +569,7 @@
 		};
 		8BE134221E973E69004B7169 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B7EEDD1A6C0039DDC204058 /* Pods-ShinyGemHunterSlotsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -405,6 +578,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vantan.LLC.ShinyGemHunterSlotsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShinyGemHunterSlots.app/ShinyGemHunterSlots";
 			};
@@ -429,6 +603,7 @@
 				8BE1341F1E973E69004B7169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BE134201E973E69004B7169 /* Build configuration list for PBXNativeTarget "ShinyGemHunterSlotsTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +612,7 @@
 				8BE134221E973E69004B7169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

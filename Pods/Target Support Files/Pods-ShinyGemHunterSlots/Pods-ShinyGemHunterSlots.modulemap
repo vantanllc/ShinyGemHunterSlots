@@ -1,0 +1,6 @@
+framework module Pods_ShinyGemHunterSlots {
+  umbrella header "Pods-ShinyGemHunterSlots-umbrella.h"
+
+  export *
+  module * { export * }
+}
