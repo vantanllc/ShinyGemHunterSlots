@@ -57,8 +57,8 @@ platform :ios do
 
     sigh
 
-    #current_build_number = latest_testflight_build_number(initial_build_number: 1)
-    #increment_build_number(build_number: current_build_number + 1)
+    current_build_number = latest_testflight_build_number(initial_build_number: 1)
+    increment_build_number(build_number: current_build_number + 1)
 
     gym(
       scheme: "ShinyGemHunterSlots",
