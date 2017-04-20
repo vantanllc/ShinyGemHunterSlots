@@ -15,6 +15,9 @@
 		8B1E57531EA86BB5005862A3 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57521EA86BB5005862A3 /* SpriteComponent.swift */; };
 		8B1E57551EA86C96005862A3 /* GemComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57541EA86C96005862A3 /* GemComponent.swift */; };
 		8B1E57571EA86CBE005862A3 /* Gem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57561EA86CBE005862A3 /* Gem.swift */; };
+		8B1E57591EA86F2F005862A3 /* SlotColumnEntity.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57581EA86F2F005862A3 /* SlotColumnEntity.spec.swift */; };
+		8B1E575B1EA86F7C005862A3 /* SlotColumnEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E575A1EA86F7C005862A3 /* SlotColumnEntity.swift */; };
+		8B1E575D1EA86FEA005862A3 /* ColumnComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E575C1EA86FEA005862A3 /* ColumnComponent.swift */; };
 		8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE133FD1E973E69004B7169 /* AppDelegate.swift */; };
 		8BE134041E973E69004B7169 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134031E973E69004B7169 /* GameScene.swift */; };
 		8BE134061E973E69004B7169 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134051E973E69004B7169 /* GameViewController.swift */; };
@@ -53,6 +56,9 @@
 		8B1E57521EA86BB5005862A3 /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		8B1E57541EA86C96005862A3 /* GemComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemComponent.swift; sourceTree = "<group>"; };
 		8B1E57561EA86CBE005862A3 /* Gem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gem.swift; sourceTree = "<group>"; };
+		8B1E57581EA86F2F005862A3 /* SlotColumnEntity.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotColumnEntity.spec.swift; sourceTree = "<group>"; };
+		8B1E575A1EA86F7C005862A3 /* SlotColumnEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotColumnEntity.swift; sourceTree = "<group>"; };
+		8B1E575C1EA86FEA005862A3 /* ColumnComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnComponent.swift; sourceTree = "<group>"; };
 		8BE133FA1E973E69004B7169 /* ShinyGemHunterSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyGemHunterSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE133FD1E973E69004B7169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE134031E973E69004B7169 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 				8B1E574A1EA869EF005862A3 /* RenderComponent.swift */,
 				8B1E57521EA86BB5005862A3 /* SpriteComponent.swift */,
 				8B1E57541EA86C96005862A3 /* GemComponent.swift */,
+				8B1E575C1EA86FEA005862A3 /* ColumnComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				8B1E574D1EA86A25005862A3 /* SlotEntity.swift */,
+				8B1E575A1EA86F7C005862A3 /* SlotColumnEntity.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			children = (
 				8BE1341A1E973E69004B7169 /* Info.plist */,
 				8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */,
+				8B1E57581EA86F2F005862A3 /* SlotColumnEntity.spec.swift */,
 			);
 			path = ShinyGemHunterSlotsTests;
 			sourceTree = "<group>";
@@ -395,6 +404,7 @@
 			files = (
 				8BE134261E973F35004B7169 /* GameSceneDelegate.swift in Sources */,
 				8B1E57531EA86BB5005862A3 /* SpriteComponent.swift in Sources */,
+				8B1E575B1EA86F7C005862A3 /* SlotColumnEntity.swift in Sources */,
 				8BE134041E973E69004B7169 /* GameScene.swift in Sources */,
 				8B1E57511EA86AA6005862A3 /* NodeLayerPosition.swift in Sources */,
 				8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */,
@@ -410,6 +420,7 @@
 				8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */,
 				8B1E574B1EA869EF005862A3 /* RenderComponent.swift in Sources */,
 				8B1E57571EA86CBE005862A3 /* Gem.swift in Sources */,
+				8B1E575D1EA86FEA005862A3 /* ColumnComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1E57591EA86F2F005862A3 /* SlotColumnEntity.spec.swift in Sources */,
 				8B1E57491EA868BE005862A3 /* SlotEntity.spec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
