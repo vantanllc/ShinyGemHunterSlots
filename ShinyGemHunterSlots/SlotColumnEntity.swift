@@ -12,7 +12,7 @@ class SlotColumnEntity: GKEntity {
   init(gems: [Gem]) {
     super.init()
     let render = RenderComponent()
-    render.node.zPosition = NodeLayerPosition.entity
+    render.node.zPosition = NodeZPosition.entity
     addComponent(render)
     
     let column = ColumnComponent(gems: gems)

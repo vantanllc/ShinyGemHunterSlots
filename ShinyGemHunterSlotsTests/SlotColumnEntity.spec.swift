@@ -35,7 +35,7 @@ class SlotColumnEntitySpec: QuickSpec {
         }
         
         it("should set node zPosition to NodeLayerPosition.entity") {
-          expect(render.node.zPosition).to(equal(NodeLayerPosition.entity))
+          expect(render.node.zPosition).to(equal(NodeZPosition.entity))
         }
       }
       
@@ -52,6 +52,10 @@ class SlotColumnEntitySpec: QuickSpec {
         
         it("should set gems") {
           expect(column.gems).to(equal(gems))
+        }
+        
+        it("should set slots for number of gems") {
+          expect(column.slots.count).to(equal(gems.count))
         }
       }
     }

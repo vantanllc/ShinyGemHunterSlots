@@ -13,7 +13,7 @@ class SlotEntity: GKEntity {
     super.init()
     
     let render = RenderComponent()
-    render.node.zPosition = NodeLayerPosition.entity
+    render.node.zPosition = NodeZPosition.entity
     addComponent(render)
     
     let sprite = SpriteComponent(node: node)

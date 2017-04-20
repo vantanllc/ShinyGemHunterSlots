@@ -11,7 +11,6 @@
 		8B1E57491EA868BE005862A3 /* SlotEntity.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */; };
 		8B1E574B1EA869EF005862A3 /* RenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E574A1EA869EF005862A3 /* RenderComponent.swift */; };
 		8B1E574E1EA86A25005862A3 /* SlotEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E574D1EA86A25005862A3 /* SlotEntity.swift */; };
-		8B1E57511EA86AA6005862A3 /* NodeLayerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57501EA86AA6005862A3 /* NodeLayerPosition.swift */; };
 		8B1E57531EA86BB5005862A3 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57521EA86BB5005862A3 /* SpriteComponent.swift */; };
 		8B1E57551EA86C96005862A3 /* GemComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57541EA86C96005862A3 /* GemComponent.swift */; };
 		8B1E57571EA86CBE005862A3 /* Gem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57561EA86CBE005862A3 /* Gem.swift */; };
@@ -52,7 +51,6 @@
 		8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotEntity.spec.swift; sourceTree = "<group>"; };
 		8B1E574A1EA869EF005862A3 /* RenderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderComponent.swift; sourceTree = "<group>"; };
 		8B1E574D1EA86A25005862A3 /* SlotEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotEntity.swift; sourceTree = "<group>"; };
-		8B1E57501EA86AA6005862A3 /* NodeLayerPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeLayerPosition.swift; sourceTree = "<group>"; };
 		8B1E57521EA86BB5005862A3 /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		8B1E57541EA86C96005862A3 /* GemComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemComponent.swift; sourceTree = "<group>"; };
 		8B1E57561EA86CBE005862A3 /* Gem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gem.swift; sourceTree = "<group>"; };
@@ -133,6 +131,15 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		8B1E575E1EA87381005862A3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */,
+				8B1E57581EA86F2F005862A3 /* SlotColumnEntity.spec.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		8BE133F11E973E69004B7169 = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +180,6 @@
 				8BE134311E9746C8004B7169 /* NodeZPosition.swift */,
 				8B1E574C1EA86A09005862A3 /* Components */,
 				8B1E574F1EA86A29005862A3 /* Entities */,
-				8B1E57501EA86AA6005862A3 /* NodeLayerPosition.swift */,
 				8B1E57561EA86CBE005862A3 /* Gem.swift */,
 			);
 			path = ShinyGemHunterSlots;
@@ -183,8 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE1341A1E973E69004B7169 /* Info.plist */,
-				8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */,
-				8B1E57581EA86F2F005862A3 /* SlotColumnEntity.spec.swift */,
+				8B1E575E1EA87381005862A3 /* Entities */,
 			);
 			path = ShinyGemHunterSlotsTests;
 			sourceTree = "<group>";
@@ -406,7 +411,6 @@
 				8B1E57531EA86BB5005862A3 /* SpriteComponent.swift in Sources */,
 				8B1E575B1EA86F7C005862A3 /* SlotColumnEntity.swift in Sources */,
 				8BE134041E973E69004B7169 /* GameScene.swift in Sources */,
-				8B1E57511EA86AA6005862A3 /* NodeLayerPosition.swift in Sources */,
 				8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */,
 				8BE1342A1E974262004B7169 /* SlotMachine.swift in Sources */,
 				8B1E574E1EA86A25005862A3 /* SlotEntity.swift in Sources */,

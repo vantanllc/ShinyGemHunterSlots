@@ -12,6 +12,10 @@ class ColumnComponent: GKComponent {
   // MARK: Lifecycle
   init(gems: [Gem]) {
     self.gems = gems
+    slots = []
+    for gem in gems {
+      slots.append(SlotEntity(gem: gem, node: SKSpriteNode(color: .red, size: CGSize(width: 10, height: 10))))
+    }
     super.init()
   }
   
@@ -21,4 +25,5 @@ class ColumnComponent: GKComponent {
   
   // MARK: Properties
   let gems: [Gem]
+  var slots: [SlotEntity]
 }

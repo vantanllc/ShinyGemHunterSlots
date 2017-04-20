@@ -38,7 +38,7 @@ class SlotEntitySpec: QuickSpec {
         }
         
         it("should set node zPosition to NodeLayerPosition.entity") {
-          expect(render.node.zPosition).to(equal(NodeLayerPosition.entity))
+          expect(render.node.zPosition).to(equal(NodeZPosition.entity))
         }
       }
       
