@@ -13,6 +13,7 @@ class GameScene: SKScene {
   // MARK: Lifecycle
   override func sceneDidLoad() {
     resultDisplay = SKLabelNode(text: "Press blue button!")
+    resultDisplay.fontSize = 70
     resultDisplay.position = CGPoint(x: size.width * 0.5, y: size.height * 0.25)
     addChild(resultDisplay)
     let columns: [[Gem]] = [
@@ -22,7 +23,7 @@ class GameScene: SKScene {
     ]
     slotGridEntity = SlotGridEntity(columns: columns)
     let node = slotGridEntity.component(ofType: RenderComponent.self)!.node
-    node.position = CGPoint(x: size.width * 0.3, y: size.height * 0.75)
+    node.position = CGPoint(x: size.width * 0.25, y: size.height * 0.80)
     addChild(node)
     
     let buttonFactory = ButtonFactory()
@@ -40,10 +41,12 @@ class GameScene: SKScene {
     
     
     walletLabel = SKLabelNode(text: "Wallet: \(wallet)")
+    walletLabel.fontSize = 70
     walletLabel.position = CGPoint(x: size.width * 0.5, y: 0)
     addChild(walletLabel)
     
     currentBetLabel = SKLabelNode(text: "Bet: \(currentBet)")
+    currentBetLabel.fontSize = 70
     currentBetLabel.position = CGPoint(x: size.width * 0.5, y: size.height * 0.95)
     addChild(currentBetLabel)
   }
@@ -54,7 +57,7 @@ class GameScene: SKScene {
     
     slotGridEntity = SlotGridEntity(columns: columns)
     let node = slotGridEntity.component(ofType: RenderComponent.self)!.node
-    node.position = CGPoint(x: size.width * 0.20, y: size.height * 0.75)
+    node.position = CGPoint(x: size.width * 0.25, y: size.height * 0.80)
     addChild(node)
   }
   

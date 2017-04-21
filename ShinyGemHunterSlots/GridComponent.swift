@@ -21,7 +21,7 @@ class GridComponent: GKComponent {
       
       let slotColumnRenderNode = slotColumn.component(ofType: RenderComponent.self)!.node
       
-      slotColumnRenderNode.position.x = 90 * CGFloat(index)
+      slotColumnRenderNode.position.x = 200 * CGFloat(index)
       node.addChild(slotColumnRenderNode)
     }
     super.init()

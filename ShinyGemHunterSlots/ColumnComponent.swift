@@ -19,7 +19,7 @@ class ColumnComponent: GKComponent {
       slots.append(slot)
       
       let slotRenderNode = slot.component(ofType: RenderComponent.self)!.node
-      slotRenderNode.position.y = -90 * CGFloat(index)
+      slotRenderNode.position.y = -200 * CGFloat(index)
       node.addChild(slotRenderNode)
     }
     super.init()
