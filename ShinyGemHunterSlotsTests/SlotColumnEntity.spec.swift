@@ -57,6 +57,11 @@ class SlotColumnEntitySpec: QuickSpec {
         it("should set slots for number of gems") {
           expect(column.slots.count).to(equal(gems.count))
         }
+        
+        it("should add node to RenderComponent.node") {
+          let render = entity.component(ofType: RenderComponent.self)
+          expect(column.node.parent).to(be(render!.node))
+        }
       }
     }
   }

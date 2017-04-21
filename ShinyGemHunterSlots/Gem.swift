@@ -6,8 +6,13 @@
 //  Copyright © 2017 Vantan LLC. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
 
 enum Gem: String {
-  case diamond, ruby
+  case diamond, ruby, amethyst
+  
+  func getNode() -> SKSpriteNode {
+    return SKSpriteNode(imageNamed: self.rawValue)
+  }
+  
 }

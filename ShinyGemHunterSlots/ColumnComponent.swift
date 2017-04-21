@@ -14,11 +14,12 @@ class ColumnComponent: GKComponent {
     self.gems = gems
     node = SKNode()
     slots = []
-    for gem in gems {
-      let slot = SlotEntity(gem: gem, node: SKSpriteNode(color: .red, size: CGSize(width: 10, height: 10)))
+    for (index, gem) in gems.enumerated() {
+      let slot = SlotEntity(gem: gem, node: SKSpriteNode(color: .red, size: CGSize(width: 40, height: 40)))
       slots.append(slot)
       
       let slotRenderNode = slot.component(ofType: RenderComponent.self)!.node
+      slotRenderNode.position.y = -90 * CGFloat(index)
       node.addChild(slotRenderNode)
     }
     super.init()

@@ -17,17 +17,21 @@ extension GameScene: ButtonRespondable {
     switch buttonIdentifier {
     case .pullHandle:
       print("pulled handle")
-      slotMachine.updateSlots()
-      slotsDisplay.text = slotMachine.slots.reduce("") {
-        text, slot in
-        return text + " " + slot.rawValue
-      }
+      slotMachine.updateColumns()
+      resetSlotGridEntity(withColumns: slotMachine.columns)
       
       if slotMachine.didWin() {
-        resultDisplay.text = "YOU'RE A WINNER!!!"
+        let winning = currentBet * 3
+        resultDisplay.text = "YOU WIN \(winning)! YAY!!!"
+        wallet += currentBet
       } else {
-        resultDisplay.text = "YOU'RE A LOSER!!!"
+        resultDisplay.text = "YOU LOST \(currentBet)! BOO!!!"
+        wallet -= currentBet
       }
+    case .up:
+      currentBet = currentBet + 1 <= wallet ? currentBet + 1 : currentBet
+    case .down:
+      currentBet = currentBet - 1 > 0 ? currentBet - 1 : currentBet
     default:
       break
     }

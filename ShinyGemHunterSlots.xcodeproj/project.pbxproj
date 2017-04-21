@@ -20,6 +20,8 @@
 		8B1E57601EA87448005862A3 /* RenderComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E575F1EA87448005862A3 /* RenderComponent.spec.swift */; };
 		8B1E57621EA8748A005862A3 /* SpriteComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57611EA8748A005862A3 /* SpriteComponent.spec.swift */; };
 		8B1E57651EA874FE005862A3 /* ColumnComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57641EA874FE005862A3 /* ColumnComponent.spec.swift */; };
+		8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */; };
+		8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52919A1EA9AD28001BEF68 /* GridComponent.swift */; };
 		8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE133FD1E973E69004B7169 /* AppDelegate.swift */; };
 		8BE134041E973E69004B7169 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134031E973E69004B7169 /* GameScene.swift */; };
 		8BE134061E973E69004B7169 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134051E973E69004B7169 /* GameViewController.swift */; };
@@ -63,6 +65,8 @@
 		8B1E575F1EA87448005862A3 /* RenderComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderComponent.spec.swift; sourceTree = "<group>"; };
 		8B1E57611EA8748A005862A3 /* SpriteComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.spec.swift; sourceTree = "<group>"; };
 		8B1E57641EA874FE005862A3 /* ColumnComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnComponent.spec.swift; sourceTree = "<group>"; };
+		8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotGridEntity.swift; sourceTree = "<group>"; };
+		8B52919A1EA9AD28001BEF68 /* GridComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		8BE133FA1E973E69004B7169 /* ShinyGemHunterSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyGemHunterSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE133FD1E973E69004B7169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE134031E973E69004B7169 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				8B1E57521EA86BB5005862A3 /* SpriteComponent.swift */,
 				8B1E57541EA86C96005862A3 /* GemComponent.swift */,
 				8B1E575C1EA86FEA005862A3 /* ColumnComponent.swift */,
+				8B52919A1EA9AD28001BEF68 /* GridComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			children = (
 				8B1E574D1EA86A25005862A3 /* SlotEntity.swift */,
 				8B1E575A1EA86F7C005862A3 /* SlotColumnEntity.swift */,
+				8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -429,11 +435,13 @@
 				8B1E575B1EA86F7C005862A3 /* SlotColumnEntity.swift in Sources */,
 				8BE134041E973E69004B7169 /* GameScene.swift in Sources */,
 				8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */,
+				8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */,
 				8BE1342A1E974262004B7169 /* SlotMachine.swift in Sources */,
 				8B1E574E1EA86A25005862A3 /* SlotEntity.swift in Sources */,
 				8BE1342E1E9745D4004B7169 /* GameScene+ButtonNode.swift in Sources */,
 				8BE134321E9746C8004B7169 /* NodeZPosition.swift in Sources */,
 				8B1E57551EA86C96005862A3 /* GemComponent.swift in Sources */,
+				8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */,
 				8BE134061E973E69004B7169 /* GameViewController.swift in Sources */,
 				8BE134301E97465F004B7169 /* ButtonFactory.swift in Sources */,
 				8BE1342C1E974570004B7169 /* ButtonNode.swift in Sources */,

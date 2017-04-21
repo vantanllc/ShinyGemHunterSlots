@@ -10,7 +10,7 @@ import SpriteKit
 
 class ButtonFactory {
   func createButton(withIdentifier identifier: ButtonIdentifier) -> ButtonNode {
-    let button = ButtonNode(texture: nil, color: .blue, size: CGSize(width: 60, height: 60))
+    let button = ButtonNode(imageNamed: identifier.rawValue)
     button.zPosition = NodeZPosition.button
     button.name = identifier.rawValue
     button.isUserInteractionEnabled = true

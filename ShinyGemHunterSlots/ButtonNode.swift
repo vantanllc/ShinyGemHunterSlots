@@ -13,7 +13,7 @@ protocol ButtonRespondable {
 }
 
 enum ButtonIdentifier: String {
-  case pullHandle
+  case pullHandle, up, down
   case retry, pause, resume, start
   case credits
   case musicOn, musicOff
