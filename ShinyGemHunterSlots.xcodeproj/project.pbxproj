@@ -334,7 +334,7 @@
 					8BE133F91E973E69004B7169 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SNXMW75MBJ;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					8BE134131E973E69004B7169 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -654,15 +654,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = SNXMW75MBJ;
 				INFOPLIST_FILE = ShinyGemHunterSlots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vantan.LLC.ShinyGemHunterSlots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b636b65e-bc95-4469-9a34-6f35ff9d471c";
+				PROVISIONING_PROFILE_SPECIFIER = "com.Vantan.LLC.ShinyGemHunterSlots AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -673,15 +673,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = SNXMW75MBJ;
 				INFOPLIST_FILE = ShinyGemHunterSlots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vantan.LLC.ShinyGemHunterSlots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b636b65e-bc95-4469-9a34-6f35ff9d471c";
+				PROVISIONING_PROFILE_SPECIFIER = "com.Vantan.LLC.ShinyGemHunterSlots AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
