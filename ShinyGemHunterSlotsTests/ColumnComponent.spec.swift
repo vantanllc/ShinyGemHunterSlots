@@ -40,8 +40,6 @@ class ColumnComponentSpec: QuickSpec {
           expect(render.parent).to(be(column.node))
         }
       }
-      
-      
     }
   }
 }

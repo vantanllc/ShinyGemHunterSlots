@@ -15,7 +15,7 @@ class ColumnComponent: GKComponent {
     node = SKNode()
     slots = []
     for (index, gem) in gems.enumerated() {
-      let slot = SlotEntity(gem: gem, node: SKSpriteNode(color: .red, size: CGSize(width: 40, height: 40)))
+      let slot = SlotEntity(gem: gem)
       slots.append(slot)
       
       let slotRenderNode = slot.component(ofType: RenderComponent.self)!.node

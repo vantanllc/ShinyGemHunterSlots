@@ -9,7 +9,7 @@
 import GameplayKit
 
 class SlotEntity: GKEntity {
-  init(gem: Gem, node: SKSpriteNode) {
+  init(gem: Gem) {
     super.init()
     
     let render = RenderComponent()

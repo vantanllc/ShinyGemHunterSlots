@@ -27,14 +27,14 @@ class RenderComponentSpec: QuickSpec {
         expect(render.node).toNot(beNil())
       }
       
-      describe("didAddToEntity") {
+      context("didAddToEntity") {
         it("should assign node.entity to self.entity") {
           entity.addComponent(render)
           expect(render.node.entity).to(be(entity))
         }
       }
       
-      describe("willRemoveFromEntity") {
+      context("willRemoveFromEntity") {
         it("should assign node.entity to nil") {
           entity.addComponent(render)
           entity.removeComponent(ofType: RenderComponent.self)

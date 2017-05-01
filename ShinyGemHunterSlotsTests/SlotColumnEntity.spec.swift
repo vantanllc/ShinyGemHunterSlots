@@ -23,7 +23,7 @@ class SlotColumnEntitySpec: QuickSpec {
         entity = SlotColumnEntity(gems: gems)
       }
       
-      describe("RenderComponent") {
+      context("RenderComponent") {
         var render: RenderComponent!
         
         beforeEach {
@@ -39,7 +39,7 @@ class SlotColumnEntitySpec: QuickSpec {
         }
       }
       
-      describe("ColumnComponent") {
+      context("ColumnComponent") {
         var column: ColumnComponent!
         
         beforeEach {

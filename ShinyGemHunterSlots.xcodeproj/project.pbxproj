@@ -162,6 +162,64 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
+		8B75ED7B1EB6DABF000DCA4F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */,
+				8BE134271E973F63004B7169 /* GameViewController+GameSceneDelegate.swift */,
+				8BE134051E973E69004B7169 /* GameViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8B75ED7C1EB6DAC9000DCA4F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8BE1342D1E9745D4004B7169 /* GameScene+ButtonNode.swift */,
+				8BE134251E973F35004B7169 /* GameSceneDelegate.swift */,
+				8BE134031E973E69004B7169 /* GameScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		8B75ED7D1EB6DAF0000DCA4F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8BE133FD1E973E69004B7169 /* AppDelegate.swift */,
+				8BE134071E973E69004B7169 /* Main.storyboard */,
+				8BE1340A1E973E69004B7169 /* Assets.xcassets */,
+				8BE1340C1E973E69004B7169 /* LaunchScreen.storyboard */,
+				8BE1340F1E973E69004B7169 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		8B75ED7E1EB6DB26000DCA4F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8BE1342F1E97465F004B7169 /* ButtonFactory.swift */,
+				8BE1342B1E974570004B7169 /* ButtonNode.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		8B75ED7F1EB6DB31000DCA4F /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				8B1E57561EA86CBE005862A3 /* Gem.swift */,
+				8BE134311E9746C8004B7169 /* NodeZPosition.swift */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		8B75ED801EB6DB3B000DCA4F /* SlotMachines */ = {
+			isa = PBXGroup;
+			children = (
+				8BE134291E974262004B7169 /* SlotMachine.swift */,
+			);
+			name = SlotMachines;
+			sourceTree = "<group>";
+		};
 		8BE133F11E973E69004B7169 = {
 			isa = PBXGroup;
 			children = (
@@ -185,24 +243,14 @@
 		8BE133FC1E973E69004B7169 /* ShinyGemHunterSlots */ = {
 			isa = PBXGroup;
 			children = (
-				8BE133FD1E973E69004B7169 /* AppDelegate.swift */,
-				8BE134031E973E69004B7169 /* GameScene.swift */,
-				8BE134051E973E69004B7169 /* GameViewController.swift */,
-				8BE134291E974262004B7169 /* SlotMachine.swift */,
-				8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */,
-				8BE134271E973F63004B7169 /* GameViewController+GameSceneDelegate.swift */,
-				8BE134251E973F35004B7169 /* GameSceneDelegate.swift */,
-				8BE134071E973E69004B7169 /* Main.storyboard */,
-				8BE1340A1E973E69004B7169 /* Assets.xcassets */,
-				8BE1340C1E973E69004B7169 /* LaunchScreen.storyboard */,
-				8BE1340F1E973E69004B7169 /* Info.plist */,
-				8BE1342B1E974570004B7169 /* ButtonNode.swift */,
-				8BE1342D1E9745D4004B7169 /* GameScene+ButtonNode.swift */,
-				8BE1342F1E97465F004B7169 /* ButtonFactory.swift */,
-				8BE134311E9746C8004B7169 /* NodeZPosition.swift */,
+				8B75ED7E1EB6DB26000DCA4F /* Buttons */,
 				8B1E574C1EA86A09005862A3 /* Components */,
 				8B1E574F1EA86A29005862A3 /* Entities */,
-				8B1E57561EA86CBE005862A3 /* Gem.swift */,
+				8B75ED7F1EB6DB31000DCA4F /* Nodes */,
+				8B75ED7C1EB6DAC9000DCA4F /* Scenes */,
+				8B75ED801EB6DB3B000DCA4F /* SlotMachines */,
+				8B75ED7D1EB6DAF0000DCA4F /* Support */,
+				8B75ED7B1EB6DABF000DCA4F /* ViewControllers */,
 			);
 			path = ShinyGemHunterSlots;
 			sourceTree = "<group>";

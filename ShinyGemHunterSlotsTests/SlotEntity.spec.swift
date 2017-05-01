@@ -15,18 +15,15 @@ import Nimble
 class SlotEntitySpec: QuickSpec {
   override func spec() {
     var entity: SlotEntity!
-    var sprite: SKSpriteNode!
     var gem: Gem!
-    let size = CGSize(width: 10, height: 20)
 
     describe("SlotEntity") {
       beforeEach {
         gem = .diamond
-        sprite = SKSpriteNode(color: .blue, size: size)
-        entity = SlotEntity(gem: gem, node: sprite)
+        entity = SlotEntity(gem: gem)
       }
       
-      describe("RenderComponent") {
+      context("RenderComponent") {
         var render: RenderComponent!
         
         beforeEach {
@@ -42,7 +39,7 @@ class SlotEntitySpec: QuickSpec {
         }
       }
       
-      describe("SpriteComponent") {
+      context("SpriteComponent") {
         var spriteComponent: SpriteComponent!
         
         beforeEach {
@@ -52,14 +49,9 @@ class SlotEntitySpec: QuickSpec {
         it("should have SpriteComponent") {
           expect(spriteComponent).toNot(beNil())
         }
-        
-        it("should add SpriteComponent.node as a child of RenderComponent.node") {
-          let render: RenderComponent! = entity.component(ofType: RenderComponent.self)
-          expect(render.node.children).to(contain(sprite))
-        }
       }
       
-      describe("GemComponent") {
+      context("GemComponent") {
         var gemComponent: GemComponent!
         
         beforeEach {
