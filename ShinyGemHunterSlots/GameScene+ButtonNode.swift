@@ -32,8 +32,6 @@ extension GameScene: ButtonRespondable {
       currentBet = currentBet + 1 <= wallet ? currentBet + 1 : currentBet
     case .down:
       currentBet = currentBet - 1 > 0 ? currentBet - 1 : currentBet
-    default:
-      break
     }
   }
 }
