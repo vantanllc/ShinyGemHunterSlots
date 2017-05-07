@@ -22,6 +22,24 @@ class GameSceneSpec: QuickSpec {
       }
       
       context("sceneDidLoad") {
+        it("should initialize slotMachine") {
+          expect(scene.slotMachine).toNot(beNil())
+        }
+        
+        context("slotGridEntity") {
+          it("should have node be in scene") {
+            let node = scene.slotGridEntity.component(ofType: RenderComponent.self)?.node
+            expect(node?.parent).to(be(scene))
+          }
+          
+          it("should have gem columns from slotMachine") {
+            let gemColumns = scene.slotGridEntity.component(ofType: GridComponent.self)!.gemColumns
+            for (index, column) in gemColumns.enumerated() {
+              expect(column).to(equal(scene.slotMachine.columns[index]))
+            }
+          }
+        }
+        
         context("labels") {
           context("currentBet") {
             it("should have fontSize set from Config") {
@@ -66,6 +84,20 @@ class GameSceneSpec: QuickSpec {
               let expectedText = "Press button to play!"
               expect(scene.resultDisplay.text).to(equal(expectedText))
             }
+          }
+        }
+        
+        context("buttons") {
+          it("should have pullHandle button in scene") {
+            expect(scene.childNode(withName: ButtonIdentifier.pullHandle.rawValue)).toNot(beNil())
+          }
+          
+          it("should have up button in scene") {
+            expect(scene.childNode(withName: ButtonIdentifier.up.rawValue)).toNot(beNil())
+          }
+          
+          it("should have down button in scene") {
+            expect(scene.childNode(withName: ButtonIdentifier.down.rawValue)).toNot(beNil())
           }
         }
       }
