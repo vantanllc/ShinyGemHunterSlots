@@ -10,12 +10,35 @@ import GameplayKit
 
 class GridComponent: GKComponent {
   // MARK: Lifecycle
-  init(columns: [[Gem]]) {
-    self.columns = columns
+  init(gemColumns: [[Gem]]) {
+    self.gemColumns = gemColumns 
     node = SKNode()
     slotColumns = []
     
-    for (index, column) in columns.enumerated() {
+    super.init()
+    
+    addSlotColumns()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  // MARK: Properties
+  let gemColumns: [[Gem]]
+  var slotColumns: [SlotColumnEntity]
+  let node: SKNode
+}
+
+extension GridComponent {
+  struct Config {
+    static let columnHorizontalSpacing: CGFloat = 200
+  }
+}
+
+fileprivate extension GridComponent {
+  func addSlotColumns() {
+    for (index, column) in gemColumns.enumerated() {
       let slotColumn = SlotColumnEntity(gems: column)
       slotColumns.append(slotColumn)
       
@@ -24,15 +47,5 @@ class GridComponent: GKComponent {
       slotColumnRenderNode.position.x = 200 * CGFloat(index)
       node.addChild(slotColumnRenderNode)
     }
-    super.init()
   }
-  
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  // MARK: Properties
-  let columns: [[Gem]]
-  var slotColumns: [SlotColumnEntity]
-  let node: SKNode
 }

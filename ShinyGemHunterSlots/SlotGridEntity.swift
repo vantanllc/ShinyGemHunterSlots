@@ -15,7 +15,7 @@ class SlotGridEntity: GKEntity {
     render.node.zPosition = NodeZPosition.entity
     addComponent(render)
     
-    let grid = GridComponent(columns: columns)
+    let grid = GridComponent(gemColumns: columns)
     render.node.addChild(grid.node)
     addComponent(grid)
   }

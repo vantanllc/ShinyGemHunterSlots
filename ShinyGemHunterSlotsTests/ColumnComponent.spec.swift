@@ -48,8 +48,8 @@ class ColumnComponentSpec: QuickSpec {
       it("should have expected vertical spacing between slots") {
         let expectedYPositions = [
           ColumnComponent.Config.slotVerticalSpacing * 0,
-          ColumnComponent.Config.slotVerticalSpacing * -1,
-          ColumnComponent.Config.slotVerticalSpacing * -2,
+          ColumnComponent.Config.slotVerticalSpacing * 1,
+          ColumnComponent.Config.slotVerticalSpacing * 2,
         ]
         let slotYPositions = column.slots.map { slot in
           return slot.component(ofType: RenderComponent.self)?.node.position.y

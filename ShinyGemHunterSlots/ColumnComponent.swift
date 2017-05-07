@@ -13,18 +13,11 @@ class ColumnComponent: GKComponent {
   init(gems: [Gem]) {
     self.gems = gems
     node = SKNode()
-    
     slots = []
-    for (index, gem) in gems.enumerated() {
-      let slot = SlotEntity(gem: gem)
-      slots.append(slot)
-      
-      let slotRenderNode = slot.component(ofType: RenderComponent.self)!.node
-      slotRenderNode.position.y = -Config.slotVerticalSpacing * CGFloat(index)
-      node.addChild(slotRenderNode)
-    }
     
     super.init()
+    
+    addSlots()
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -39,6 +32,19 @@ class ColumnComponent: GKComponent {
 
 extension ColumnComponent {
   struct Config {
-    static let slotVerticalSpacing: CGFloat = 200
+    static let slotVerticalSpacing: CGFloat = -200
+  }
+}
+
+fileprivate extension ColumnComponent {
+  func addSlots() {
+    for (index, gem) in gems.enumerated() {
+      let slot = SlotEntity(gem: gem)
+      slots.append(slot)
+      
+      let slotRenderNode = slot.component(ofType: RenderComponent.self)!.node
+      slotRenderNode.position.y = Config.slotVerticalSpacing * CGFloat(index)
+      node.addChild(slotRenderNode)
+    }
   }
 }
