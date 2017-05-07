@@ -21,7 +21,7 @@ class GameScene: SKScene {
       [.diamond, .ruby, .amethyst],
       [.diamond, .ruby, .amethyst]
     ]
-    slotGridEntity = SlotGridEntity(columns: columns)
+    slotGridEntity = SlotGridEntity(gemColumns: columns)
     let node = slotGridEntity.component(ofType: RenderComponent.self)!.node
     node.position = CGPoint(x: size.width * 0.25, y: size.height * 0.80)
     addChild(node)
@@ -55,7 +55,7 @@ class GameScene: SKScene {
     let oldNode = slotGridEntity.component(ofType: RenderComponent.self)?.node
     oldNode?.removeFromParent()
     
-    slotGridEntity = SlotGridEntity(columns: columns)
+    slotGridEntity = SlotGridEntity(gemColumns: columns)
     let node = slotGridEntity.component(ofType: RenderComponent.self)!.node
     node.position = CGPoint(x: size.width * 0.25, y: size.height * 0.80)
     addChild(node)

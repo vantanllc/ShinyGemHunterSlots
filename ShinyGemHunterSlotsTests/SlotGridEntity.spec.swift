@@ -1,8 +1,8 @@
 //
-//  SlotColumnEntity.spec.swift
+//  SlotGridEntity.spec.swift
 //  ShinyGemHunterSlots
 //
-//  Created by Thinh Luong on 4/19/17.
+//  Created by Thinh Luong on 5/6/17.
 //  Copyright © 2017 Vantan LLC. All rights reserved.
 //
 
@@ -12,15 +12,16 @@ import Quick
 import Nimble
 @testable import ShinyGemHunterSlots
 
-class SlotColumnEntitySpec: QuickSpec {
+class GridColumnEntitySpec: QuickSpec {
   override func spec() {
-    var entity: SlotColumnEntity!
-    var gems: [Gem]!
+    var entity: SlotGridEntity!
+    var gemColumns: [[Gem]]!
     
-    describe("SlotColumnEntity") {
+    describe("SlotGridEntity") {
       beforeEach {
-        gems = [.diamond, .ruby, .diamond]
-        entity = SlotColumnEntity(gems: gems)
+        let gems: [Gem] = [.diamond, .ruby, .diamond]
+        gemColumns = [gems, gems, gems]
+        entity = SlotGridEntity(gemColumns: gemColumns)
       }
       
       context("RenderComponent") {
@@ -39,20 +40,20 @@ class SlotColumnEntitySpec: QuickSpec {
         }
       }
       
-      context("ColumnComponent") {
-        var column: ColumnComponent!
+      context("GridComponent") {
+        var grid: GridComponent!
         
         beforeEach {
-          column = entity.component(ofType: ColumnComponent.self)
+          grid = entity.component(ofType: GridComponent.self)
         }
         
-        it("should have a ColumnComponent") {
-          expect(column).toNot(beNil())
+        it("should have a GridComponent") {
+          expect(grid).toNot(beNil())
         }
         
         it("should add node to RenderComponent.node") {
           let render = entity.component(ofType: RenderComponent.self)!
-          expect(column.node.parent).to(be(render.node))
+          expect(grid.node.parent).to(be(render.node))
         }
       }
     }

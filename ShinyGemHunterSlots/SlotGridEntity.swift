@@ -9,13 +9,13 @@
 import GameplayKit
 
 class SlotGridEntity: GKEntity {
-  init(columns: [[Gem]]) {
+  init(gemColumns: [[Gem]]) {
     super.init()
     let render = RenderComponent()
     render.node.zPosition = NodeZPosition.entity
     addComponent(render)
     
-    let grid = GridComponent(gemColumns: columns)
+    let grid = GridComponent(gemColumns: gemColumns)
     render.node.addChild(grid.node)
     addComponent(grid)
   }
