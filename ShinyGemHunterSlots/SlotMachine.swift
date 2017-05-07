@@ -11,7 +11,11 @@ import GameplayKit
 class SlotMachine {
   // MARK: Lifecycle
   init() {
-    self.columns = [[]]
+    columns = [
+      [.diamond, .ruby, .amethyst],
+      [.diamond, .ruby, .amethyst],
+      [.diamond, .ruby, .amethyst]
+    ]
   }
   
   // MARK: Properties

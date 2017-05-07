@@ -16,7 +16,6 @@ extension GameScene: ButtonRespondable {
     
     switch buttonIdentifier {
     case .pullHandle:
-      print("pulled handle")
       slotMachine.updateColumns()
       resetSlotGridEntity(withColumns: slotMachine.columns)
       
