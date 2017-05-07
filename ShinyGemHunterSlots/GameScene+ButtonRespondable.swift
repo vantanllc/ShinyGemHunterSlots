@@ -16,20 +16,13 @@ extension GameScene: ButtonRespondable {
     
     switch buttonIdentifier {
     case .pullHandle:
-      print("pulled handle")
-      slotMachine.updateSlots()
-      slotsDisplay.text = slotMachine.slots.reduce("") {
-        text, slot in
-        return text + " " + slot.rawValue
-      }
-      
-      if slotMachine.didWin() {
-        resultDisplay.text = "YOU'RE A WINNER!!!"
-      } else {
-        resultDisplay.text = "YOU'RE A LOSER!!!"
-      }
-    default:
-      break
+      slotMachine.updateColumns()
+      resetSlotGridEntity(withColumns: slotMachine.columns)
+      evaluateSlotReel()
+    case .up:
+      currentBet = currentBet + 1 <= wallet ? currentBet + 1 : currentBet
+    case .down:
+      currentBet = currentBet - 1 > 0 ? currentBet - 1 : currentBet
     }
   }
 }

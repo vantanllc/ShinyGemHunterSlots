@@ -1,5 +1,5 @@
 //
-//  SlotEntity.swift
+//  SlotColumnEntity.swift
 //  ShinyGemHunterSlots
 //
 //  Created by Thinh Luong on 4/19/17.
@@ -8,20 +8,16 @@
 
 import GameplayKit
 
-class SlotEntity: GKEntity {
-  init(gem: Gem) {
+class SlotColumnEntity: GKEntity {
+  init(gems: [Gem]) {
     super.init()
-    
     let render = RenderComponent()
     render.node.zPosition = NodeZPosition.entity
     addComponent(render)
     
-    let sprite = SpriteComponent(node: gem.getNode())
-    render.node.addChild(sprite.node)
-    addComponent(sprite)
-    
-    let gemComponent = GemComponent(gem: gem)
-    addComponent(gemComponent)
+    let column = ColumnComponent(gems: gems)
+    render.node.addChild(column.node)
+    addComponent(column)
   }
   
   required init?(coder aDecoder: NSCoder) {

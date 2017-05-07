@@ -15,16 +15,15 @@ import Nimble
 class SlotEntitySpec: QuickSpec {
   override func spec() {
     var entity: SlotEntity!
-    var sprite: SKSpriteNode!
-    let size = CGSize(width: 10, height: 20)
+    var gem: Gem!
 
     describe("SlotEntity") {
       beforeEach {
-        sprite = SKSpriteNode(color: .blue, size: size)
-        entity = SlotEntity(node: sprite)
+        gem = .diamond
+        entity = SlotEntity(gem: gem)
       }
       
-      describe("RenderComponent") {
+      context("RenderComponent") {
         var render: RenderComponent!
         
         beforeEach {
@@ -36,7 +35,35 @@ class SlotEntitySpec: QuickSpec {
         }
         
         it("should set node zPosition to NodeLayerPosition.entity") {
-          expect(render.node.zPosition).to(equal(NodeLayerPosition.entity))
+          expect(render.node.zPosition).to(equal(NodeZPosition.entity))
+        }
+      }
+      
+      context("SpriteComponent") {
+        var spriteComponent: SpriteComponent!
+        
+        beforeEach {
+          spriteComponent = entity.component(ofType: SpriteComponent.self)
+        }
+        
+        it("should have SpriteComponent") {
+          expect(spriteComponent).toNot(beNil())
+        }
+      }
+      
+      context("GemComponent") {
+        var gemComponent: GemComponent!
+        
+        beforeEach {
+          gemComponent = entity.component(ofType: GemComponent.self)
+        }
+        
+        it("should have a GemComponent") {
+          expect(gemComponent).toNot(beNil())
+        }
+        
+        it("should set gem") {
+          expect(gemComponent.gem).to(equal(gem))
         }
       }
     }

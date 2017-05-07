@@ -8,35 +8,48 @@
 
 import GameplayKit
 
-enum Slot: String {
-  case diamond, ruby
-}
-
 class SlotMachine {
+  // MARK: Functions
+  func didWin() -> Bool {
+    let gems = columns.map { column in
+      return column[1]
+    }
+    
+    let uniqueSlots = Set<Gem>(gems)
+    return uniqueSlots.count == 1
+  }
+  
   // MARK: Lifecycle
   init() {
-    self.slots = []
+    columns = [
+      [.diamond, .ruby, .amethyst],
+      [.diamond, .ruby, .amethyst],
+      [.diamond, .ruby, .amethyst]
+    ]
   }
   
   // MARK: Properties
-  var slots: [Slot]
+  var columns: [[Gem]]
 }
 
 extension SlotMachine {
-  func updateSlots() {
-    slots.removeAll()
+  func updateColumns() {
+    columns.removeAll()
     
     for _ in stride(from: 0, to: 3, by: 1) {
-      if GKRandomSource.sharedRandom().nextBool() {
-        slots.append(.diamond)
-      } else {
-        slots.append(.ruby)
+      var column: [Gem] = []
+      for _ in stride(from: 0, to: 3, by: 1) {
+        switch GKRandomSource.sharedRandom().nextInt(upperBound: 3) {
+        case 0:
+          column.append(.diamond)
+        case 1:
+          column.append(.ruby)
+        default:
+          column.append(.amethyst)
+        }
       }
+      
+      columns.append(column)
     }
-  }
-  
-  func didWin() -> Bool {
-    let uniqueSlots = Set<Slot>(slots)
-    return uniqueSlots.count == 1
   }
 }

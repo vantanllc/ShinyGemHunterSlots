@@ -1,27 +1,23 @@
 //
-//  SlotEntity.swift
+//  SlotGridEntity.swift
 //  ShinyGemHunterSlots
 //
-//  Created by Thinh Luong on 4/19/17.
+//  Created by Thinh Luong on 4/20/17.
 //  Copyright © 2017 Vantan LLC. All rights reserved.
 //
 
 import GameplayKit
 
-class SlotEntity: GKEntity {
-  init(gem: Gem) {
+class SlotGridEntity: GKEntity {
+  init(gemColumns: [[Gem]]) {
     super.init()
-    
     let render = RenderComponent()
     render.node.zPosition = NodeZPosition.entity
     addComponent(render)
     
-    let sprite = SpriteComponent(node: gem.getNode())
-    render.node.addChild(sprite.node)
-    addComponent(sprite)
-    
-    let gemComponent = GemComponent(gem: gem)
-    addComponent(gemComponent)
+    let grid = GridComponent(gemColumns: gemColumns)
+    render.node.addChild(grid.node)
+    addComponent(grid)
   }
   
   required init?(coder aDecoder: NSCoder) {

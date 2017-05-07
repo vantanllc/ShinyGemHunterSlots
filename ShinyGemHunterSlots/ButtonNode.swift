@@ -13,13 +13,7 @@ protocol ButtonRespondable {
 }
 
 enum ButtonIdentifier: String {
-  case pullHandle
-  case retry, pause, resume, start
-  case credits
-  case musicOn, musicOff
-  static let all: [ButtonIdentifier] = [
-    .retry, .pause, .resume, .start, .credits, musicOn, musicOff
-  ]
+  case pullHandle, up, down
 }
 
 class ButtonNode: SKSpriteNode {
