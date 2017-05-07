@@ -9,10 +9,9 @@
 import SpriteKit
 
 extension GameViewController {
-  func createGameScene(size: CGSize, withDelegate delegate: GameSceneDelegate? = nil, scaleMode: SKSceneScaleMode = .resizeFill) -> GameScene {
+  func createGameScene(size: CGSize, scaleMode: SKSceneScaleMode = .resizeFill) -> GameScene {
     let gameScene = GameScene(size: size)
     gameScene.scaleMode = scaleMode
-    gameScene.gameSceneDelegate = delegate
     return gameScene
   }
   

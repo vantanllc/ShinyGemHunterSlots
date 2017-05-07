@@ -35,8 +35,6 @@
 		8BE1340B1E973E69004B7169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE1340A1E973E69004B7169 /* Assets.xcassets */; };
 		8BE1340E1E973E69004B7169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE1340C1E973E69004B7169 /* LaunchScreen.storyboard */; };
 		8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */; };
-		8BE134261E973F35004B7169 /* GameSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134251E973F35004B7169 /* GameSceneDelegate.swift */; };
-		8BE134281E973F63004B7169 /* GameViewController+GameSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134271E973F63004B7169 /* GameViewController+GameSceneDelegate.swift */; };
 		8BE1342A1E974262004B7169 /* SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134291E974262004B7169 /* SlotMachine.swift */; };
 		8BE1342C1E974570004B7169 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1342B1E974570004B7169 /* ButtonNode.swift */; };
 		8BE1342E1E9745D4004B7169 /* GameScene+ButtonRespondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1342D1E9745D4004B7169 /* GameScene+ButtonRespondable.swift */; };
@@ -92,8 +90,6 @@
 		8BE134141E973E69004B7169 /* ShinyGemHunterSlotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShinyGemHunterSlotsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE1341A1E973E69004B7169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController+GameScene.swift"; sourceTree = "<group>"; };
-		8BE134251E973F35004B7169 /* GameSceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneDelegate.swift; sourceTree = "<group>"; };
-		8BE134271E973F63004B7169 /* GameViewController+GameSceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController+GameSceneDelegate.swift"; sourceTree = "<group>"; };
 		8BE134291E974262004B7169 /* SlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachine.swift; sourceTree = "<group>"; };
 		8BE1342B1E974570004B7169 /* ButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		8BE1342D1E9745D4004B7169 /* GameScene+ButtonRespondable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+ButtonRespondable.swift"; sourceTree = "<group>"; };
@@ -185,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */,
-				8BE134271E973F63004B7169 /* GameViewController+GameSceneDelegate.swift */,
 				8BE134051E973E69004B7169 /* GameViewController.swift */,
 			);
 			name = ViewControllers;
@@ -195,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				8BE1342D1E9745D4004B7169 /* GameScene+ButtonRespondable.swift */,
-				8BE134251E973F35004B7169 /* GameSceneDelegate.swift */,
 				8BE134031E973E69004B7169 /* GameScene.swift */,
 			);
 			name = Scenes;
@@ -526,7 +520,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BE134261E973F35004B7169 /* GameSceneDelegate.swift in Sources */,
 				8B1E57531EA86BB5005862A3 /* SpriteComponent.swift in Sources */,
 				8B1E575B1EA86F7C005862A3 /* SlotColumnEntity.swift in Sources */,
 				8BE134041E973E69004B7169 /* GameScene.swift in Sources */,
@@ -541,7 +534,6 @@
 				8BE134061E973E69004B7169 /* GameViewController.swift in Sources */,
 				8BE134301E97465F004B7169 /* ButtonFactory.swift in Sources */,
 				8BE1342C1E974570004B7169 /* ButtonNode.swift in Sources */,
-				8BE134281E973F63004B7169 /* GameViewController+GameSceneDelegate.swift in Sources */,
 				8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */,
 				8B1E574B1EA869EF005862A3 /* RenderComponent.swift in Sources */,
 				8B1E57571EA86CBE005862A3 /* Gem.swift in Sources */,

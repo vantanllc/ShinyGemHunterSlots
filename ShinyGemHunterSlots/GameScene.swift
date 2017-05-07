@@ -35,7 +35,6 @@ class GameScene: SKScene {
   var resultDisplay: SKLabelNode!
   var slotMachine: SlotMachine!
   var slotGridEntity: SlotGridEntity!
-  weak var gameSceneDelegate: GameSceneDelegate?
 }
 
 extension GameScene {
