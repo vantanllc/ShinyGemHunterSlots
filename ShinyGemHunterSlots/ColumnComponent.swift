@@ -13,15 +13,17 @@ class ColumnComponent: GKComponent {
   init(gems: [Gem]) {
     self.gems = gems
     node = SKNode()
+    
     slots = []
     for (index, gem) in gems.enumerated() {
       let slot = SlotEntity(gem: gem)
       slots.append(slot)
       
       let slotRenderNode = slot.component(ofType: RenderComponent.self)!.node
-      slotRenderNode.position.y = -200 * CGFloat(index)
+      slotRenderNode.position.y = -Config.slotVerticalSpacing * CGFloat(index)
       node.addChild(slotRenderNode)
     }
+    
     super.init()
   }
   
@@ -33,4 +35,10 @@ class ColumnComponent: GKComponent {
   let gems: [Gem]
   var slots: [SlotEntity]
   let node: SKNode
+}
+
+extension ColumnComponent {
+  struct Config {
+    static let slotVerticalSpacing: CGFloat = 200
+  }
 }

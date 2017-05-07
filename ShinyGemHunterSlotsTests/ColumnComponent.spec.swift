@@ -23,6 +23,10 @@ class ColumnComponentSpec: QuickSpec {
         column = ColumnComponent(gems: gems)
       }
       
+      it("should have node") {
+        expect(column.node).notTo(beNil())
+      }
+      
       it("should create slots according to gems") {
         let slotGems = column.slots.flatMap { slot in
           return slot.component(ofType: GemComponent.self)?.gem
@@ -39,6 +43,19 @@ class ColumnComponentSpec: QuickSpec {
         for render in slotRenderNodes {
           expect(render.parent).to(be(column.node))
         }
+      }
+      
+      it("should have expected vertical spacing between slots") {
+        let expectedYPositions = [
+          ColumnComponent.Config.slotVerticalSpacing * 0,
+          ColumnComponent.Config.slotVerticalSpacing * -1,
+          ColumnComponent.Config.slotVerticalSpacing * -2,
+        ]
+        let slotYPositions = column.slots.map { slot in
+          return slot.component(ofType: RenderComponent.self)?.node.position.y
+        }
+        
+        expect(slotYPositions).to(equal(expectedYPositions))
       }
     }
   }

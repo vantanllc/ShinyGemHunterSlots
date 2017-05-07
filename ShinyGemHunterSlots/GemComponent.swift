@@ -17,7 +17,7 @@ class GemComponent: GKComponent {
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
-}
+  }
   
   // MARK: Properties
   let gem: Gem
