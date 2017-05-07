@@ -79,7 +79,7 @@ platform :ios do
       app_rating_config_path: './fastlane/metadata/itunes_rating_config.json',
       automatic_release: true,
       overwrite_screenshots: true,
-      app_icon: './icon/Icon-Original.png'
+      app_icon: './icon/Icon-1024.png'
     )
   end
 
