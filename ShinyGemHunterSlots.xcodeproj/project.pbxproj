@@ -242,20 +242,29 @@
 		8BB2A3A81EBEC2E60015D328 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				8BB2A3A41EBEC17B0015D328 /* ButtonNode.spec.swift */,
 				8BB2A3A61EBEC2570015D328 /* ButtonFactory.spec.swift */,
+				8BB2A3A41EBEC17B0015D328 /* ButtonNode.spec.swift */,
 			);
 			name = Buttons;
+			sourceTree = "<group>";
+		};
+		8BE12E921EBF172900B67EE0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8BFACF0C1EBEE229009581E0 /* GameScene.spec.swift */,
+				8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 		8BE133F11E973E69004B7169 = {
 			isa = PBXGroup;
 			children = (
+				EAA1FCC6D36DA7C4FA8E1070 /* Frameworks */,
+				7CE5394CECFCE484E028442D /* Pods */,
+				8BE133FB1E973E69004B7169 /* Products */,
 				8BE133FC1E973E69004B7169 /* ShinyGemHunterSlots */,
 				8BE134171E973E69004B7169 /* ShinyGemHunterSlotsTests */,
-				8BE133FB1E973E69004B7169 /* Products */,
-				7CE5394CECFCE484E028442D /* Pods */,
-				EAA1FCC6D36DA7C4FA8E1070 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,23 +295,22 @@
 		8BE134171E973E69004B7169 /* ShinyGemHunterSlotsTests */ = {
 			isa = PBXGroup;
 			children = (
-				8BE1341A1E973E69004B7169 /* Info.plist */,
-				8B1E575E1EA87381005862A3 /* Entities */,
-				8B1E57631EA874EC005862A3 /* Components */,
 				8BB2A3A81EBEC2E60015D328 /* Buttons */,
-				8BFACF0B1EBEE1A4009581E0 /* Slotmachines */,
-				8BFACF0C1EBEE229009581E0 /* GameScene.spec.swift */,
-				8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */,
+				8B1E57631EA874EC005862A3 /* Components */,
+				8B1E575E1EA87381005862A3 /* Entities */,
+				8BE1341A1E973E69004B7169 /* Info.plist */,
+				8BE12E921EBF172900B67EE0 /* Scenes */,
+				8BFACF0B1EBEE1A4009581E0 /* SlotMachines */,
 			);
 			path = ShinyGemHunterSlotsTests;
 			sourceTree = "<group>";
 		};
-		8BFACF0B1EBEE1A4009581E0 /* Slotmachines */ = {
+		8BFACF0B1EBEE1A4009581E0 /* SlotMachines */ = {
 			isa = PBXGroup;
 			children = (
 				8BFACF091EBED8B4009581E0 /* SlotMachine.spec.swift */,
 			);
-			name = Slotmachines;
+			name = SlotMachines;
 			sourceTree = "<group>";
 		};
 		EAA1FCC6D36DA7C4FA8E1070 /* Frameworks */ = {

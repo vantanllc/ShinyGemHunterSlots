@@ -21,6 +21,24 @@ class GameSceneSpec: QuickSpec {
         scene = GameScene()
       }
       
+      context("currentBet changes") {
+        it("should update currentBetLabel text") {
+          let randomNumber = 83749
+          scene.currentBet = randomNumber
+          
+          expect(scene.currentBetLabel.text).to(equal("Bet: \(randomNumber)"))
+        }
+      }
+      
+      context("wallet changes") {
+        it("should update walletLabel text") {
+          let randomNumber = 83749
+          scene.wallet = randomNumber
+          
+          expect(scene.walletLabel.text).to(equal("Wallet: \(randomNumber)"))
+        }
+      }
+      
       context("sceneDidLoad") {
         it("should initialize slotMachine") {
           expect(scene.slotMachine).toNot(beNil())
