@@ -39,11 +39,32 @@ class GameScene: SKScene {
 }
 
 extension GameScene {
+  struct Config {
+    struct Label {
+      static let fontSize: CGFloat = 70
+    }
+    
+    static let winningMultiplier: Int = 10
+  }
+}
+
+extension GameScene {
   func resetSlotGridEntity(withColumns columns: [[Gem]]) {
     let oldNode = slotGridEntity.component(ofType: RenderComponent.self)?.node
     oldNode?.removeFromParent()
     
     addSlotGrid()
+  }
+  
+  func evaluateSlotReel() {
+    if slotMachine.didWin() {
+      let winning = currentBet * Config.winningMultiplier
+      resultDisplay.text = "YOU WIN \(winning)! YAY!!!"
+      wallet += currentBet
+    } else {
+      resultDisplay.text = "YOU LOST \(currentBet)! BOO!!!"
+      wallet -= currentBet
+    }
   }
 }
 
@@ -56,45 +77,41 @@ fileprivate extension GameScene {
   }
   
   func addLabels() {
-    addResultDisplay()
-    addBettingLabel()
-    addWalletLabel()
-  }
-  
-  func addBettingLabel() {
+    let xPosition = size.width * 0.5
+    
     currentBetLabel = SKLabelNode(text: "Bet: \(currentBet)")
-    currentBetLabel.fontSize = 70
-    currentBetLabel.position = CGPoint(x: size.width * 0.5, y: size.height * 0.95)
+    currentBetLabel.fontSize = Config.Label.fontSize
+    currentBetLabel.position = CGPoint(x: xPosition, y: size.height * 0.95)
     addChild(currentBetLabel)
-  }
-  
-  func addWalletLabel() {
+    
     walletLabel = SKLabelNode(text: "Wallet: \(wallet)")
-    walletLabel.fontSize = 70
-    walletLabel.position = CGPoint(x: size.width * 0.5, y: 0)
+    walletLabel.fontSize = Config.Label.fontSize 
+    walletLabel.position = CGPoint(x: xPosition, y: 0)
     addChild(walletLabel)
-  }
-  
-  func addResultDisplay() {
-    resultDisplay = SKLabelNode(text: "Press blue button!")
-    resultDisplay.fontSize = 70
-    resultDisplay.position = CGPoint(x: size.width * 0.5, y: size.height * 0.25)
+    
+    resultDisplay = SKLabelNode(text: "Press button to play!")
+    resultDisplay.fontSize = Config.Label.fontSize  
+    resultDisplay.position = CGPoint(x: xPosition, y: size.height * 0.25)
     addChild(resultDisplay)
   }
   
   func addButtons() {
     let buttonFactory = ButtonFactory()
     
+    let yPosition = size.height * 0.15
+    
     let pullHandleButton = buttonFactory.createButton(withIdentifier: .pullHandle)
-    pullHandleButton.position = CGPoint(x: size.width * 0.5, y: size.height * 0.15)
+    pullHandleButton.position = CGPoint(x: size.width * 0.5, y: yPosition)
     addChild(pullHandleButton)
     
     let upButton = buttonFactory.createButton(withIdentifier: .up)
-    upButton.position = CGPoint(x: size.width * 0.80, y: size.height * 0.15)
+    upButton.anchorPoint = CGPoint(x: 1, y: 0.5)
+    upButton.position = CGPoint(x: size.width, y: yPosition)
     addChild(upButton)
     
     let downButton = buttonFactory.createButton(withIdentifier: .down)
-    downButton.position = CGPoint(x: size.width * 0.20, y: size.height * 0.15)
+    downButton.anchorPoint = CGPoint(x: 0, y: 0.5)
+    downButton.position = CGPoint(x: 0, y: yPosition)
     addChild(downButton)
   }
 }

@@ -18,15 +18,7 @@ extension GameScene: ButtonRespondable {
     case .pullHandle:
       slotMachine.updateColumns()
       resetSlotGridEntity(withColumns: slotMachine.columns)
-      
-      if slotMachine.didWin() {
-        let winning = currentBet * 3
-        resultDisplay.text = "YOU WIN \(winning)! YAY!!!"
-        wallet += currentBet
-      } else {
-        resultDisplay.text = "YOU LOST \(currentBet)! BOO!!!"
-        wallet -= currentBet
-      }
+      evaluateSlotReel()
     case .up:
       currentBet = currentBet + 1 <= wallet ? currentBet + 1 : currentBet
     case .down:

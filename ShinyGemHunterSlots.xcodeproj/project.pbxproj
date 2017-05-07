@@ -42,6 +42,7 @@
 		8BE134301E97465F004B7169 /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1342F1E97465F004B7169 /* ButtonFactory.swift */; };
 		8BE134321E9746C8004B7169 /* NodeZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134311E9746C8004B7169 /* NodeZPosition.swift */; };
 		8BFACF0A1EBED8B4009581E0 /* SlotMachine.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFACF091EBED8B4009581E0 /* SlotMachine.spec.swift */; };
+		8BFACF0D1EBEE229009581E0 /* GameScene.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFACF0C1EBEE229009581E0 /* GameScene.spec.swift */; };
 		A7CDBD16F4620D1E76FC9F51 /* Pods_ShinyGemHunterSlotsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7C5B978199551218D5F9C3 /* Pods_ShinyGemHunterSlotsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		8BE1342F1E97465F004B7169 /* ButtonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
 		8BE134311E9746C8004B7169 /* NodeZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeZPosition.swift; sourceTree = "<group>"; };
 		8BFACF091EBED8B4009581E0 /* SlotMachine.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachine.spec.swift; sourceTree = "<group>"; };
+		8BFACF0C1EBEE229009581E0 /* GameScene.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.spec.swift; sourceTree = "<group>"; };
 		A26F3E60C858DDA343338C5E /* Pods-ShinyGemHunterSlotsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlotsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlotsTests/Pods-ShinyGemHunterSlotsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A29F5F5E154EDD61EBFAB54C /* Pods_ShinyGemHunterSlots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShinyGemHunterSlots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC63CD98E7384DCC1A197F38 /* Pods-ShinyGemHunterSlots.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlots.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlots/Pods-ShinyGemHunterSlots.release.xcconfig"; sourceTree = "<group>"; };
@@ -286,9 +288,18 @@
 				8B1E575E1EA87381005862A3 /* Entities */,
 				8B1E57631EA874EC005862A3 /* Components */,
 				8BB2A3A81EBEC2E60015D328 /* Buttons */,
-				8BFACF091EBED8B4009581E0 /* SlotMachine.spec.swift */,
+				8BFACF0B1EBEE1A4009581E0 /* Slotmachines */,
+				8BFACF0C1EBEE229009581E0 /* GameScene.spec.swift */,
 			);
 			path = ShinyGemHunterSlotsTests;
+			sourceTree = "<group>";
+		};
+		8BFACF0B1EBEE1A4009581E0 /* Slotmachines */ = {
+			isa = PBXGroup;
+			children = (
+				8BFACF091EBED8B4009581E0 /* SlotMachine.spec.swift */,
+			);
+			name = Slotmachines;
 			sourceTree = "<group>";
 		};
 		EAA1FCC6D36DA7C4FA8E1070 /* Frameworks */ = {
@@ -535,6 +546,7 @@
 				8B1E57651EA874FE005862A3 /* ColumnComponent.spec.swift in Sources */,
 				8BB2A3A31EBEBF2E0015D328 /* SlotGridEntity.spec.swift in Sources */,
 				8BB2A3A11EBEB7500015D328 /* GridComponent.spec.swift in Sources */,
+				8BFACF0D1EBEE229009581E0 /* GameScene.spec.swift in Sources */,
 				8B1E57601EA87448005862A3 /* RenderComponent.spec.swift in Sources */,
 				8B75ED821EB6DE94000DCA4F /* GemComponent.spec.swift in Sources */,
 				8BB2A3A71EBEC2570015D328 /* ButtonFactory.spec.swift in Sources */,
