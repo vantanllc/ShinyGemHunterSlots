@@ -121,7 +121,7 @@ class GameSceneSpec: QuickSpec {
         context("labels") {
           context("currentBet") {
             it("should have fontSize set from Config") {
-              expect(scene.currentBetLabel.fontSize).to(equal(GameScene.Config.Label.fontSize))
+              expect(scene.currentBetLabel.fontSize).to(equal(GameScene.Label.fontSize))
             }
             
             it("should be child of scene") {
@@ -136,7 +136,7 @@ class GameSceneSpec: QuickSpec {
           
           context("wallet") {
             it("should have fontSize set from Config") {
-              expect(scene.walletLabel.fontSize).to(equal(GameScene.Config.Label.fontSize))
+              expect(scene.walletLabel.fontSize).to(equal(GameScene.Label.fontSize))
             }
             
             it("should be child of scene") {
@@ -151,7 +151,7 @@ class GameSceneSpec: QuickSpec {
           
           context("resultDisplay") {
             it("should have fontSize set from Config") {
-              expect(scene.resultDisplay.fontSize).to(equal(GameScene.Config.Label.fontSize))
+              expect(scene.resultDisplay.fontSize).to(equal(GameScene.Label.fontSize))
             }
             
             it("should be child of scene") {

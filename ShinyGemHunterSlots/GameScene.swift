@@ -40,11 +40,11 @@ class GameScene: SKScene {
 
 extension GameScene {
   struct Config {
-    struct Label {
-      static let fontSize: CGFloat = 70
-    }
-    
     static let winningMultiplier: Int = 5
+  }
+  
+  struct Label {
+    static let fontSize: CGFloat = 70
   }
 }
 
@@ -80,17 +80,17 @@ fileprivate extension GameScene {
     let xPosition = size.width * 0.5
     
     currentBetLabel = SKLabelNode(text: "Bet: \(currentBet)")
-    currentBetLabel.fontSize = Config.Label.fontSize
+    currentBetLabel.fontSize = Label.fontSize
     currentBetLabel.position = CGPoint(x: xPosition, y: size.height * 0.95)
     addChild(currentBetLabel)
     
     walletLabel = SKLabelNode(text: "Wallet: \(wallet)")
-    walletLabel.fontSize = Config.Label.fontSize 
+    walletLabel.fontSize = Label.fontSize 
     walletLabel.position = CGPoint(x: xPosition, y: 0)
     addChild(walletLabel)
     
     resultDisplay = SKLabelNode(text: "Press button to play!")
-    resultDisplay.fontSize = Config.Label.fontSize  
+    resultDisplay.fontSize = Label.fontSize  
     resultDisplay.position = CGPoint(x: xPosition, y: size.height * 0.25)
     addChild(resultDisplay)
   }
