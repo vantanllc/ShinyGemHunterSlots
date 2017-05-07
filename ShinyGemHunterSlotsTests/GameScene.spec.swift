@@ -39,6 +39,66 @@ class GameSceneSpec: QuickSpec {
         }
       }
       
+      context("evaluateSlotReel") {
+        var mockSlotMachine: MockSlotMachine!
+        
+        beforeEach {
+          mockSlotMachine = MockSlotMachine()
+          scene.slotMachine = mockSlotMachine
+        }
+        
+        context("didWin returns true") {
+          beforeEach {
+            mockSlotMachine.didWinReturn = true
+          }
+          
+          it("should update wallet with winnings") {
+            let previousWallet = scene.wallet
+            let winnings = scene.currentBet * GameScene.Config.winningMultiplier
+            
+            scene.evaluateSlotReel()
+            
+            expect(scene.wallet).to(equal(previousWallet + winnings))
+          }
+          
+          it("should update resultLabel with winnings") {
+            let winnings = scene.currentBet * GameScene.Config.winningMultiplier
+            
+            scene.evaluateSlotReel()
+            
+            expect(scene.resultDisplay.text).to(equal("YOU WON \(winnings)! YAY!!!"))
+          }
+        }
+        
+        context("didWin returns false") {
+          beforeEach {
+            mockSlotMachine.didWinReturn = false
+          }
+          
+          it("should update wallet with loss") {
+            let previousWallet = scene.wallet
+            
+            scene.evaluateSlotReel()
+            
+            expect(scene.wallet).to(equal(previousWallet - scene.currentBet))
+          }
+          
+          it("should update resultLabel with loss") {
+            scene.evaluateSlotReel()
+            
+            expect(scene.resultDisplay.text).to(equal("YOU LOST \(scene.currentBet)! BOO!!!"))
+          }
+        }
+        
+        class MockSlotMachine: SlotMachine {
+          var didWinReturn = true
+          
+          override func didWin() -> Bool {
+            return didWinReturn
+          }
+        }
+      }
+      
       context("sceneDidLoad") {
         it("should initialize slotMachine") {
           expect(scene.slotMachine).toNot(beNil())

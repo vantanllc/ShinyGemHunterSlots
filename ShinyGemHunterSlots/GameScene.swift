@@ -44,7 +44,7 @@ extension GameScene {
       static let fontSize: CGFloat = 70
     }
     
-    static let winningMultiplier: Int = 10
+    static let winningMultiplier: Int = 5
   }
 }
 
@@ -59,8 +59,8 @@ extension GameScene {
   func evaluateSlotReel() {
     if slotMachine.didWin() {
       let winning = currentBet * Config.winningMultiplier
-      resultDisplay.text = "YOU WIN \(winning)! YAY!!!"
-      wallet += currentBet
+      resultDisplay.text = "YOU WON \(winning)! YAY!!!"
+      wallet += winning
     } else {
       resultDisplay.text = "YOU LOST \(currentBet)! BOO!!!"
       wallet -= currentBet

@@ -9,6 +9,16 @@
 import GameplayKit
 
 class SlotMachine {
+  // MARK: Functions
+  func didWin() -> Bool {
+    let gems = columns.map { column in
+      return column[1]
+    }
+    
+    let uniqueSlots = Set<Gem>(gems)
+    return uniqueSlots.count == 1
+  }
+  
   // MARK: Lifecycle
   init() {
     columns = [
@@ -41,14 +51,5 @@ extension SlotMachine {
       
       columns.append(column)
     }
-  }
-  
-  func didWin() -> Bool {
-    let gems = columns.map { column in
-      return column[1]
-    }
-    
-    let uniqueSlots = Set<Gem>(gems)
-    return uniqueSlots.count == 1
   }
 }
