@@ -20,9 +20,11 @@ extension GameScene: ButtonRespondable {
       resetSlotGridEntity(withColumns: slotMachine.columns)
       evaluateSlotReel()
     case .up:
-      currentBet = currentBet + 1 <= wallet ? currentBet + 1 : currentBet
+      // Update currentBet here!
+      print("Fix me!")
     case .down:
-      currentBet = currentBet - 1 > 0 ? currentBet - 1 : currentBet
+      // Update currentBet here!
+      print("Fix me!")
     }
   }
 }

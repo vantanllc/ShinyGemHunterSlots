@@ -21,12 +21,10 @@ class GameScene: SKScene {
   // MARK: Properties
   var wallet: Int = 100 {
     didSet {
-      walletLabel.text = "Wallet: \(wallet)"
     }
   }
   var currentBet: Int = 1 {
     didSet {
-      currentBetLabel.text = "Bet: \(currentBet)"
     }
   }
   var walletLabel: SKLabelNode!
@@ -56,14 +54,6 @@ extension GameScene {
   }
   
   func evaluateSlotReel() {
-    if slotMachine.didWin() {
-      let winning = currentBet * Config.winningMultiplier
-      resultDisplay.text = "YOU WON \(winning)! YAY!!!"
-      wallet += winning
-    } else {
-      resultDisplay.text = "YOU LOST \(currentBet)! BOO!!!"
-      wallet -= currentBet
-    }
   }
 }
 
@@ -79,17 +69,14 @@ fileprivate extension GameScene {
     let xPosition = size.width * 0.5
     
     currentBetLabel = SKLabelNode(text: "Bet: \(currentBet)")
-    currentBetLabel.fontSize = Label.fontSize
     currentBetLabel.position = CGPoint(x: xPosition, y: size.height * 0.95)
     addChild(currentBetLabel)
     
     walletLabel = SKLabelNode(text: "Wallet: \(wallet)")
-    walletLabel.fontSize = Label.fontSize 
     walletLabel.position = CGPoint(x: xPosition, y: 0)
     addChild(walletLabel)
     
     resultDisplay = SKLabelNode(text: "Press button to play!")
-    resultDisplay.fontSize = Label.fontSize  
     resultDisplay.position = CGPoint(x: xPosition, y: size.height * 0.25)
     addChild(resultDisplay)
   }
@@ -103,7 +90,7 @@ fileprivate extension GameScene {
     pullHandleButton.position = CGPoint(x: size.width * 0.5, y: yPosition)
     addChild(pullHandleButton)
     
-    let upButton = buttonFactory.createButton(withIdentifier: .up)
+    let upButton = buttonFactory.createButton(withIdentifier: .pullHandle)
     upButton.anchorPoint = CGPoint(x: 1, y: 0.5)
     upButton.position = CGPoint(x: size.width, y: yPosition)
     addChild(upButton)
