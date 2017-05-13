@@ -39,6 +39,13 @@ Press ```Command r``` to run the app!
 
 ## Remember to commit often
 Make sure you commit as your tackling these failing tests to save your progress!
+We will use a test account to commit and push your branch.
+```
+git config user.name "{your nanme}"
+git config user.email "shinygemhunterslots@gmail.com"
+```
+
+Woohoo! We can now commit some sweet code!
 ```
 git add -p
 git commit -m "I wrote code!!!"
@@ -46,7 +53,7 @@ git commit -m "I wrote code!!!"
 
 Once you have all the tests passing. Commit! And push your branch!
 ```
-git push origin HEAD
+git push https://shinygemhunterslots@github.com/vantanllc/ShinyGemHunterSlots.git HEAD
 ```
 
 ## Travis CI is your friend
