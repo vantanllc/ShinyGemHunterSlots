@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
     
     gameScene = createGameScene(size: view.bounds.size)
     if let skView = view as? SKView {
+      gameScene.backgroundColor = .gray
       presentGameSceneInDevMode(gameScene: gameScene, intoSKView: skView)
     }
   }
