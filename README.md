@@ -25,18 +25,18 @@ We are using Swift 3 and targeting iOS 10. Make sure you have Xcode 8 or above. 
 Run Xcode 8 and open up the ```ShinyGemHunterSlots.xcworkspace``` file. This xcworkspace file will pull in our ShinyGemHunterSlots.xcodeproj and the cocoapods we depend on.
 Once you open up the workspace, make sure you update the device simulator to an iPad device.
 
-![](images/ipadSimulator.png)
+![](images/ipadSimulator.png =200x200)
 
 ## Show me them shortcuts
 Press ```Command u``` to run all the tests!
 
 Press ```Command 5``` to get to the Test Navigator view. You will be presented the failing tests.
 
-![](images/TestNavigatorView.png)
+![](images/TestNavigatorView.png =400x400)
 
 Press ```Command 0``` to get to the Project Navigator view. You can traverse through the project files.
 
-![](images/ProjectNavigatorView.png)
+![](images/ProjectNavigatorView.png =400x400)
 
 Press ```Command r``` to run the app! 
 
@@ -58,6 +58,7 @@ Once you have all the tests passing. Commit! And push your branch!
 ```
 git push https://shinygemhunterslots@github.com/vantanllc/ShinyGemHunterSlots.git HEAD
 ```
+git will ask for a password to complete the push. Refer to the presenter for the password.
 
 ## Travis CI is your friend
 Now go to Travis CI to watch your branch run tests and build the application!
