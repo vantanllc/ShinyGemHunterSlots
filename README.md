@@ -25,18 +25,18 @@ We are using Swift 3 and targeting iOS 10. Make sure you have Xcode 8 or above. 
 Run Xcode 8 and open up the ```ShinyGemHunterSlots.xcworkspace``` file. This xcworkspace file will pull in our ShinyGemHunterSlots.xcodeproj and the cocoapods we depend on.
 Once you open up the workspace, make sure you update the device simulator to an iPad device.
 
-<img src="images/ipadSimulator.png" width="200px" height="200px">
+<img src="images/ipadSimulator.png" height="100px">
 
 ## Show me them shortcuts
 Press ```Command u``` to run all the tests!
 
 Press ```Command 5``` to get to the Test Navigator view. You will be presented the failing tests.
 
-<img src="images/TestNavigatorView.png" width="400px" height="400px">
+<img src="images/TestNavigatorView.png" height="400px">
 
 Press ```Command 0``` to get to the Project Navigator view. You can traverse through the project files.
 
-<img src="images/ProjectNavigatorView.png" width="400px" height="400px">
+<img src="images/ProjectNavigatorView.png" height="400px">
 
 Press ```Command r``` to run the app! 
 
@@ -67,4 +67,4 @@ Now go to Travis CI to watch your branch run tests and build the application!
 
 
 ## Time to go cash them gems outside! How about that!
-<img src="images/ScreenShot.png" width="400px" height="400px">
+<img src="images/ScreenShot.png" height="400px">
