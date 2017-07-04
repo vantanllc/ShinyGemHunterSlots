@@ -6,11 +6,11 @@
 //  Copyright © 2017 Vantan LLC. All rights reserved.
 //
 
-import SpriteKit
+import GameplayKit
 
 extension GameViewController {
   func createGameScene(size: CGSize, scaleMode: SKSceneScaleMode = .resizeFill) -> GameScene {
-    let gameScene = GameScene(size: size)
+    let gameScene = GameScene(size: size, randomSource: GKRandomSource.sharedRandom())
     gameScene.scaleMode = scaleMode
     return gameScene
   }

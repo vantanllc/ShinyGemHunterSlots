@@ -11,11 +11,25 @@ import GameplayKit
 
 class GameScene: SKScene {
   // MARK: Lifecycle
+  init(size: CGSize, randomSource: GKRandomSource) {
+    sharedRandom = randomSource
+    super.init(size: size)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   override func sceneDidLoad() {
+    loadStateMachine()
     addLabels()
     addButtons()
-    slotMachine = SlotMachine(randomSource: GKRandomSource.sharedRandom())
+    slotMachine = SlotMachine(randomSource: sharedRandom)
     addSlotGrid()
+  }
+  
+  override func didMove(to view: SKView) {
+    stateMachine.enter(GameSceneActiveState.self)
   }
   
   // MARK: Properties
@@ -35,6 +49,9 @@ class GameScene: SKScene {
   var resultDisplay: SKLabelNode!
   var slotMachine: SlotMachine!
   var slotGridEntity: SlotGridEntity!
+  
+  var stateMachine: GKStateMachine!
+  let sharedRandom: GKRandomSource
 }
 
 extension GameScene {
@@ -44,6 +61,15 @@ extension GameScene {
   
   struct Label {
     static let fontSize: CGFloat = 70
+  }
+}
+
+extension GameScene {
+  func loadStateMachine() {
+    let states: [GKState] = [
+      GameSceneActiveState(gameScene: self),
+    ]
+    stateMachine = GKStateMachine(states: states)
   }
 }
 

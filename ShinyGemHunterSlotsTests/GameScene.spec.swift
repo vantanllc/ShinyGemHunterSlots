@@ -18,7 +18,14 @@ class GameSceneSpec: QuickSpec {
       var scene: GameScene!
       
       beforeEach {
-        scene = GameScene()
+        scene = GameScene(size: CGSize(), randomSource: GKRandomSource())
+      }
+      
+      context("didMove") {
+        it("should be in active state") {
+          scene.didMove(to: SKView())
+          expect(scene.stateMachine.currentState).to(beAKindOf(GameSceneActiveState.self))
+        }
       }
       
       context("currentBet changes") {
