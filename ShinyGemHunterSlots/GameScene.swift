@@ -14,7 +14,7 @@ class GameScene: SKScene {
   override func sceneDidLoad() {
     addLabels()
     addButtons()
-    slotMachine = SlotMachine()
+    slotMachine = SlotMachine(randomSource: GKRandomSource.sharedRandom())
     addSlotGrid()
   }
   

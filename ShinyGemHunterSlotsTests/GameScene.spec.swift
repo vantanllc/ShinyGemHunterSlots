@@ -43,7 +43,7 @@ class GameSceneSpec: QuickSpec {
         var mockSlotMachine: MockSlotMachine!
         
         beforeEach {
-          mockSlotMachine = MockSlotMachine()
+          mockSlotMachine = MockSlotMachine(randomSource: GKRandomSource.sharedRandom())
           scene.slotMachine = mockSlotMachine
         }
         
@@ -87,14 +87,6 @@ class GameSceneSpec: QuickSpec {
             scene.evaluateSlotReel()
             
             expect(scene.resultDisplay.text).to(equal("YOU LOST \(scene.currentBet)! BOO!!!"))
-          }
-        }
-        
-        class MockSlotMachine: SlotMachine {
-          var didWinReturn = true
-          
-          override func didWin() -> Bool {
-            return didWinReturn
           }
         }
       }
