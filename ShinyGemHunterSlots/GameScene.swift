@@ -37,12 +37,23 @@ class GameScene: SKScene {
     didSet {
       walletLabel.text = "Wallet: \(wallet)"
     }
+    willSet {
+      if newValue == 0 {
+        stateMachine.enter(GameSceneIdleState.self)
+      }
+      if newValue < currentBet {
+        currentBet = newValue
+      }
+    }
   }
   var currentBet: Int = 1 {
     didSet {
       currentBetLabel.text = "Bet: \(currentBet)"
     }
   }
+  // MARK: Timing
+  var lastUpdateTime: TimeInterval = 0
+  
   var walletLabel: SKLabelNode!
   var currentBetLabel: SKLabelNode!
   var slotsDisplay: SKLabelNode!
@@ -64,10 +75,27 @@ extension GameScene {
   }
 }
 
+// MARK: Update
+extension GameScene {
+  override func update(_ currentTime: TimeInterval) {
+    super.update(currentTime)
+    
+    if lastUpdateTime.isZero {
+      lastUpdateTime = currentTime
+    }
+    
+    let deltaTime = currentTime - lastUpdateTime
+    lastUpdateTime = currentTime
+    
+    stateMachine.update(deltaTime: deltaTime)
+  }
+}
+
 extension GameScene {
   func loadStateMachine() {
     let states: [GKState] = [
       GameSceneActiveState(gameScene: self),
+      GameSceneIdleState(gameScene: self),
     ]
     stateMachine = GKStateMachine(states: states)
   }

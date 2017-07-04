@@ -9,6 +9,7 @@
 import GameplayKit
 
 class GameSceneActiveState: GKState {
+  // MARK: Functions
   override func handleButtonTriggered(button: ButtonNode) {
     guard let buttonIdentifier = button.buttonIdentifier else {
       return
@@ -30,6 +31,7 @@ class GameSceneActiveState: GKState {
     }
   }
   
+  // MARK: Lifecycle
   init(gameScene: GameScene) {
     self.gameScene = gameScene
   }

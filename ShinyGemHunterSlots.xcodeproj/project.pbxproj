@@ -31,6 +31,7 @@
 		8BC749E11F0B15DB00325364 /* MockGKRandomSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749E01F0B15DB00325364 /* MockGKRandomSource.swift */; };
 		8BC749E31F0B243A00325364 /* GameSceneActiveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749E21F0B243A00325364 /* GameSceneActiveState.swift */; };
 		8BC749E51F0B258500325364 /* GKState+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749E41F0B258500325364 /* GKState+Button.swift */; };
+		8BC749EA1F0B443400325364 /* GameSceneIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749E91F0B443400325364 /* GameSceneIdleState.swift */; };
 		8BE12E911EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */; };
 		8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE133FD1E973E69004B7169 /* AppDelegate.swift */; };
 		8BE134041E973E69004B7169 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134031E973E69004B7169 /* GameScene.swift */; };
@@ -86,6 +87,7 @@
 		8BC749E01F0B15DB00325364 /* MockGKRandomSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockGKRandomSource.swift; sourceTree = "<group>"; };
 		8BC749E21F0B243A00325364 /* GameSceneActiveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneActiveState.swift; sourceTree = "<group>"; };
 		8BC749E41F0B258500325364 /* GKState+Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKState+Button.swift"; sourceTree = "<group>"; };
+		8BC749E91F0B443400325364 /* GameSceneIdleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneIdleState.swift; sourceTree = "<group>"; };
 		8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+ButtonRespondable.spec.swift"; sourceTree = "<group>"; };
 		8BE133FA1E973E69004B7169 /* ShinyGemHunterSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyGemHunterSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE133FD1E973E69004B7169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -253,7 +255,9 @@
 		8BC749E61F0B3EAF00325364 /* States */ = {
 			isa = PBXGroup;
 			children = (
+				8BC749E41F0B258500325364 /* GKState+Button.swift */,
 				8BC749E21F0B243A00325364 /* GameSceneActiveState.swift */,
+				8BC749E91F0B443400325364 /* GameSceneIdleState.swift */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -300,7 +304,6 @@
 				8B75ED7D1EB6DAF0000DCA4F /* Support */,
 				8B75ED7B1EB6DABF000DCA4F /* ViewControllers */,
 				8BC749E61F0B3EAF00325364 /* States */,
-				8BC749E41F0B258500325364 /* GKState+Button.swift */,
 			);
 			path = ShinyGemHunterSlots;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */,
 				8B1E574B1EA869EF005862A3 /* RenderComponent.swift in Sources */,
 				8B1E57571EA86CBE005862A3 /* Gem.swift in Sources */,
+				8BC749EA1F0B443400325364 /* GameSceneIdleState.swift in Sources */,
 				8B1E575D1EA86FEA005862A3 /* ColumnComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

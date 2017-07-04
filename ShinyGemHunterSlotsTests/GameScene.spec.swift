@@ -46,6 +46,18 @@ class GameSceneSpec: QuickSpec {
         }
       }
       
+      context("no money in wallet") {
+        it("should be in idle state") {
+          scene.wallet = 0
+          expect(scene.stateMachine.currentState).to(beAKindOf(GameSceneIdleState.self))
+        }
+        
+        it("should update currentBet") {
+          scene.wallet = 0
+          expect(scene.currentBet).to(equal(scene.wallet))
+        }
+      }
+      
       context("evaluateSlotReel") {
         var mockSlotMachine: MockSlotMachine!
         
