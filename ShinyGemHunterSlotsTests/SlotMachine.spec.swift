@@ -16,6 +16,8 @@ class SlotMachineSpec: QuickSpec {
   override func spec() {
     describe("SlotMachine") {
       var slotMachine: SlotMachine!
+      var mockSharedSource: MockGKRandomSource!
+      
       let initialColumns: [[Gem]] = [
         [.diamond, .ruby, .amethyst],
         [.diamond, .ruby, .amethyst],
@@ -23,7 +25,8 @@ class SlotMachineSpec: QuickSpec {
       ]
       
       beforeEach {
-        slotMachine = SlotMachine()
+        mockSharedSource = MockGKRandomSource()
+        slotMachine = SlotMachine(randomSource: mockSharedSource)
       }
       
       it("should have initialized columns of gems") {
@@ -34,9 +37,10 @@ class SlotMachineSpec: QuickSpec {
       
       context("updateColumns") {
         it("should set columns to new randomized columns of gems") {
+          let expectedGem: Gem = Gem.getRandom(randomSource: mockSharedSource)
           slotMachine.updateColumns()
-          for (index, column) in slotMachine.columns.enumerated() {
-            expect(column).toNot(equal(initialColumns[index]))
+          _ = slotMachine.columns.flatMap{$0}.map{ gem in
+            expect(gem).to(equal(expectedGem))
           }
         }
       }

@@ -27,6 +27,8 @@
 		8BB2A3A31EBEBF2E0015D328 /* SlotGridEntity.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2A3A21EBEBF2E0015D328 /* SlotGridEntity.spec.swift */; };
 		8BB2A3A51EBEC17B0015D328 /* ButtonNode.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2A3A41EBEC17B0015D328 /* ButtonNode.spec.swift */; };
 		8BB2A3A71EBEC2570015D328 /* ButtonFactory.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2A3A61EBEC2570015D328 /* ButtonFactory.spec.swift */; };
+		8BC749DF1F0B144000325364 /* MockSlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749DE1F0B144000325364 /* MockSlotMachine.swift */; };
+		8BC749E11F0B15DB00325364 /* MockGKRandomSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749E01F0B15DB00325364 /* MockGKRandomSource.swift */; };
 		8BE12E911EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */; };
 		8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE133FD1E973E69004B7169 /* AppDelegate.swift */; };
 		8BE134041E973E69004B7169 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134031E973E69004B7169 /* GameScene.swift */; };
@@ -78,6 +80,8 @@
 		8BB2A3A21EBEBF2E0015D328 /* SlotGridEntity.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotGridEntity.spec.swift; sourceTree = "<group>"; };
 		8BB2A3A41EBEC17B0015D328 /* ButtonNode.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNode.spec.swift; sourceTree = "<group>"; };
 		8BB2A3A61EBEC2570015D328 /* ButtonFactory.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFactory.spec.swift; sourceTree = "<group>"; };
+		8BC749DE1F0B144000325364 /* MockSlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSlotMachine.swift; sourceTree = "<group>"; };
+		8BC749E01F0B15DB00325364 /* MockGKRandomSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockGKRandomSource.swift; sourceTree = "<group>"; };
 		8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+ButtonRespondable.spec.swift"; sourceTree = "<group>"; };
 		8BE133FA1E973E69004B7169 /* ShinyGemHunterSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyGemHunterSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE133FD1E973E69004B7169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 			children = (
 				8BFACF0C1EBEE229009581E0 /* GameScene.spec.swift */,
 				8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */,
+				8BC749DE1F0B144000325364 /* MockSlotMachine.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				8BE1341A1E973E69004B7169 /* Info.plist */,
 				8BE12E921EBF172900B67EE0 /* Scenes */,
 				8BFACF0B1EBEE1A4009581E0 /* SlotMachines */,
+				8BC749E01F0B15DB00325364 /* MockGKRandomSource.swift */,
 			);
 			path = ShinyGemHunterSlotsTests;
 			sourceTree = "<group>";
@@ -554,7 +560,9 @@
 				8B1E57601EA87448005862A3 /* RenderComponent.spec.swift in Sources */,
 				8B75ED821EB6DE94000DCA4F /* GemComponent.spec.swift in Sources */,
 				8BB2A3A71EBEC2570015D328 /* ButtonFactory.spec.swift in Sources */,
+				8BC749DF1F0B144000325364 /* MockSlotMachine.swift in Sources */,
 				8B1E57591EA86F2F005862A3 /* SlotColumnEntity.spec.swift in Sources */,
+				8BC749E11F0B15DB00325364 /* MockGKRandomSource.swift in Sources */,
 				8BFACF0A1EBED8B4009581E0 /* SlotMachine.spec.swift in Sources */,
 				8BB2A3A51EBEC17B0015D328 /* ButtonNode.spec.swift in Sources */,
 				8B1E57491EA868BE005862A3 /* SlotEntity.spec.swift in Sources */,

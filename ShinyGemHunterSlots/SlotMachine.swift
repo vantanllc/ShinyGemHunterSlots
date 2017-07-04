@@ -20,7 +20,8 @@ class SlotMachine {
   }
   
   // MARK: Lifecycle
-  init() {
+  init(randomSource: GKRandomSource) {
+    sharedRandom = randomSource
     columns = [
       [.diamond, .ruby, .amethyst],
       [.diamond, .ruby, .amethyst],
@@ -29,6 +30,7 @@ class SlotMachine {
   }
   
   // MARK: Properties
+  let sharedRandom: GKRandomSource
   var columns: [[Gem]]
 }
 
@@ -39,14 +41,7 @@ extension SlotMachine {
     for _ in stride(from: 0, to: 3, by: 1) {
       var column: [Gem] = []
       for _ in stride(from: 0, to: 3, by: 1) {
-        switch GKRandomSource.sharedRandom().nextInt(upperBound: 3) {
-        case 0:
-          column.append(.diamond)
-        case 1:
-          column.append(.ruby)
-        default:
-          column.append(.amethyst)
-        }
+        column.append(Gem.getRandom(randomSource: sharedRandom))
       }
       
       columns.append(column)
