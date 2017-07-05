@@ -34,19 +34,19 @@ class GameScene: SKScene {
   override func didChangeSize(_ oldSize: CGSize) {
     super.didChangeSize(oldSize)
     if UIDevice.current.orientation.isLandscape {
-      upButton.anchorPoint = CGPoint(x: 0.5, y: 0)
-      upButton.position = CGPoint(x: downButton.frame.midX, y: downButton.frame.maxY)
+      upButton?.anchorPoint = CGPoint(x: 0.5, y: 0)
+      upButton?.position = CGPoint(x: downButton.frame.midX, y: downButton.frame.maxY)
       
-      pullHandleButton.anchorPoint = CGPoint(x: 1, y: 0.5)
-      pullHandleButton.position = CGPoint(x: size.width, y: downButton.frame.midY)
+      pullHandleButton?.anchorPoint = CGPoint(x: 1, y: 0.5)
+      pullHandleButton?.position = CGPoint(x: size.width, y: downButton.frame.midY)
     }
     
     if UIDevice.current.orientation.isPortrait {
-      upButton.anchorPoint = CGPoint(x: 1, y: 0.5)
-      upButton.position = CGPoint(x: size.width, y: downButton.frame.midY)
+      upButton?.anchorPoint = CGPoint(x: 1, y: 0.5)
+      upButton?.position = CGPoint(x: size.width, y: downButton.frame.midY)
       
-      pullHandleButton.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-      pullHandleButton.position = CGPoint(x: size.width * 0.5, y: downButton.frame.midY)
+      pullHandleButton?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+      pullHandleButton?.position = CGPoint(x: size.width * 0.5, y: downButton.frame.midY)
     }
   }
   
