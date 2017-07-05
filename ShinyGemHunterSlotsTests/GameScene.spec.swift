@@ -162,7 +162,7 @@ class GameSceneSpec: QuickSpec {
           
           context("resultDisplay") {
             it("should have fontSize set from Config") {
-              expect(scene.resultDisplay.fontSize).to(equal(GameScene.Label.fontSize))
+              expect(scene.resultDisplay.label.fontSize).to(equal(GameScene.Label.fontSize))
             }
             
             it("should be child of scene") {

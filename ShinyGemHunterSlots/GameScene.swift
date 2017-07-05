@@ -205,7 +205,7 @@ fileprivate extension GameScene {
       y: pullHandleButton.frame.maxY
     )
     
-    slotGridEntity.component(ofType: RenderComponent.self)?.node.position = CGPoint(x: size.width * 0.25, y: size.height * 0.80)
+    slotGridEntity?.component(ofType: RenderComponent.self)?.node.position = CGPoint(x: size.width * 0.25, y: size.height * 0.80)
   }
   
   func presentInLandscapeMode() {
@@ -227,6 +227,6 @@ fileprivate extension GameScene {
       y: pullHandleButton.frame.minY
     )
     
-    slotGridEntity.component(ofType: RenderComponent.self)?.node.position = CGPoint(x: size.width * 0.3, y: size.height * 0.80)
+    slotGridEntity?.component(ofType: RenderComponent.self)?.node.position = CGPoint(x: size.width * 0.3, y: size.height * 0.80)
   }
 }
