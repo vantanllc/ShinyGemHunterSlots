@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		851E2D8B19709D4360C312BA /* Pods_ShinyGemHunterSlots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29F5F5E154EDD61EBFAB54C /* Pods_ShinyGemHunterSlots.framework */; };
+		8B0988401F0D897F00B87BFB /* TLLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B09883F1F0D897F00B87BFB /* TLLabelNode.swift */; };
 		8B1E57491EA868BE005862A3 /* SlotEntity.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */; };
 		8B1E574B1EA869EF005862A3 /* RenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E574A1EA869EF005862A3 /* RenderComponent.swift */; };
 		8B1E574E1EA86A25005862A3 /* SlotEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E574D1EA86A25005862A3 /* SlotEntity.swift */; };
@@ -64,6 +65,7 @@
 		2B7EEDD1A6C0039DDC204058 /* Pods-ShinyGemHunterSlotsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlotsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlotsTests/Pods-ShinyGemHunterSlotsTests.release.xcconfig"; sourceTree = "<group>"; };
 		61E228A4C0CC4566474BB13D /* Pods-ShinyGemHunterSlots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlots.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlots/Pods-ShinyGemHunterSlots.debug.xcconfig"; sourceTree = "<group>"; };
 		7C7C5B978199551218D5F9C3 /* Pods_ShinyGemHunterSlotsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShinyGemHunterSlotsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B09883F1F0D897F00B87BFB /* TLLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLLabelNode.swift; sourceTree = "<group>"; };
 		8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotEntity.spec.swift; sourceTree = "<group>"; };
 		8B1E574A1EA869EF005862A3 /* RenderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderComponent.swift; sourceTree = "<group>"; };
 		8B1E574D1EA86A25005862A3 /* SlotEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotEntity.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			children = (
 				8B1E57561EA86CBE005862A3 /* Gem.swift */,
 				8BE134311E9746C8004B7169 /* NodeZPosition.swift */,
+				8B09883F1F0D897F00B87BFB /* TLLabelNode.swift */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				8B1E57551EA86C96005862A3 /* GemComponent.swift in Sources */,
 				8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */,
 				8BE134061E973E69004B7169 /* GameViewController.swift in Sources */,
+				8B0988401F0D897F00B87BFB /* TLLabelNode.swift in Sources */,
 				8BE134301E97465F004B7169 /* ButtonFactory.swift in Sources */,
 				8BE1342C1E974570004B7169 /* ButtonNode.swift in Sources */,
 				8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */,

@@ -39,6 +39,9 @@ class GameScene: SKScene {
       
       pullHandleButton?.anchorPoint = CGPoint(x: 1, y: 0.5)
       pullHandleButton?.position = CGPoint(x: size.width, y: downButton.frame.midY)
+      
+      currentBetLabel?.position = CGPoint(x: size.width * 0.25, y: 0)
+      walletLabel?.position = CGPoint(x: size.width * 0.75, y: 0)
     }
     
     if UIDevice.current.orientation.isPortrait {
@@ -47,6 +50,9 @@ class GameScene: SKScene {
       
       pullHandleButton?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
       pullHandleButton?.position = CGPoint(x: size.width * 0.5, y: downButton.frame.midY)
+      
+      currentBetLabel?.position = CGPoint(x: size.width * 0.25, y: 0)
+      walletLabel?.position = CGPoint(x: size.width * 0.75, y: 0)
     }
   }
   
@@ -72,8 +78,8 @@ class GameScene: SKScene {
   // MARK: Timing
   var lastUpdateTime: TimeInterval = 0
   
-  var walletLabel: SKLabelNode!
-  var currentBetLabel: SKLabelNode!
+  var walletLabel: TLLabelNode!
+  var currentBetLabel: TLLabelNode!
   var slotsDisplay: SKLabelNode!
   var resultDisplay: SKLabelNode!
   var slotMachine: SlotMachine!
@@ -154,14 +160,14 @@ fileprivate extension GameScene {
   func addLabels() {
     let xPosition = size.width * 0.5
     
-    currentBetLabel = SKLabelNode(text: "Bet: \(currentBet)")
-    currentBetLabel.position = CGPoint(x: xPosition, y: size.height * 0.95)
-    currentBetLabel.fontSize = Label.fontSize
+    currentBetLabel = TLLabelNode(text: "Bet: \(currentBet)")
+    currentBetLabel.position = CGPoint(x: size.width * 0.25, y: 0)
+    currentBetLabel.label.fontSize = Label.fontSize
     addChild(currentBetLabel)
     
-    walletLabel = SKLabelNode(text: "Wallet: \(wallet)")
-    walletLabel.position = CGPoint(x: xPosition, y: 0)
-    walletLabel.fontSize = Label.fontSize
+    walletLabel = TLLabelNode(text: "Wallet: \(wallet)")
+    walletLabel.position = CGPoint(x: size.width * 0.75, y: 0)
+    walletLabel.label.fontSize = Label.fontSize
     addChild(walletLabel)
     
     resultDisplay = SKLabelNode(text: "Press button to play!")
