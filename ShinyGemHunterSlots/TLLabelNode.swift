@@ -14,6 +14,7 @@ class TLLabelNode: SKSpriteNode {
     self.text = text
     label = SKLabelNode(text: text)
     label.fontSize = 70
+    label.verticalAlignmentMode = .bottom
     super.init(texture: nil, color: .clear, size: label.frame.size)
     addChild(label)
   }
