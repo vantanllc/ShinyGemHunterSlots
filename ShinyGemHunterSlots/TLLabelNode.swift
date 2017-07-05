@@ -12,8 +12,9 @@ class TLLabelNode: SKSpriteNode {
   // MARK: Lifecycle
   init(text: String) {
     self.text = text
-    super.init(texture: nil, color: .clear, size: .zero)
     label = SKLabelNode(text: text)
+    label.fontSize = 70
+    super.init(texture: nil, color: .clear, size: label.frame.size)
     addChild(label)
   }
   

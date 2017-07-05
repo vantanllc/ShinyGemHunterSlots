@@ -31,28 +31,35 @@ class GameScene: SKScene {
   override func didMove(to view: SKView) {
     stateMachine.enter(GameSceneActiveState.self)
   }
+  
   override func didChangeSize(_ oldSize: CGSize) {
     super.didChangeSize(oldSize)
     if UIDevice.current.orientation.isLandscape {
-      upButton?.anchorPoint = CGPoint(x: 0.5, y: 0)
-      upButton?.position = CGPoint(x: downButton.frame.midX, y: downButton.frame.maxY)
-      
-      pullHandleButton?.anchorPoint = CGPoint(x: 1, y: 0.5)
-      pullHandleButton?.position = CGPoint(x: size.width, y: downButton.frame.midY)
-      
       currentBetLabel?.position = CGPoint(x: size.width * 0.25, y: 0)
       walletLabel?.position = CGPoint(x: size.width * 0.75, y: 0)
+      
+      pullHandleButton?.anchorPoint = CGPoint(x: 1, y: 0)
+      pullHandleButton?.position = CGPoint(x: size.width, y: walletLabel.frame.height)
+      
+      downButton?.anchorPoint = CGPoint(x: 0, y: 0.5)
+      downButton?.position = CGPoint(x: 0, y: pullHandleButton.frame.midY)
+      
+      upButton?.anchorPoint = CGPoint(x: 0.5, y: 0)
+      upButton?.position = CGPoint(x: downButton.frame.midX, y: downButton.frame.maxY)
     }
     
     if UIDevice.current.orientation.isPortrait {
-      upButton?.anchorPoint = CGPoint(x: 1, y: 0.5)
-      upButton?.position = CGPoint(x: size.width, y: downButton.frame.midY)
-      
-      pullHandleButton?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-      pullHandleButton?.position = CGPoint(x: size.width * 0.5, y: downButton.frame.midY)
-      
       currentBetLabel?.position = CGPoint(x: size.width * 0.25, y: 0)
       walletLabel?.position = CGPoint(x: size.width * 0.75, y: 0)
+      
+      pullHandleButton?.anchorPoint = CGPoint(x: 0.5, y: 0)
+      pullHandleButton?.position = CGPoint(x: size.width * 0.5, y: walletLabel.frame.height)
+      
+      downButton?.anchorPoint = CGPoint(x: 0, y: 0.5)
+      downButton?.position = CGPoint(x: 0, y: pullHandleButton.frame.midY)
+      
+      upButton?.anchorPoint = CGPoint(x: 1, y: 0.5)
+      upButton?.position = CGPoint(x: size.width, y: pullHandleButton.frame.midY)
     }
   }
   
@@ -162,12 +169,10 @@ fileprivate extension GameScene {
     
     currentBetLabel = TLLabelNode(text: "Bet: \(currentBet)")
     currentBetLabel.position = CGPoint(x: size.width * 0.25, y: 0)
-    currentBetLabel.label.fontSize = Label.fontSize
     addChild(currentBetLabel)
     
     walletLabel = TLLabelNode(text: "Wallet: \(wallet)")
     walletLabel.position = CGPoint(x: size.width * 0.75, y: 0)
-    walletLabel.label.fontSize = Label.fontSize
     addChild(walletLabel)
     
     resultDisplay = SKLabelNode(text: "Press button to play!")
