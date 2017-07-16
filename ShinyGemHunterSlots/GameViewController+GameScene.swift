@@ -14,7 +14,7 @@ extension GameViewController {
     gameScene.scaleMode = scaleMode
     return gameScene
   }
-  
+
   func presentGameSceneInDevMode(gameScene: GameScene, intoSKView skView: SKView) {
     skView.presentScene(gameScene)
     skView.ignoresSiblingOrder = true

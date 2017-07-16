@@ -10,20 +10,20 @@ import GameplayKit
 
 enum Gem: String {
   case diamond, ruby, amethyst
-  
+
   static let all: [Gem] = [
     .diamond,
     .ruby,
     .amethyst
   ]
-  
+
   func getNode() -> SKSpriteNode {
     return SKSpriteNode(imageNamed: self.rawValue)
   }
-  
+
   static func getRandom(randomSource: GKRandomSource) -> Gem {
     let gem: Gem
-    
+
     switch randomSource.nextInt(upperBound: all.count) {
     case 0:
       gem = .diamond
@@ -32,7 +32,7 @@ enum Gem: String {
     default:
       gem = .amethyst
     }
-    
+
     return gem
   }
 }

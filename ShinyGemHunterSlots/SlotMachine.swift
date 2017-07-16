@@ -14,7 +14,7 @@ class SlotMachine {
     sharedRandom = randomSource
     self.columns = columns
   }
-  
+
   // MARK: Properties
   let sharedRandom: GKRandomSource
   var columns: [[Gem]]

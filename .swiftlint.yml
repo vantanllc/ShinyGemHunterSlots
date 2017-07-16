@@ -17,7 +17,7 @@ disabled_rules: # rule identifiers to exclude from running
 #  - todo
 #  - trailing_newline
 #  - trailing_semicolon
-  - trailing_whitespace
+#  - trailing_whitespace
 #  - type_body_length
   - type_name
 #  - variable_name_max_length
@@ -28,10 +28,10 @@ excluded: # paths to ignore during linting. overridden by `included`.
   - Pods
   - ShinyGemHunterSlotsTests
 file_length:
-  - 1000
+  - 150
+  - 200
 function_body_length:
-  - 75
-  - 100
+  - 15
 type_body_length:
   - 400 # Warning
   - 500 # Error

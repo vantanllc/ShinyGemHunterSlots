@@ -14,16 +14,16 @@ class ColumnComponent: GKComponent {
     self.gems = gems
     node = SKNode()
     slots = []
-    
+
     super.init()
-    
+
     addSlots()
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+
   // MARK: Properties
   let gems: [Gem]
   var slots: [SlotEntity]
@@ -41,7 +41,7 @@ fileprivate extension ColumnComponent {
     for (index, gem) in gems.enumerated() {
       let slot = SlotEntity(gem: gem)
       slots.append(slot)
-      
+
       let slotRenderNode = slot.component(ofType: RenderComponent.self)!.node
       slotRenderNode.position.y = Config.slotVerticalSpacing * CGFloat(index)
       node.addChild(slotRenderNode)

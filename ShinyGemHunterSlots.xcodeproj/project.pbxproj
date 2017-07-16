@@ -28,6 +28,8 @@
 		8B2423071F1AE66100BB159A /* GameScene+SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423061F1AE66100BB159A /* GameScene+SlotMachine.swift */; };
 		8B2423091F1AE6B700BB159A /* GameScene+StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423081F1AE6B700BB159A /* GameScene+StateMachine.swift */; };
 		8B24230B1F1AEA1700BB159A /* SlotMachine+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */; };
+		8B24230E1F1AF68600BB159A /* Winnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230D1F1AF68600BB159A /* Winnable.swift */; };
+		8B2423101F1AF6A500BB159A /* SlotMachine+Winnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230F1F1AF6A500BB159A /* SlotMachine+Winnable.swift */; };
 		8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */; };
 		8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52919A1EA9AD28001BEF68 /* GridComponent.swift */; };
 		8B75ED821EB6DE94000DCA4F /* GemComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */; };
@@ -92,6 +94,8 @@
 		8B2423061F1AE66100BB159A /* GameScene+SlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+SlotMachine.swift"; sourceTree = "<group>"; };
 		8B2423081F1AE6B700BB159A /* GameScene+StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+StateMachine.swift"; sourceTree = "<group>"; };
 		8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SlotMachine+Operations.swift"; sourceTree = "<group>"; };
+		8B24230D1F1AF68600BB159A /* Winnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Winnable.swift; sourceTree = "<group>"; };
+		8B24230F1F1AF6A500BB159A /* SlotMachine+Winnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SlotMachine+Winnable.swift"; sourceTree = "<group>"; };
 		8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotGridEntity.swift; sourceTree = "<group>"; };
 		8B52919A1EA9AD28001BEF68 /* GridComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemComponent.spec.swift; sourceTree = "<group>"; };
@@ -203,6 +207,14 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
+		8B24230C1F1AED3600BB159A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8B2422FE1F1AE19D00BB159A /* CGFloat+Extras.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		8B75ED7B1EB6DABF000DCA4F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +274,8 @@
 			children = (
 				8BE134291E974262004B7169 /* SlotMachine.swift */,
 				8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */,
+				8B24230F1F1AF6A500BB159A /* SlotMachine+Winnable.swift */,
+				8B24230D1F1AF68600BB159A /* Winnable.swift */,
 			);
 			name = SlotMachines;
 			sourceTree = "<group>";
@@ -327,7 +341,7 @@
 				8B75ED7D1EB6DAF0000DCA4F /* Support */,
 				8B75ED7B1EB6DABF000DCA4F /* ViewControllers */,
 				8BC749E61F0B3EAF00325364 /* States */,
-				8B2422FE1F1AE19D00BB159A /* CGFloat+Extras.swift */,
+				8B24230C1F1AED3600BB159A /* Common */,
 			);
 			path = ShinyGemHunterSlots;
 			sourceTree = "<group>";
@@ -575,11 +589,13 @@
 				8B2423091F1AE6B700BB159A /* GameScene+StateMachine.swift in Sources */,
 				8B1E575B1EA86F7C005862A3 /* SlotColumnEntity.swift in Sources */,
 				8BE134041E973E69004B7169 /* GameScene.swift in Sources */,
+				8B2423101F1AF6A500BB159A /* SlotMachine+Winnable.swift in Sources */,
 				8B2423051F1AE63D00BB159A /* GameScene+Update.swift in Sources */,
 				8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */,
 				8BC749E31F0B243A00325364 /* GameSceneActiveState.swift in Sources */,
 				8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */,
 				8BE1342A1E974262004B7169 /* SlotMachine.swift in Sources */,
+				8B24230E1F1AF68600BB159A /* Winnable.swift in Sources */,
 				8B1E574E1EA86A25005862A3 /* SlotEntity.swift in Sources */,
 				8BE1342E1E9745D4004B7169 /* GameScene+ButtonRespondable.swift in Sources */,
 				8BC749E51F0B258500325364 /* GKState+Button.swift in Sources */,

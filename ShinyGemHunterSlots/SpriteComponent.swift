@@ -14,11 +14,11 @@ class SpriteComponent: GKComponent {
     self.node = node
     super.init()
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+
   // MARK: Properties
   let node: SKSpriteNode
 }

@@ -11,10 +11,10 @@ import GameplayKit
 extension GameScene {
   func resetSlotGridEntity(withColumns columns: [[Gem]]) {
     slotGridEntity?.component(ofType: RenderComponent.self)?.node.removeFromParent()
-    
+
     addSlotGrid()
   }
-  
+
   func evaluateSlotReel() {
     if slotMachine.didWin() {
       let winnings = currentBet * Config.winningMultiplier

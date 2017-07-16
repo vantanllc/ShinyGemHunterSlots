@@ -14,35 +14,35 @@ class GameScene: SKScene {
     sharedRandom = randomSource
     super.init(size: size)
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+
   override func sceneDidLoad() {
     loadStateMachine()
     addLabels()
     addButtons()
-    
+
     let gems: [[Gem]] = [
       [.diamond, .diamond, .diamond],
       [.diamond, .diamond, .diamond],
-      [.diamond, .diamond, .diamond],
+      [.diamond, .diamond, .diamond]
     ]
     slotMachine = SlotMachine(columns: gems, randomSource: sharedRandom)
     resetSlotGridEntity(withColumns: gems)
   }
-  
+
   override func didMove(to view: SKView) {
     stateMachine.enter(GameSceneActiveState.self)
     layoutNodes()
   }
-  
+
   override func didChangeSize(_ oldSize: CGSize) {
     super.didChangeSize(oldSize)
     layoutNodes()
   }
-  
+
   // MARK: Properties
   var wallet: Int = 100 {
     didSet {
@@ -64,16 +64,16 @@ class GameScene: SKScene {
   }
   // MARK: Timing
   var lastUpdateTime: TimeInterval = 0
-  
+
   var walletLabel: TLLabelNode!
   var currentBetLabel: TLLabelNode!
   var resultDisplay: TLLabelNode!
   var slotMachine: SlotMachine!
   var slotGridEntity: SlotGridEntity!
-  
+
   var stateMachine: GKStateMachine!
   let sharedRandom: GKRandomSource
-  
+
   var upButton: ButtonNode!
   var downButton: ButtonNode!
   var pullHandleButton: ButtonNode!

@@ -13,11 +13,11 @@ class RenderComponent: GKComponent {
   override func didAddToEntity() {
     node.entity = entity
   }
-  
+
   override func willRemoveFromEntity() {
     node.entity = nil
   }
-  
+
   // MARK: Properties
   let node = SKNode()
 }

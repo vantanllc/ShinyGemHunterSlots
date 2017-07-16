@@ -14,7 +14,7 @@ class GameSceneActiveState: GKState {
     guard let buttonIdentifier = button.buttonIdentifier else {
       return
     }
-    
+
     switch buttonIdentifier {
     case .pullHandle:
       gameScene.slotMachine.updateColumns()
@@ -30,12 +30,12 @@ class GameSceneActiveState: GKState {
       }
     }
   }
-  
+
   // MARK: Lifecycle
   init(gameScene: GameScene) {
     self.gameScene = gameScene
   }
-  
+
   // MARK: Properties
   let gameScene: GameScene
 }

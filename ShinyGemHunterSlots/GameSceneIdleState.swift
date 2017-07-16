@@ -10,12 +10,12 @@ import GameplayKit
 
 class GameSceneIdleState: GKState {
   // MARK: Functions
-  
+
   // MARK: Lifecycle
   init(gameScene: GameScene) {
     self.gameScene = gameScene
   }
-  
+
   // MARK: Properties
   let gameScene: GameScene
 }

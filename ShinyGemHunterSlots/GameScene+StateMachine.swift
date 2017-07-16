@@ -12,7 +12,7 @@ extension GameScene {
   func loadStateMachine() {
     let states: [GKState] = [
       GameSceneActiveState(gameScene: self),
-      GameSceneIdleState(gameScene: self),
+      GameSceneIdleState(gameScene: self)
     ]
     stateMachine = GKStateMachine(states: states)
   }

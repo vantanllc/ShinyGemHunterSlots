@@ -25,7 +25,7 @@ class ButtonNode: SKSpriteNode {
     }
     return identifier
   }
-  
+
   var responder: ButtonRespondable? {
     guard let responder = scene as? ButtonRespondable else {
       return nil
@@ -41,7 +41,7 @@ extension ButtonNode {
       responder?.buttonTriggered(button: self)
     }
   }
-  
+
   func fadeIn() {
     let fadeIn = SKAction.fadeIn(withDuration: Configuration.fadeInDuration)
     fadeIn.timingMode = .easeIn
@@ -61,17 +61,17 @@ extension ButtonNode {
 extension ButtonNode {
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesEnded(touches, with: event)
-    
+
     if containsTouches(touches: touches) {
       buttonTriggered()
     }
   }
-  
+
   private func containsTouches(touches: Set<UITouch>) -> Bool {
     guard let scene = scene else {
       fatalError("Button must be used within a SKScene")
     }
-    
+
     return touches.contains { touch in
       let touchPoint = touch.location(in: scene)
       let touchNode = scene.atPoint(touchPoint)
