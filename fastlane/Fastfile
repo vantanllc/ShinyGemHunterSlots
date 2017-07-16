@@ -78,9 +78,12 @@ platform :ios do
   desc "Deploy to Testflight"
   lane :beta do
     pilot(
-      wait_processing_interval: 30,
+      beta_app_description: "app description",
+      beta_app_feedback_email: "https://sites.google.com/view/vantanllc/home",
+      changelog: "app changelog",
       skip_submission: true,
-      skip_waiting_for_build_processing: true
+      skip_waiting_for_build_processing: true,
+      wait_processing_interval: 30
     )
   end
 
