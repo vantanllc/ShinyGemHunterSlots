@@ -27,6 +27,7 @@
 		8B2423051F1AE63D00BB159A /* GameScene+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423041F1AE63D00BB159A /* GameScene+Update.swift */; };
 		8B2423071F1AE66100BB159A /* GameScene+SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423061F1AE66100BB159A /* GameScene+SlotMachine.swift */; };
 		8B2423091F1AE6B700BB159A /* GameScene+StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423081F1AE6B700BB159A /* GameScene+StateMachine.swift */; };
+		8B24230B1F1AEA1700BB159A /* SlotMachine+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */; };
 		8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */; };
 		8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52919A1EA9AD28001BEF68 /* GridComponent.swift */; };
 		8B75ED821EB6DE94000DCA4F /* GemComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */; };
@@ -90,6 +91,7 @@
 		8B2423041F1AE63D00BB159A /* GameScene+Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+Update.swift"; sourceTree = "<group>"; };
 		8B2423061F1AE66100BB159A /* GameScene+SlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+SlotMachine.swift"; sourceTree = "<group>"; };
 		8B2423081F1AE6B700BB159A /* GameScene+StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+StateMachine.swift"; sourceTree = "<group>"; };
+		8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SlotMachine+Operations.swift"; sourceTree = "<group>"; };
 		8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotGridEntity.swift; sourceTree = "<group>"; };
 		8B52919A1EA9AD28001BEF68 /* GridComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemComponent.spec.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE134291E974262004B7169 /* SlotMachine.swift */,
+				8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */,
 			);
 			name = SlotMachines;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B24230B1F1AEA1700BB159A /* SlotMachine+Operations.swift in Sources */,
 				8B2422FF1F1AE19D00BB159A /* CGFloat+Extras.swift in Sources */,
 				8B2423071F1AE66100BB159A /* GameScene+SlotMachine.swift in Sources */,
 				8B1E57531EA86BB5005862A3 /* SpriteComponent.swift in Sources */,
