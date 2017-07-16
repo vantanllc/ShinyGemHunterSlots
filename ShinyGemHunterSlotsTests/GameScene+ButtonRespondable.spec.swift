@@ -18,9 +18,12 @@ class GameSceneButtonRespondableSpec: QuickSpec {
       var scene: GameScene!
       var button: ButtonNode!
       let buttonFactory = ButtonFactory()
+      var mockSharedSource: MockGKRandomSource!
       
       beforeEach {
-        scene = GameScene()
+        mockSharedSource = MockGKRandomSource()
+        scene = GameScene(size: CGSize(), randomSource: mockSharedSource)
+        scene.didMove(to: SKView())
       }
       
       context("buttonTriggered") {
@@ -30,12 +33,10 @@ class GameSceneButtonRespondableSpec: QuickSpec {
           }
           
           it("should update slotMachine columns with new randomized gems") {
-            let oldColumns = scene.slotMachine.columns
-            
+            let expectedGem: Gem = Gem.getRandom(randomSource: mockSharedSource)
             scene.buttonTriggered(button: button)
-            
-            for (index, column) in scene.slotMachine.columns.enumerated() {
-              expect(column).toNot(equal(oldColumns[index]))
+            _ = scene.slotMachine.columns.flatMap{$0}.map{ gem in
+              expect(gem).to(equal(expectedGem))
             }
           }
           

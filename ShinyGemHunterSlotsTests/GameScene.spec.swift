@@ -18,7 +18,14 @@ class GameSceneSpec: QuickSpec {
       var scene: GameScene!
       
       beforeEach {
-        scene = GameScene()
+        scene = GameScene(size: CGSize(), randomSource: GKRandomSource())
+      }
+      
+      context("didMove") {
+        it("should be in active state") {
+          scene.didMove(to: SKView())
+          expect(scene.stateMachine.currentState).to(beAKindOf(GameSceneActiveState.self))
+        }
       }
       
       context("currentBet changes") {
@@ -39,11 +46,24 @@ class GameSceneSpec: QuickSpec {
         }
       }
       
+      context("no money in wallet") {
+        it("should be in idle state") {
+          scene.wallet = 0
+          expect(scene.stateMachine.currentState).to(beAKindOf(GameSceneIdleState.self))
+        }
+        
+        it("should update currentBet") {
+          scene.wallet = 0
+          expect(scene.currentBet).to(equal(scene.wallet))
+        }
+      }
+      
       context("evaluateSlotReel") {
         var mockSlotMachine: MockSlotMachine!
+        let gems: [[Gem]] = [[]]
         
         beforeEach {
-          mockSlotMachine = MockSlotMachine(randomSource: GKRandomSource.sharedRandom())
+          mockSlotMachine = MockSlotMachine(columns: gems, randomSource: GKRandomSource.sharedRandom())
           scene.slotMachine = mockSlotMachine
         }
         
@@ -113,7 +133,7 @@ class GameSceneSpec: QuickSpec {
         context("labels") {
           context("currentBet") {
             it("should have fontSize set from Config") {
-              expect(scene.currentBetLabel.fontSize).to(equal(GameScene.Label.fontSize))
+              expect(scene.currentBetLabel.label.fontSize).to(equal(GameScene.Label.fontSize))
             }
             
             it("should be child of scene") {
@@ -128,7 +148,7 @@ class GameSceneSpec: QuickSpec {
           
           context("wallet") {
             it("should have fontSize set from Config") {
-              expect(scene.walletLabel.fontSize).to(equal(GameScene.Label.fontSize))
+              expect(scene.walletLabel.label.fontSize).to(equal(GameScene.Label.fontSize))
             }
             
             it("should be child of scene") {
@@ -143,7 +163,7 @@ class GameSceneSpec: QuickSpec {
           
           context("resultDisplay") {
             it("should have fontSize set from Config") {
-              expect(scene.resultDisplay.fontSize).to(equal(GameScene.Label.fontSize))
+              expect(scene.resultDisplay.label.fontSize).to(equal(GameScene.Label.fontSize))
             }
             
             it("should be child of scene") {

@@ -14,12 +14,12 @@ class SlotColumnEntity: GKEntity {
     let render = RenderComponent()
     render.node.zPosition = NodeZPosition.entity
     addComponent(render)
-    
+
     let column = ColumnComponent(gems: gems)
     render.node.addChild(column.node)
     addComponent(column)
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }

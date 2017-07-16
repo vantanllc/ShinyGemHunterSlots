@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		851E2D8B19709D4360C312BA /* Pods_ShinyGemHunterSlots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29F5F5E154EDD61EBFAB54C /* Pods_ShinyGemHunterSlots.framework */; };
+		8B0988401F0D897F00B87BFB /* TLLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B09883F1F0D897F00B87BFB /* TLLabelNode.swift */; };
 		8B1E57491EA868BE005862A3 /* SlotEntity.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */; };
 		8B1E574B1EA869EF005862A3 /* RenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E574A1EA869EF005862A3 /* RenderComponent.swift */; };
 		8B1E574E1EA86A25005862A3 /* SlotEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E574D1EA86A25005862A3 /* SlotEntity.swift */; };
@@ -20,6 +21,15 @@
 		8B1E57601EA87448005862A3 /* RenderComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E575F1EA87448005862A3 /* RenderComponent.spec.swift */; };
 		8B1E57621EA8748A005862A3 /* SpriteComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57611EA8748A005862A3 /* SpriteComponent.spec.swift */; };
 		8B1E57651EA874FE005862A3 /* ColumnComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57641EA874FE005862A3 /* ColumnComponent.spec.swift */; };
+		8B2422FF1F1AE19D00BB159A /* CGFloat+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2422FE1F1AE19D00BB159A /* CGFloat+Extras.swift */; };
+		8B2423011F1AE3A100BB159A /* GameScene+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423001F1AE3A100BB159A /* GameScene+Layout.swift */; };
+		8B2423031F1AE5FF00BB159A /* GameScene+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423021F1AE5FF00BB159A /* GameScene+Config.swift */; };
+		8B2423051F1AE63D00BB159A /* GameScene+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423041F1AE63D00BB159A /* GameScene+Update.swift */; };
+		8B2423071F1AE66100BB159A /* GameScene+SlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423061F1AE66100BB159A /* GameScene+SlotMachine.swift */; };
+		8B2423091F1AE6B700BB159A /* GameScene+StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423081F1AE6B700BB159A /* GameScene+StateMachine.swift */; };
+		8B24230B1F1AEA1700BB159A /* SlotMachine+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */; };
+		8B24230E1F1AF68600BB159A /* Winnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230D1F1AF68600BB159A /* Winnable.swift */; };
+		8B2423101F1AF6A500BB159A /* SlotMachine+Winnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230F1F1AF6A500BB159A /* SlotMachine+Winnable.swift */; };
 		8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */; };
 		8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52919A1EA9AD28001BEF68 /* GridComponent.swift */; };
 		8B75ED821EB6DE94000DCA4F /* GemComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */; };
@@ -29,6 +39,9 @@
 		8BB2A3A71EBEC2570015D328 /* ButtonFactory.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2A3A61EBEC2570015D328 /* ButtonFactory.spec.swift */; };
 		8BC749DF1F0B144000325364 /* MockSlotMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749DE1F0B144000325364 /* MockSlotMachine.swift */; };
 		8BC749E11F0B15DB00325364 /* MockGKRandomSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749E01F0B15DB00325364 /* MockGKRandomSource.swift */; };
+		8BC749E31F0B243A00325364 /* GameSceneActiveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749E21F0B243A00325364 /* GameSceneActiveState.swift */; };
+		8BC749E51F0B258500325364 /* GKState+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749E41F0B258500325364 /* GKState+Button.swift */; };
+		8BC749EA1F0B443400325364 /* GameSceneIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC749E91F0B443400325364 /* GameSceneIdleState.swift */; };
 		8BE12E911EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */; };
 		8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE133FD1E973E69004B7169 /* AppDelegate.swift */; };
 		8BE134041E973E69004B7169 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE134031E973E69004B7169 /* GameScene.swift */; };
@@ -61,6 +74,7 @@
 		2B7EEDD1A6C0039DDC204058 /* Pods-ShinyGemHunterSlotsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlotsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlotsTests/Pods-ShinyGemHunterSlotsTests.release.xcconfig"; sourceTree = "<group>"; };
 		61E228A4C0CC4566474BB13D /* Pods-ShinyGemHunterSlots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlots.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlots/Pods-ShinyGemHunterSlots.debug.xcconfig"; sourceTree = "<group>"; };
 		7C7C5B978199551218D5F9C3 /* Pods_ShinyGemHunterSlotsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShinyGemHunterSlotsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B09883F1F0D897F00B87BFB /* TLLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLLabelNode.swift; sourceTree = "<group>"; };
 		8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotEntity.spec.swift; sourceTree = "<group>"; };
 		8B1E574A1EA869EF005862A3 /* RenderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderComponent.swift; sourceTree = "<group>"; };
 		8B1E574D1EA86A25005862A3 /* SlotEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotEntity.swift; sourceTree = "<group>"; };
@@ -73,6 +87,15 @@
 		8B1E575F1EA87448005862A3 /* RenderComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderComponent.spec.swift; sourceTree = "<group>"; };
 		8B1E57611EA8748A005862A3 /* SpriteComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.spec.swift; sourceTree = "<group>"; };
 		8B1E57641EA874FE005862A3 /* ColumnComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnComponent.spec.swift; sourceTree = "<group>"; };
+		8B2422FE1F1AE19D00BB159A /* CGFloat+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extras.swift"; sourceTree = "<group>"; };
+		8B2423001F1AE3A100BB159A /* GameScene+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+Layout.swift"; sourceTree = "<group>"; };
+		8B2423021F1AE5FF00BB159A /* GameScene+Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+Config.swift"; sourceTree = "<group>"; };
+		8B2423041F1AE63D00BB159A /* GameScene+Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+Update.swift"; sourceTree = "<group>"; };
+		8B2423061F1AE66100BB159A /* GameScene+SlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+SlotMachine.swift"; sourceTree = "<group>"; };
+		8B2423081F1AE6B700BB159A /* GameScene+StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+StateMachine.swift"; sourceTree = "<group>"; };
+		8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SlotMachine+Operations.swift"; sourceTree = "<group>"; };
+		8B24230D1F1AF68600BB159A /* Winnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Winnable.swift; sourceTree = "<group>"; };
+		8B24230F1F1AF6A500BB159A /* SlotMachine+Winnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SlotMachine+Winnable.swift"; sourceTree = "<group>"; };
 		8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotGridEntity.swift; sourceTree = "<group>"; };
 		8B52919A1EA9AD28001BEF68 /* GridComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemComponent.spec.swift; sourceTree = "<group>"; };
@@ -82,6 +105,9 @@
 		8BB2A3A61EBEC2570015D328 /* ButtonFactory.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFactory.spec.swift; sourceTree = "<group>"; };
 		8BC749DE1F0B144000325364 /* MockSlotMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSlotMachine.swift; sourceTree = "<group>"; };
 		8BC749E01F0B15DB00325364 /* MockGKRandomSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockGKRandomSource.swift; sourceTree = "<group>"; };
+		8BC749E21F0B243A00325364 /* GameSceneActiveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneActiveState.swift; sourceTree = "<group>"; };
+		8BC749E41F0B258500325364 /* GKState+Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GKState+Button.swift"; sourceTree = "<group>"; };
+		8BC749E91F0B443400325364 /* GameSceneIdleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneIdleState.swift; sourceTree = "<group>"; };
 		8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+ButtonRespondable.spec.swift"; sourceTree = "<group>"; };
 		8BE133FA1E973E69004B7169 /* ShinyGemHunterSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinyGemHunterSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE133FD1E973E69004B7169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +207,14 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
+		8B24230C1F1AED3600BB159A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8B2422FE1F1AE19D00BB159A /* CGFloat+Extras.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		8B75ED7B1EB6DABF000DCA4F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +229,11 @@
 			children = (
 				8BE1342D1E9745D4004B7169 /* GameScene+ButtonRespondable.swift */,
 				8BE134031E973E69004B7169 /* GameScene.swift */,
+				8B2423081F1AE6B700BB159A /* GameScene+StateMachine.swift */,
+				8B2423041F1AE63D00BB159A /* GameScene+Update.swift */,
+				8B2423061F1AE66100BB159A /* GameScene+SlotMachine.swift */,
+				8B2423021F1AE5FF00BB159A /* GameScene+Config.swift */,
+				8B2423001F1AE3A100BB159A /* GameScene+Layout.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -225,6 +264,7 @@
 			children = (
 				8B1E57561EA86CBE005862A3 /* Gem.swift */,
 				8BE134311E9746C8004B7169 /* NodeZPosition.swift */,
+				8B09883F1F0D897F00B87BFB /* TLLabelNode.swift */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -233,6 +273,9 @@
 			isa = PBXGroup;
 			children = (
 				8BE134291E974262004B7169 /* SlotMachine.swift */,
+				8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */,
+				8B24230F1F1AF6A500BB159A /* SlotMachine+Winnable.swift */,
+				8B24230D1F1AF68600BB159A /* Winnable.swift */,
 			);
 			name = SlotMachines;
 			sourceTree = "<group>";
@@ -244,6 +287,16 @@
 				8BB2A3A41EBEC17B0015D328 /* ButtonNode.spec.swift */,
 			);
 			name = Buttons;
+			sourceTree = "<group>";
+		};
+		8BC749E61F0B3EAF00325364 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				8BC749E41F0B258500325364 /* GKState+Button.swift */,
+				8BC749E21F0B243A00325364 /* GameSceneActiveState.swift */,
+				8BC749E91F0B443400325364 /* GameSceneIdleState.swift */,
+			);
+			name = States;
 			sourceTree = "<group>";
 		};
 		8BE12E921EBF172900B67EE0 /* Scenes */ = {
@@ -287,6 +340,8 @@
 				8B75ED801EB6DB3B000DCA4F /* SlotMachines */,
 				8B75ED7D1EB6DAF0000DCA4F /* Support */,
 				8B75ED7B1EB6DABF000DCA4F /* ViewControllers */,
+				8BC749E61F0B3EAF00325364 /* States */,
+				8B24230C1F1AED3600BB159A /* Common */,
 			);
 			path = ShinyGemHunterSlots;
 			sourceTree = "<group>";
@@ -526,23 +581,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B24230B1F1AEA1700BB159A /* SlotMachine+Operations.swift in Sources */,
+				8B2422FF1F1AE19D00BB159A /* CGFloat+Extras.swift in Sources */,
+				8B2423071F1AE66100BB159A /* GameScene+SlotMachine.swift in Sources */,
 				8B1E57531EA86BB5005862A3 /* SpriteComponent.swift in Sources */,
+				8B2423011F1AE3A100BB159A /* GameScene+Layout.swift in Sources */,
+				8B2423091F1AE6B700BB159A /* GameScene+StateMachine.swift in Sources */,
 				8B1E575B1EA86F7C005862A3 /* SlotColumnEntity.swift in Sources */,
 				8BE134041E973E69004B7169 /* GameScene.swift in Sources */,
+				8B2423101F1AF6A500BB159A /* SlotMachine+Winnable.swift in Sources */,
+				8B2423051F1AE63D00BB159A /* GameScene+Update.swift in Sources */,
 				8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */,
+				8BC749E31F0B243A00325364 /* GameSceneActiveState.swift in Sources */,
 				8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */,
 				8BE1342A1E974262004B7169 /* SlotMachine.swift in Sources */,
+				8B24230E1F1AF68600BB159A /* Winnable.swift in Sources */,
 				8B1E574E1EA86A25005862A3 /* SlotEntity.swift in Sources */,
 				8BE1342E1E9745D4004B7169 /* GameScene+ButtonRespondable.swift in Sources */,
+				8BC749E51F0B258500325364 /* GKState+Button.swift in Sources */,
 				8BE134321E9746C8004B7169 /* NodeZPosition.swift in Sources */,
 				8B1E57551EA86C96005862A3 /* GemComponent.swift in Sources */,
 				8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */,
 				8BE134061E973E69004B7169 /* GameViewController.swift in Sources */,
+				8B0988401F0D897F00B87BFB /* TLLabelNode.swift in Sources */,
+				8B2423031F1AE5FF00BB159A /* GameScene+Config.swift in Sources */,
 				8BE134301E97465F004B7169 /* ButtonFactory.swift in Sources */,
 				8BE1342C1E974570004B7169 /* ButtonNode.swift in Sources */,
 				8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */,
 				8B1E574B1EA869EF005862A3 /* RenderComponent.swift in Sources */,
 				8B1E57571EA86CBE005862A3 /* Gem.swift in Sources */,
+				8BC749EA1F0B443400325364 /* GameSceneIdleState.swift in Sources */,
 				8B1E575D1EA86FEA005862A3 /* ColumnComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

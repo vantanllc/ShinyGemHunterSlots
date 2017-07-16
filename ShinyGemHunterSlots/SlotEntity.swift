@@ -11,19 +11,19 @@ import GameplayKit
 class SlotEntity: GKEntity {
   init(gem: Gem) {
     super.init()
-    
+
     let render = RenderComponent()
     render.node.zPosition = NodeZPosition.entity
     addComponent(render)
-    
+
     let sprite = SpriteComponent(node: gem.getNode())
     render.node.addChild(sprite.node)
     addComponent(sprite)
-    
+
     let gemComponent = GemComponent(gem: gem)
     addComponent(gemComponent)
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
