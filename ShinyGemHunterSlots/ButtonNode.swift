@@ -29,4 +29,3 @@ class ButtonNode: SKSpriteNode {
     return responder
   }
 }
-

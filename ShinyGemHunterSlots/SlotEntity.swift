@@ -9,6 +9,7 @@
 import GameplayKit
 
 class SlotEntity: GKEntity {
+  // MARK: Lifecycle
   init(gem: Gem) {
     super.init()
 
