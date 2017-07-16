@@ -77,7 +77,7 @@ platform :ios do
 
   desc "Deploy to Testflight"
   lane :beta do
-    testflight(
+    pilot(
       wait_processing_interval: 30,
       skip_submission: true,
       skip_waiting_for_build_processing: true
