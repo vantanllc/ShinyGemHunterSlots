@@ -79,7 +79,7 @@ platform :ios do
   lane :beta do
     pilot(
       beta_app_description: "app description",
-      beta_app_feedback_email: "https://sites.google.com/view/vantanllc/home",
+      beta_app_feedback_email: "vantan.llc@gmail.com",
       changelog: "app changelog",
       skip_submission: true,
       skip_waiting_for_build_processing: false,
