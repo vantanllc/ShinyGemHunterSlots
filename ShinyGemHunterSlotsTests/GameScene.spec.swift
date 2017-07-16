@@ -60,9 +60,10 @@ class GameSceneSpec: QuickSpec {
       
       context("evaluateSlotReel") {
         var mockSlotMachine: MockSlotMachine!
+        let gems: [[Gem]] = [[]]
         
         beforeEach {
-          mockSlotMachine = MockSlotMachine(randomSource: GKRandomSource.sharedRandom())
+          mockSlotMachine = MockSlotMachine(columns: gems, randomSource: GKRandomSource.sharedRandom())
           scene.slotMachine = mockSlotMachine
         }
         

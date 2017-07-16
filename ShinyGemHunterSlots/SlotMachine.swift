@@ -20,13 +20,9 @@ class SlotMachine {
   }
   
   // MARK: Lifecycle
-  init(randomSource: GKRandomSource) {
+  init(columns: [[Gem]], randomSource: GKRandomSource) {
     sharedRandom = randomSource
-    columns = [
-      [.diamond, .ruby, .amethyst],
-      [.diamond, .ruby, .amethyst],
-      [.diamond, .ruby, .amethyst]
-    ]
+    self.columns = columns
   }
   
   // MARK: Properties

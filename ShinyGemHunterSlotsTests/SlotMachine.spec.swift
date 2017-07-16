@@ -26,7 +26,7 @@ class SlotMachineSpec: QuickSpec {
       
       beforeEach {
         mockSharedSource = MockGKRandomSource()
-        slotMachine = SlotMachine(randomSource: mockSharedSource)
+        slotMachine = SlotMachine(columns: initialColumns, randomSource: mockSharedSource)
       }
       
       it("should have initialized columns of gems") {

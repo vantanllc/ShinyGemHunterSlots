@@ -23,12 +23,13 @@ class GameScene: SKScene {
     loadStateMachine()
     addLabels()
     addButtons()
-    slotMachine = SlotMachine(randomSource: sharedRandom)
+    
     let gems: [[Gem]] = [
       [.diamond, .diamond, .diamond],
       [.diamond, .diamond, .diamond],
       [.diamond, .diamond, .diamond],
     ]
+    slotMachine = SlotMachine(columns: gems, randomSource: sharedRandom)
     resetSlotGridEntity(withColumns: gems)
   }
   
