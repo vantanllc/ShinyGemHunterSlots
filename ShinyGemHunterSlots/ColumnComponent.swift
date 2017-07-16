@@ -30,12 +30,6 @@ class ColumnComponent: GKComponent {
   let node: SKNode
 }
 
-extension ColumnComponent {
-  struct Config {
-    static let slotVerticalSpacing: CGFloat = -200
-  }
-}
-
 fileprivate extension ColumnComponent {
   func addSlots() {
     for (index, gem) in gems.enumerated() {

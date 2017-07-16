@@ -30,12 +30,6 @@ class GridComponent: GKComponent {
   let node: SKNode
 }
 
-extension GridComponent {
-  struct Config {
-    static let columnHorizontalSpacing: CGFloat = 200
-  }
-}
-
 fileprivate extension GridComponent {
   func addSlotColumns() {
     for (index, column) in gemColumns.enumerated() {

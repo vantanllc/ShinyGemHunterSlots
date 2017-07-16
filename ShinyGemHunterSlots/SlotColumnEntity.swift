@@ -9,6 +9,7 @@
 import GameplayKit
 
 class SlotColumnEntity: GKEntity {
+  // MARK: Lifecycle
   init(gems: [Gem]) {
     super.init()
     let render = RenderComponent()

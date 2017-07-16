@@ -9,7 +9,5 @@
 import GameplayKit
 
 extension GKState {
-  func handleButtonTriggered(button: ButtonNode) {
-
-  }
+  func handleButtonTriggered(button: ButtonNode) {}
 }

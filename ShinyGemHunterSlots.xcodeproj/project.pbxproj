@@ -30,6 +30,15 @@
 		8B24230B1F1AEA1700BB159A /* SlotMachine+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */; };
 		8B24230E1F1AF68600BB159A /* Winnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230D1F1AF68600BB159A /* Winnable.swift */; };
 		8B2423101F1AF6A500BB159A /* SlotMachine+Winnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24230F1F1AF6A500BB159A /* SlotMachine+Winnable.swift */; };
+		8B2423121F1BFD6400BB159A /* ButtonRespondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423111F1BFD6400BB159A /* ButtonRespondable.swift */; };
+		8B2423141F1BFD9F00BB159A /* ButtonNode+ButtonRespondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423131F1BFD9F00BB159A /* ButtonNode+ButtonRespondable.swift */; };
+		8B2423161F1BFDD200BB159A /* ButtonNode+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423151F1BFDD200BB159A /* ButtonNode+Config.swift */; };
+		8B2423181F1BFE2E00BB159A /* ButtonNode+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423171F1BFE2E00BB159A /* ButtonNode+Touch.swift */; };
+		8B24231A1F1BFE5400BB159A /* ButtonNode+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423191F1BFE5400BB159A /* ButtonNode+Animation.swift */; };
+		8B24231C1F1BFED900BB159A /* ColumnComponent+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24231B1F1BFED900BB159A /* ColumnComponent+Config.swift */; };
+		8B24231E1F1BFEE400BB159A /* GridComponent+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24231D1F1BFEE400BB159A /* GridComponent+Config.swift */; };
+		8B2423201F1BFFAC00BB159A /* GameViewController+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24231F1F1BFFAC00BB159A /* GameViewController+Config.swift */; };
+		8B2423221F1C007300BB159A /* GameSceneActiveState+GKState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423211F1C007300BB159A /* GameSceneActiveState+GKState.swift */; };
 		8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */; };
 		8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52919A1EA9AD28001BEF68 /* GridComponent.swift */; };
 		8B75ED821EB6DE94000DCA4F /* GemComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */; };
@@ -96,6 +105,15 @@
 		8B24230A1F1AEA1700BB159A /* SlotMachine+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SlotMachine+Operations.swift"; sourceTree = "<group>"; };
 		8B24230D1F1AF68600BB159A /* Winnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Winnable.swift; sourceTree = "<group>"; };
 		8B24230F1F1AF6A500BB159A /* SlotMachine+Winnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SlotMachine+Winnable.swift"; sourceTree = "<group>"; };
+		8B2423111F1BFD6400BB159A /* ButtonRespondable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonRespondable.swift; sourceTree = "<group>"; };
+		8B2423131F1BFD9F00BB159A /* ButtonNode+ButtonRespondable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonNode+ButtonRespondable.swift"; sourceTree = "<group>"; };
+		8B2423151F1BFDD200BB159A /* ButtonNode+Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonNode+Config.swift"; sourceTree = "<group>"; };
+		8B2423171F1BFE2E00BB159A /* ButtonNode+Touch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonNode+Touch.swift"; sourceTree = "<group>"; };
+		8B2423191F1BFE5400BB159A /* ButtonNode+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonNode+Animation.swift"; sourceTree = "<group>"; };
+		8B24231B1F1BFED900BB159A /* ColumnComponent+Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColumnComponent+Config.swift"; sourceTree = "<group>"; };
+		8B24231D1F1BFEE400BB159A /* GridComponent+Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GridComponent+Config.swift"; sourceTree = "<group>"; };
+		8B24231F1F1BFFAC00BB159A /* GameViewController+Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController+Config.swift"; sourceTree = "<group>"; };
+		8B2423211F1C007300BB159A /* GameSceneActiveState+GKState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameSceneActiveState+GKState.swift"; sourceTree = "<group>"; };
 		8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotGridEntity.swift; sourceTree = "<group>"; };
 		8B52919A1EA9AD28001BEF68 /* GridComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemComponent.spec.swift; sourceTree = "<group>"; };
@@ -170,7 +188,9 @@
 				8B1E57521EA86BB5005862A3 /* SpriteComponent.swift */,
 				8B1E57541EA86C96005862A3 /* GemComponent.swift */,
 				8B1E575C1EA86FEA005862A3 /* ColumnComponent.swift */,
+				8B24231B1F1BFED900BB159A /* ColumnComponent+Config.swift */,
 				8B52919A1EA9AD28001BEF68 /* GridComponent.swift */,
+				8B24231D1F1BFEE400BB159A /* GridComponent+Config.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -220,6 +240,7 @@
 			children = (
 				8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */,
 				8BE134051E973E69004B7169 /* GameViewController.swift */,
+				8B24231F1F1BFFAC00BB159A /* GameViewController+Config.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -254,7 +275,12 @@
 			isa = PBXGroup;
 			children = (
 				8BE1342F1E97465F004B7169 /* ButtonFactory.swift */,
+				8B2423131F1BFD9F00BB159A /* ButtonNode+ButtonRespondable.swift */,
 				8BE1342B1E974570004B7169 /* ButtonNode.swift */,
+				8B2423171F1BFE2E00BB159A /* ButtonNode+Touch.swift */,
+				8B2423151F1BFDD200BB159A /* ButtonNode+Config.swift */,
+				8B2423111F1BFD6400BB159A /* ButtonRespondable.swift */,
+				8B2423191F1BFE5400BB159A /* ButtonNode+Animation.swift */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -294,6 +320,7 @@
 			children = (
 				8BC749E41F0B258500325364 /* GKState+Button.swift */,
 				8BC749E21F0B243A00325364 /* GameSceneActiveState.swift */,
+				8B2423211F1C007300BB159A /* GameSceneActiveState+GKState.swift */,
 				8BC749E91F0B443400325364 /* GameSceneIdleState.swift */,
 			);
 			name = States;
@@ -591,25 +618,34 @@
 				8BE134041E973E69004B7169 /* GameScene.swift in Sources */,
 				8B2423101F1AF6A500BB159A /* SlotMachine+Winnable.swift in Sources */,
 				8B2423051F1AE63D00BB159A /* GameScene+Update.swift in Sources */,
+				8B24231C1F1BFED900BB159A /* ColumnComponent+Config.swift in Sources */,
 				8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */,
 				8BC749E31F0B243A00325364 /* GameSceneActiveState.swift in Sources */,
 				8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */,
 				8BE1342A1E974262004B7169 /* SlotMachine.swift in Sources */,
 				8B24230E1F1AF68600BB159A /* Winnable.swift in Sources */,
 				8B1E574E1EA86A25005862A3 /* SlotEntity.swift in Sources */,
+				8B2423141F1BFD9F00BB159A /* ButtonNode+ButtonRespondable.swift in Sources */,
+				8B2423161F1BFDD200BB159A /* ButtonNode+Config.swift in Sources */,
+				8B24231E1F1BFEE400BB159A /* GridComponent+Config.swift in Sources */,
 				8BE1342E1E9745D4004B7169 /* GameScene+ButtonRespondable.swift in Sources */,
 				8BC749E51F0B258500325364 /* GKState+Button.swift in Sources */,
 				8BE134321E9746C8004B7169 /* NodeZPosition.swift in Sources */,
 				8B1E57551EA86C96005862A3 /* GemComponent.swift in Sources */,
+				8B2423221F1C007300BB159A /* GameSceneActiveState+GKState.swift in Sources */,
 				8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */,
 				8BE134061E973E69004B7169 /* GameViewController.swift in Sources */,
 				8B0988401F0D897F00B87BFB /* TLLabelNode.swift in Sources */,
 				8B2423031F1AE5FF00BB159A /* GameScene+Config.swift in Sources */,
+				8B24231A1F1BFE5400BB159A /* ButtonNode+Animation.swift in Sources */,
 				8BE134301E97465F004B7169 /* ButtonFactory.swift in Sources */,
 				8BE1342C1E974570004B7169 /* ButtonNode.swift in Sources */,
+				8B2423181F1BFE2E00BB159A /* ButtonNode+Touch.swift in Sources */,
 				8BE133FE1E973E69004B7169 /* AppDelegate.swift in Sources */,
 				8B1E574B1EA869EF005862A3 /* RenderComponent.swift in Sources */,
 				8B1E57571EA86CBE005862A3 /* Gem.swift in Sources */,
+				8B2423121F1BFD6400BB159A /* ButtonRespondable.swift in Sources */,
+				8B2423201F1BFFAC00BB159A /* GameViewController+Config.swift in Sources */,
 				8BC749EA1F0B443400325364 /* GameSceneIdleState.swift in Sources */,
 				8B1E575D1EA86FEA005862A3 /* ColumnComponent.swift in Sources */,
 			);
