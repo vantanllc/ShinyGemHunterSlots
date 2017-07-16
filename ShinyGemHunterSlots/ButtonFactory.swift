@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class ButtonFactory {
+struct ButtonFactory {
   func createButton(withIdentifier identifier: ButtonIdentifier) -> ButtonNode {
     let button = ButtonNode(imageNamed: identifier.rawValue)
     button.zPosition = NodeZPosition.button
