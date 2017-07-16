@@ -82,7 +82,7 @@ platform :ios do
       beta_app_feedback_email: "https://sites.google.com/view/vantanllc/home",
       changelog: "app changelog",
       skip_submission: true,
-      skip_waiting_for_build_processing: true,
+      skip_waiting_for_build_processing: false,
       wait_processing_interval: 30
     )
   end
