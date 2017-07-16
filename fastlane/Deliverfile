@@ -1,5 +1,5 @@
 app_icon './icon/Icon-1024.png'
-app_rating_config_path './fastlane/metadata/itunes_rating_config.js'
+app_rating_config_path './fastlane/metadata/itunes_rating_config.json'
 automatic_release true
 force true
 overwrite_screenshots true
