@@ -72,15 +72,7 @@ platform :ios do
 
   desc "Upload to App Store"
   lane :upload_metadata do
-    deliver(
-      force: true,
-      skip_binary_upload: true,
-      price_tier: 0,
-      app_rating_config_path: './fastlane/metadata/itunes_rating_config.json',
-      automatic_release: true,
-      overwrite_screenshots: true,
-      app_icon: './icon/Icon-1024.png'
-    )
+    deliver()
   end
 
   desc "Deploy to Testflight"
