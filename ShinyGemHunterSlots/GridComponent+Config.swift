@@ -10,6 +10,11 @@ import SpriteKit
 
 extension GridComponent {
   struct Config {
-    static let columnHorizontalSpacing: CGFloat = 200
+    struct iPhone {
+      static let columnHorizontalSpacing: CGFloat = 80
+    }
+    struct iPad {
+      static let columnHorizontalSpacing: CGFloat = 200
+    }
   }
 }
