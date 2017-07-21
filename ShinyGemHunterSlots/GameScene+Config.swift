@@ -12,8 +12,4 @@ extension GameScene {
   struct Config {
     static let winningMultiplier: Int = 5
   }
-
-  struct Label {
-    static let fontSize: CGFloat = 70
-  }
 }

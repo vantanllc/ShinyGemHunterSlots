@@ -821,7 +821,7 @@
 				PROVISIONING_PROFILE = "b636b65e-bc95-4469-9a34-6f35ff9d471c";
 				PROVISIONING_PROFILE_SPECIFIER = "com.Vantan.LLC.ShinyGemHunterSlots AppStore";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -843,7 +843,7 @@
 				PROVISIONING_PROFILE = "b636b65e-bc95-4469-9a34-6f35ff9d471c";
 				PROVISIONING_PROFILE_SPECIFIER = "com.Vantan.LLC.ShinyGemHunterSlots AppStore";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
