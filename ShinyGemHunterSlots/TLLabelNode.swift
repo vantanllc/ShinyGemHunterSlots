@@ -13,7 +13,7 @@ class TLLabelNode: SKSpriteNode {
   init(text: String) {
     self.text = text
     label = SKLabelNode(text: text)
-    label.fontSize = 70
+    label.fontSize = UIDevice.current.userInterfaceIdiom == .phone ? iPhoneConfig.fontSize : iPadConfig.fontSize
     label.verticalAlignmentMode = .bottom
     super.init(texture: nil, color: .clear, size: label.frame.size)
     addChild(label)
@@ -30,4 +30,13 @@ class TLLabelNode: SKSpriteNode {
     }
   }
   var label: SKLabelNode!
+}
+
+extension TLLabelNode {
+  struct iPhoneConfig {
+    static let fontSize: CGFloat = 30
+  }
+  struct iPadConfig {
+    static let fontSize: CGFloat = 70
+  }
 }
