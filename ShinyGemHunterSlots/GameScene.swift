@@ -77,4 +77,5 @@ class GameScene: SKScene {
   var upButton: ButtonNode!
   var downButton: ButtonNode!
   var pullHandleButton: ButtonNode!
+  var maxBetButton: ButtonNode!
 }

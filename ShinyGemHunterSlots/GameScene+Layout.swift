@@ -46,6 +46,11 @@ extension GameScene {
     downButton.anchorPoint = CGPoint(x: 0, y: 0.5)
     downButton.position = CGPoint(x: 0, y: yPosition)
     addChild(downButton)
+    
+    maxBetButton = buttonFactory.createButton(withIdentifier: .maxBet)
+    maxBetButton.anchorPoint = CGPoint(x: 0.5, y: 0)
+    maxBetButton.position = CGPoint(x: upButton.frame.midX, y: upButton.frame.maxY)
+    addChild(maxBetButton)
   }
 }
 
