@@ -22,7 +22,9 @@ class GameSceneButtonRespondableSpec: QuickSpec {
       
       beforeEach {
         mockSharedSource = MockGKRandomSource()
-        scene = GameScene(size: CGSize(), randomSource: mockSharedSource)
+        scene = GameScene(size: CGSize(),
+                          randomSource: mockSharedSource,
+                          userDefaults: UserDefaults.standard)
         scene.didMove(to: SKView())
       }
       

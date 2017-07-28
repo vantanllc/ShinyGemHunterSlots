@@ -10,8 +10,9 @@ import GameplayKit
 
 class GameScene: SKScene {
   // MARK: Lifecycle
-  init(size: CGSize, randomSource: GKRandomSource) {
+  init(size: CGSize, randomSource: GKRandomSource, userDefaults: UserDefaults) {
     sharedRandom = randomSource
+    self.userDefaults = userDefaults
     super.init(size: size)
   }
 
@@ -73,6 +74,7 @@ class GameScene: SKScene {
 
   var stateMachine: GKStateMachine!
   let sharedRandom: GKRandomSource
+  let userDefaults: UserDefaults
 
   var upButton: ButtonNode!
   var downButton: ButtonNode!

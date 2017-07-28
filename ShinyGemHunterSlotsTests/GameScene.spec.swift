@@ -18,7 +18,9 @@ class GameSceneSpec: QuickSpec {
       var scene: GameScene!
       
       beforeEach {
-        scene = GameScene(size: CGSize(), randomSource: GKRandomSource())
+        scene = GameScene(size: CGSize(),
+                          randomSource: GKRandomSource(),
+                          userDefaults: UserDefaults.standard)
       }
       
       context("didMove") {
