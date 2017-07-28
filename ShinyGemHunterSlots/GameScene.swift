@@ -24,6 +24,8 @@ class GameScene: SKScene {
     loadStateMachine()
     addLabels()
     addButtons()
+    
+    wallet = userDefaults.integer(forKey: "playerWallet")
 
     let gems: [[Gem]] = [
       [.diamond, .diamond, .diamond],

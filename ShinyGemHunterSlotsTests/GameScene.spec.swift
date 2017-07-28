@@ -16,11 +16,13 @@ class GameSceneSpec: QuickSpec {
   override func spec() {
     describe("GameScene") {
       var scene: GameScene!
+      var mockUserDefaults: MockUserDefaults!
       
       beforeEach {
+        mockUserDefaults = MockUserDefaults()
         scene = GameScene(size: CGSize(),
                           randomSource: GKRandomSource(),
-                          userDefaults: UserDefaults.standard)
+                          userDefaults: mockUserDefaults)
       }
       
       context("didMove") {
@@ -116,6 +118,12 @@ class GameSceneSpec: QuickSpec {
       context("sceneDidLoad") {
         it("should initialize slotMachine") {
           expect(scene.slotMachine).toNot(beNil())
+        }
+        
+        context("loading previous wallet") {
+          it("should set wallet from userDefaults") {
+            expect(scene.wallet).to(equal(mockUserDefaults.playerWallet))
+          }
         }
         
         context("slotGridEntity") {
