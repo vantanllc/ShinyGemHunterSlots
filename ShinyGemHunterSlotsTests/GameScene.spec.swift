@@ -17,10 +17,11 @@ class GameSceneSpec: QuickSpec {
     describe("GameScene") {
       var scene: GameScene!
       var mockUserDefaults: MockUserDefaults!
+      let randomNumber = 83749
       
       beforeEach {
         mockUserDefaults = MockUserDefaults()
-        mockUserDefaults.set(true, forKey: "didReceiveInitialWalletCash")
+        mockUserDefaults.set(true, forKey: UserDefaultsService.Keys.didReceiveInitialWalletCash)
         let userDefaultsService = UserDefaultsService(userDefaults: mockUserDefaults)
         scene = GameScene(size: CGSize(),
                           randomSource: GKRandomSource(),
@@ -36,7 +37,6 @@ class GameSceneSpec: QuickSpec {
       
       context("currentBet changes") {
         it("should update currentBetLabel text") {
-          let randomNumber = 83749
           scene.currentBet = randomNumber
           
           expect(scene.currentBetLabel.text).to(equal("Bet: \(randomNumber)"))
@@ -45,10 +45,15 @@ class GameSceneSpec: QuickSpec {
       
       context("wallet changes") {
         it("should update walletLabel text") {
-          let randomNumber = 83749
           scene.wallet = randomNumber
           
           expect(scene.walletLabel.text).to(equal("Wallet: \(randomNumber)"))
+        }
+        
+        it("should update userDefaults with player's new wallet") {
+          scene.wallet = randomNumber
+          
+          expect(scene.userDefaultsService.getPlayerWallet()).to(equal(randomNumber))
         }
       }
       
@@ -140,14 +145,21 @@ class GameSceneSpec: QuickSpec {
         }
         
         context("is new player") {
-          it("should set wallet to initial wallet value for new player") {
+          beforeEach {
             mockUserDefaults = MockUserDefaults()
             mockUserDefaults.set(false, forKey: UserDefaultsService.Keys.didReceiveInitialWalletCash)
             let mockUserDefaultsService = UserDefaultsService(userDefaults: mockUserDefaults)
             scene = GameScene(size: CGSize(),
                               randomSource: GKRandomSource(),
                               userDefaultsService: mockUserDefaultsService)
+          }
+          
+          it("should set wallet to initial wallet value for new player") {
             expect(scene.wallet).to(equal(20))
+          }
+          
+          it("should set didReceiveInitialWalletCash to true") {
+            expect(scene.userDefaultsService.didReceiveInitialWalletCash()).to(beTrue())
           }
         }
         

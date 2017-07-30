@@ -27,6 +27,7 @@ class GameScene: SKScene {
     
     if !userDefaultsService.didReceiveInitialWalletCash() {
       wallet = 20
+      userDefaultsService.confirmReceiveInitialWalletCash()
     } else {
       wallet = userDefaultsService.getPlayerWallet()
     }
@@ -53,6 +54,7 @@ class GameScene: SKScene {
   // MARK: Properties
   var wallet: Int = 100 {
     didSet {
+      userDefaultsService.updatePlayerWallet(wallet)
       walletLabel.text = "Wallet: \(wallet)"
     }
     willSet {

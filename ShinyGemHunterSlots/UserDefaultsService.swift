@@ -23,8 +23,18 @@ extension UserDefaultsService {
     return userDefaults.bool(forKey: Keys.didReceiveInitialWalletCash)
   }
   
+  func confirmReceiveInitialWalletCash() {
+    userDefaults.set(true, forKey: Keys.didReceiveInitialWalletCash)
+    userDefaults.synchronize()
+  }
+  
   func getPlayerWallet() -> Int {
     return userDefaults.integer(forKey: Keys.playerWallet)
+  }
+  
+  func updatePlayerWallet(_ newValue: Int) {
+    userDefaults.set(newValue, forKey: Keys.playerWallet)
+    userDefaults.synchronize()
   }
 }
 
