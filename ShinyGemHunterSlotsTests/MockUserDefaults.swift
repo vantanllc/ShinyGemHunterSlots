@@ -10,7 +10,9 @@ import Foundation
 
 class MockUserDefaults: UserDefaults {
   override func integer(forKey defaultName: String) -> Int {
-    return defaultName == "playerWallet" ? playerWallet : defaultValue
+    return keyValues.contains { key, value in
+      return key == defaultName
+    } ? keyValues[defaultName] as! Int : 0
   }
   
   override func set(_ value: Int, forKey defaultName: String) {
@@ -27,7 +29,11 @@ class MockUserDefaults: UserDefaults {
     } ? keyValues[defaultName] as! Bool : false
   }
   
-  let playerWallet = 10
-  let defaultValue = 0
-  var keyValues = [String: Any]()
+  func clearKeyValues() {
+    keyValues.removeAll()
+  }
+  
+  let playerWallet: Int = 10
+  let defaultValue: Int = 0
+  var keyValues: [String: Any] = [:]
 }

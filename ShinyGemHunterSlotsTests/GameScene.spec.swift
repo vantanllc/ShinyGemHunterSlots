@@ -21,9 +21,10 @@ class GameSceneSpec: QuickSpec {
       beforeEach {
         mockUserDefaults = MockUserDefaults()
         mockUserDefaults.set(true, forKey: "didReceiveInitialWalletCash")
+        let userDefaultsService = UserDefaultsService(userDefaults: mockUserDefaults)
         scene = GameScene(size: CGSize(),
                           randomSource: GKRandomSource(),
-                          userDefaults: mockUserDefaults)
+                          userDefaultsService: userDefaultsService)
       }
       
       context("didMove") {
@@ -117,6 +118,10 @@ class GameSceneSpec: QuickSpec {
       }
       
       context("sceneDidLoad") {
+        afterEach {
+          mockUserDefaults.clearKeyValues()
+        }
+        
         it("should initialize slotMachine") {
           expect(scene.slotMachine).toNot(beNil())
         }
@@ -124,24 +129,25 @@ class GameSceneSpec: QuickSpec {
         context("loading previous wallet") {
           it("should set wallet from userDefaults") {
             mockUserDefaults = MockUserDefaults()
-            mockUserDefaults.set(true, forKey: "didReceiveInitialWalletCash")
+            mockUserDefaults.set(true, forKey: UserDefaultsService.Keys.didReceiveInitialWalletCash)
+            mockUserDefaults.set(mockUserDefaults.playerWallet, forKey: UserDefaultsService.Keys.playerWallet)
+            let mockUserDefaultsService = UserDefaultsService(userDefaults: mockUserDefaults)
             scene = GameScene(size: CGSize(),
                               randomSource: GKRandomSource(),
-                              userDefaults: mockUserDefaults)
+                              userDefaultsService: mockUserDefaultsService)
             expect(scene.wallet).to(equal(mockUserDefaults.playerWallet))
-            mockUserDefaults.removeObject(forKey: "didReceiveInitialWalletCash")
           }
         }
         
         context("is new player") {
           it("should set wallet to initial wallet value for new player") {
             mockUserDefaults = MockUserDefaults()
-            mockUserDefaults.set(false, forKey: "didReceiveInitialWalletCash")
+            mockUserDefaults.set(false, forKey: UserDefaultsService.Keys.didReceiveInitialWalletCash)
+            let mockUserDefaultsService = UserDefaultsService(userDefaults: mockUserDefaults)
             scene = GameScene(size: CGSize(),
                               randomSource: GKRandomSource(),
-                              userDefaults: mockUserDefaults)
+                              userDefaultsService: mockUserDefaultsService)
             expect(scene.wallet).to(equal(20))
-            mockUserDefaults.removeObject(forKey: "didReceiveInitialWalletCash")
           }
         }
         

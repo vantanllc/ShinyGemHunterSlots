@@ -10,9 +10,10 @@ import GameplayKit
 
 extension GameViewController {
   func createGameScene(size: CGSize, scaleMode: SKSceneScaleMode = .resizeFill) -> GameScene {
+    let userDefaultsService = UserDefaultsService(userDefaults: UserDefaults.standard)
     let gameScene = GameScene(size: size,
                               randomSource: GKRandomSource.sharedRandom(),
-                              userDefaults: UserDefaults.standard)
+                              userDefaultsService: userDefaultsService)
     gameScene.scaleMode = scaleMode
     return gameScene
   }
