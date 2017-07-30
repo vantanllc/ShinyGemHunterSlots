@@ -9,7 +9,7 @@
 import SpriteKit
 
 enum ButtonIdentifier: String {
-  case pullHandle, up, down
+  case pullHandle, up, down, maxBet
 }
 
 class ButtonNode: SKSpriteNode {

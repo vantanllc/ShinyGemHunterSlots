@@ -112,6 +112,21 @@ class GameSceneButtonRespondableSpec: QuickSpec {
           }
         }
         
+        context("maxBet button") {
+          beforeEach {
+            button = buttonFactory.createButton(withIdentifier: .maxBet)
+          }
+          
+          it("should set current bet to amount of money in wallet") {
+            scene.currentBet = 1
+            scene.wallet = 19
+            
+            scene.buttonTriggered(button: button)
+            
+            expect(scene.currentBet).to(equal(scene.wallet))
+          }
+        }
+        
         context("up button") {
           beforeEach {
             button = buttonFactory.createButton(withIdentifier: .up)
