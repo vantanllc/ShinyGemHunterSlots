@@ -24,7 +24,7 @@ class GameScene: SKScene {
     loadStateMachine()
     addLabels()
     addButtons()
-    
+
     if !userDefaultsService.didReceiveInitialWalletCash() {
       wallet = 20
       userDefaultsService.confirmReceiveInitialWalletCash()

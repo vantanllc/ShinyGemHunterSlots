@@ -28,29 +28,60 @@ extension GameScene {
     addChild(resultDisplay)
   }
 
-  func addButtons() {
+  func addButton(withIdentifier identifier: ButtonIdentifier,
+                 withPosition position: CGPoint,
+                 withAnchorPoint anchorPoint: CGPoint = CGPoint(x: 0.5, y: 0.5)
+    ) -> ButtonNode {
     let buttonFactory = ButtonFactory()
 
+    let button = buttonFactory.createButton(withIdentifier: identifier)
+    button.anchorPoint = anchorPoint
+    button.position = position
+    return button
+  }
+
+  func addPullHandleButton() {
     let yPosition = size.height * 0.15
-
-    pullHandleButton = buttonFactory.createButton(withIdentifier: .pullHandle)
-    pullHandleButton.position = CGPoint(x: size.width * 0.5, y: yPosition)
+    let position = CGPoint(x: size.width * 0.5, y: yPosition)
+    pullHandleButton = addButton(withIdentifier: .pullHandle,
+                                 withPosition: position)
     addChild(pullHandleButton)
+  }
 
-    upButton = buttonFactory.createButton(withIdentifier: .up)
-    upButton.anchorPoint = CGPoint(x: 1, y: 0.5)
-    upButton.position = CGPoint(x: size.width, y: yPosition)
+  func addUpButton() {
+    let yPosition = size.height * 0.15
+    let anchorPoint = CGPoint(x: 1, y: 0.5)
+    let position = CGPoint(x: size.width, y: yPosition)
+    upButton = addButton(withIdentifier: .up,
+                         withPosition: position,
+                         withAnchorPoint: anchorPoint)
     addChild(upButton)
+  }
 
-    downButton = buttonFactory.createButton(withIdentifier: .down)
-    downButton.anchorPoint = CGPoint(x: 0, y: 0.5)
-    downButton.position = CGPoint(x: 0, y: yPosition)
+  func addDownButton() {
+    let yPosition = size.height * 0.15
+    let anchorPoint = CGPoint(x: 0, y: 0.5)
+    let position = CGPoint(x: 0, y: yPosition)
+    downButton = addButton(withIdentifier: .down,
+                         withPosition: position,
+                         withAnchorPoint: anchorPoint)
     addChild(downButton)
-    
-    maxBetButton = buttonFactory.createButton(withIdentifier: .maxBet)
-    maxBetButton.anchorPoint = CGPoint(x: 0.5, y: 0)
-    maxBetButton.position = CGPoint(x: upButton.frame.midX, y: upButton.frame.maxY)
+  }
+
+  func addMaxBetButton() {
+    let anchorPoint = CGPoint(x: 0.5, y: 0)
+    let position = CGPoint(x: upButton.frame.midX, y: upButton.frame.maxY)
+    maxBetButton = addButton(withIdentifier: .maxBet,
+                         withPosition: position,
+                         withAnchorPoint: anchorPoint)
     addChild(maxBetButton)
+  }
+
+  func addButtons() {
+    addPullHandleButton()
+    addUpButton()
+    addDownButton()
+    addMaxBetButton()
   }
 }
 
