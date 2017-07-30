@@ -13,6 +13,21 @@ class MockUserDefaults: UserDefaults {
     return defaultName == "playerWallet" ? playerWallet : defaultValue
   }
   
+  override func set(_ value: Int, forKey defaultName: String) {
+    keyValues[defaultName] = value
+  }
+  
+  override func set(_ value: Bool, forKey defaultName: String) {
+    keyValues[defaultName] = value
+  }
+  
+  override func bool(forKey defaultName: String) -> Bool {
+    return keyValues.contains { key, value in
+      return key == defaultName
+    } ? keyValues[defaultName] as! Bool : false
+  }
+  
   let playerWallet = 10
   let defaultValue = 0
+  var keyValues = [String: Any]()
 }

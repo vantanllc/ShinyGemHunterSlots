@@ -25,7 +25,11 @@ class GameScene: SKScene {
     addLabels()
     addButtons()
     
-    wallet = userDefaults.integer(forKey: "playerWallet")
+    if !userDefaults.bool(forKey: "didReceiveInitialWalletCash") {
+      wallet = 20
+    } else {
+      wallet = userDefaults.integer(forKey: "playerWallet")
+    }
 
     let gems: [[Gem]] = [
       [.diamond, .diamond, .diamond],
