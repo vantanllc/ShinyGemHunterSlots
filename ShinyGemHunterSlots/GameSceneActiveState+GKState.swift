@@ -27,6 +27,8 @@ extension GameSceneActiveState {
       if gameScene.currentBet > 1 {
         gameScene.currentBet -= 1
       }
+    case .maxBet:
+      gameScene.currentBet = gameScene.wallet
     }
   }
 }

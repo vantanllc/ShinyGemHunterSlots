@@ -192,6 +192,10 @@ class GameSceneSpec: QuickSpec {
           it("should have down button in scene") {
             expect(scene.childNode(withName: ButtonIdentifier.down.rawValue)).toNot(beNil())
           }
+          
+          it("should have maxBet button in scene") {
+            expect(scene.childNode(withName: ButtonIdentifier.maxBet.rawValue)).toNot(beNil())
+          }
         }
       }
     }
