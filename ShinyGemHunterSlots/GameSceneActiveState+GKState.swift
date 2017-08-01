@@ -29,6 +29,8 @@ extension GameSceneActiveState {
       }
     case .maxBet:
       gameScene.currentBet = gameScene.wallet
+    case .watchAds:
+      gameScene.adDelegate?.showInterstitialAds()
     }
   }
 }

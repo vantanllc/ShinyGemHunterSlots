@@ -11,5 +11,6 @@ import GameplayKit
 extension GameScene {
   struct Config {
     static let winningMultiplier: Int = 5
+    static let watchAdsCredit: Int = 30
   }
 }

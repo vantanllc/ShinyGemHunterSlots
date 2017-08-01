@@ -8,13 +8,16 @@
 
 import UIKit
 import GameplayKit
+import GoogleMobileAds
 
 class GameViewController: UIViewController {
   // MARK: Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    gameScene = createGameScene(size: view.bounds.size)
+    
+    interstitial = AdBuilder.getInterstitial(withDelegate: self)
+    
+    gameScene = createGameScene(size: view.bounds.size, withAdDelegate: self)
     if let skView = view as? SKView {
       gameScene.backgroundColor = .gray
       presentGameSceneInDevMode(gameScene: gameScene, intoSKView: skView)
@@ -29,4 +32,5 @@ class GameViewController: UIViewController {
 
   // MARK: Properties
   var gameScene: GameScene!
+  var interstitial: GADInterstitial!
 }
