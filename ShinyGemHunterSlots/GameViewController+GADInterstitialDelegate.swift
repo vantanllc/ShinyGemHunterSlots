@@ -12,7 +12,7 @@ extension GameViewController: GADInterstitialDelegate {
   func interstitialDidDismissScreen(_ ad: GADInterstitial) {
     interstitial = AdBuilder.getInterstitial(withDelegate: self)
   }
-  
+
   func interstitialWillDismissScreen(_ ad: GADInterstitial) {
     gameScene.didFinishViewingAds()
   }

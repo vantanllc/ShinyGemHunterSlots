@@ -16,21 +16,33 @@ extension GameSceneActiveState {
 
     switch buttonIdentifier {
     case .pullHandle:
-      gameScene.slotMachine.updateColumns()
-      gameScene.resetSlotGridEntity(withColumns: gameScene.slotMachine.columns)
-      gameScene.evaluateSlotReel()
+      handlePullHandle()
     case .up:
-      if gameScene.currentBet < gameScene.wallet {
-        gameScene.currentBet += 1
-      }
+      handleUp()
     case .down:
-      if gameScene.currentBet > 1 {
-        gameScene.currentBet -= 1
-      }
+      handleDown()
     case .maxBet:
       gameScene.currentBet = gameScene.wallet
     case .watchAds:
       gameScene.adDelegate?.showInterstitialAds()
     }
+  }
+
+  private func handleDown() {
+    if gameScene.currentBet > 1 {
+      gameScene.currentBet -= 1
+    }
+  }
+
+  private func handleUp() {
+    if gameScene.currentBet < gameScene.wallet {
+      gameScene.currentBet += 1
+    }
+  }
+
+  private func handlePullHandle() {
+      gameScene.slotMachine.updateColumns()
+      gameScene.resetSlotGridEntity(withColumns: gameScene.slotMachine.columns)
+      gameScene.evaluateSlotReel()
   }
 }

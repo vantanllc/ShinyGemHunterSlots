@@ -67,7 +67,7 @@ extension GameScene {
                          withAnchorPoint: anchorPoint)
     addChild(downButton)
   }
-  
+
   func addWatchAdsButton() {
     let anchorPoint = CGPoint(x: 0, y: 1)
     let position = CGPoint(x: 0, y: size.height)

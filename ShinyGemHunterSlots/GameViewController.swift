@@ -14,9 +14,9 @@ class GameViewController: UIViewController {
   // MARK: Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     interstitial = AdBuilder.getInterstitial(withDelegate: self)
-    
+
     gameScene = createGameScene(size: view.bounds.size, withAdDelegate: self)
     if let skView = view as? SKView {
       gameScene.backgroundColor = .gray

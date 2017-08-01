@@ -12,11 +12,11 @@ class AdBuilder {
   static func getInterstitial(withDelegate delegate: GADInterstitialDelegate) -> GADInterstitial {
     let interstitial = GADInterstitial(adUnitID: AdMob.adUnitID)
     interstitial.delegate = delegate
-    
+
     let request = GADRequest()
     request.testDevices = [kGADSimulatorID]
     interstitial.load(request)
-    
+
     return interstitial
   }
 }
