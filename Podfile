@@ -6,6 +6,7 @@ target 'ShinyGemHunterSlots' do
   use_frameworks!
 
   # Pods for ShinyGemHunterSlots
+  pod 'Google-Mobile-Ads-SDK'
 
   target 'ShinyGemHunterSlotsTests' do
     inherit! :search_paths
