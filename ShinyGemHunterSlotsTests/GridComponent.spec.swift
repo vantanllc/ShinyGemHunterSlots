@@ -52,7 +52,7 @@ class GridComponentSpec: QuickSpec {
       }
       
       it("should have expected horizontal spacing between columns") {
-        let horizontalSpacing = UIDevice.current.userInterfaceIdiom == .phone ? GridComponent.Config.iPhone.columnHorizontalSpacing : GridComponent.Config.iPad.columnHorizontalSpacing
+        let horizontalSpacing = UIDevice.current.userInterfaceIdiom == .phone ? GridComponent.Config.columnHorizontalSpacingIphone : GridComponent.Config.columnHorizontalSpacingIpad
         let expectedXPositions = [
           horizontalSpacing * 0,
           horizontalSpacing * 1,

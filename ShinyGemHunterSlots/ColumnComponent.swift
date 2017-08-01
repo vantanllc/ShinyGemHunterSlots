@@ -35,8 +35,8 @@ fileprivate extension ColumnComponent {
     for (index, gem) in gems.enumerated() {
       let slot = SlotEntity(gem: gem)
       slots.append(slot)
-      
-      let verticalSpacing = UIDevice.current.userInterfaceIdiom == .phone ? Config.iPhone.slotVerticalSpacing : Config.iPad.slotVerticalSpacing
+
+      let verticalSpacing = UIDevice.current.userInterfaceIdiom == .phone ? Config.slotVerticalSpacingIphone : Config.slotVerticalSpacingIpad
 
       let slotRenderNode = slot.component(ofType: RenderComponent.self)!.node
       slotRenderNode.position.y = verticalSpacing * CGFloat(index)

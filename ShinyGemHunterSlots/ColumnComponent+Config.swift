@@ -10,11 +10,7 @@ import SpriteKit
 
 extension ColumnComponent {
   struct Config {
-    struct iPhone {
-      static let slotVerticalSpacing: CGFloat = -80
-    }
-    struct iPad {
-      static let slotVerticalSpacing: CGFloat = -200
-    }
+    static let slotVerticalSpacingIphone: CGFloat = -80
+    static let slotVerticalSpacingIpad: CGFloat = -200
   }
 }

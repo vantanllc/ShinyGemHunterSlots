@@ -10,8 +10,9 @@ import GameplayKit
 
 class GameScene: SKScene {
   // MARK: Lifecycle
-  init(size: CGSize, randomSource: GKRandomSource) {
+  init(size: CGSize, randomSource: GKRandomSource, userDefaultsService: UserDefaultsService) {
     sharedRandom = randomSource
+    self.userDefaultsService = userDefaultsService
     super.init(size: size)
   }
 
@@ -23,6 +24,13 @@ class GameScene: SKScene {
     loadStateMachine()
     addLabels()
     addButtons()
+
+    if !userDefaultsService.didReceiveInitialWalletCash() {
+      wallet = 20
+      userDefaultsService.confirmReceiveInitialWalletCash()
+    } else {
+      wallet = userDefaultsService.getPlayerWallet()
+    }
 
     let gems: [[Gem]] = [
       [.diamond, .diamond, .diamond],
@@ -46,6 +54,7 @@ class GameScene: SKScene {
   // MARK: Properties
   var wallet: Int = 100 {
     didSet {
+      userDefaultsService.updatePlayerWallet(wallet)
       walletLabel.text = "Wallet: \(wallet)"
     }
     willSet {
@@ -73,6 +82,7 @@ class GameScene: SKScene {
 
   var stateMachine: GKStateMachine!
   let sharedRandom: GKRandomSource
+  let userDefaultsService: UserDefaultsService
 
   var upButton: ButtonNode!
   var downButton: ButtonNode!

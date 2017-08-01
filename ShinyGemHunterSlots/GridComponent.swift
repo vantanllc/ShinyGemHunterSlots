@@ -38,7 +38,7 @@ fileprivate extension GridComponent {
 
       let slotColumnRenderNode = slotColumn.component(ofType: RenderComponent.self)!.node
 
-      let horizontalSpacing = UIDevice.current.userInterfaceIdiom == .phone ? Config.iPhone.columnHorizontalSpacing : Config.iPad.columnHorizontalSpacing
+      let horizontalSpacing = UIDevice.current.userInterfaceIdiom == .phone ? Config.columnHorizontalSpacingIphone : Config.columnHorizontalSpacingIpad
       slotColumnRenderNode.position.x = horizontalSpacing * CGFloat(index)
       node.addChild(slotColumnRenderNode)
     }

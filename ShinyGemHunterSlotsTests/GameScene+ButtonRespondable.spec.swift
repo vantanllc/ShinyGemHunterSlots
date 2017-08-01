@@ -19,10 +19,15 @@ class GameSceneButtonRespondableSpec: QuickSpec {
       var button: ButtonNode!
       let buttonFactory = ButtonFactory()
       var mockSharedSource: MockGKRandomSource!
+      var mockUserDefaults: MockUserDefaults!
       
       beforeEach {
         mockSharedSource = MockGKRandomSource()
-        scene = GameScene(size: CGSize(), randomSource: mockSharedSource)
+        mockUserDefaults = MockUserDefaults()
+        let mockUserDefaultsService = UserDefaultsService(userDefaults: mockUserDefaults)
+        scene = GameScene(size: CGSize(),
+                          randomSource: mockSharedSource,
+                          userDefaultsService: mockUserDefaultsService)
         scene.didMove(to: SKView())
       }
       
