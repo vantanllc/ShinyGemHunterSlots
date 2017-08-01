@@ -10,6 +10,7 @@ import SpriteKit
 
 enum ButtonIdentifier: String {
   case pullHandle, up, down, maxBet
+  case watchAds
 }
 
 class ButtonNode: SKSpriteNode {

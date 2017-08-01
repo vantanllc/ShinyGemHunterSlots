@@ -68,6 +68,15 @@ extension GameScene {
     addChild(downButton)
   }
 
+  func addWatchAdsButton() {
+    let anchorPoint = CGPoint(x: 0, y: 1)
+    let position = CGPoint(x: 0, y: size.height)
+    watchAdsButton = addButton(withIdentifier: .watchAds,
+                         withPosition: position,
+                         withAnchorPoint: anchorPoint)
+    addChild(watchAdsButton)
+  }
+
   func addMaxBetButton() {
     let anchorPoint = CGPoint(x: 0.5, y: 0)
     let position = CGPoint(x: upButton.frame.midX, y: upButton.frame.maxY)
@@ -82,6 +91,7 @@ extension GameScene {
     addUpButton()
     addDownButton()
     addMaxBetButton()
+    addWatchAdsButton()
   }
 }
 

@@ -41,6 +41,13 @@
 		8B2423221F1C007300BB159A /* GameSceneActiveState+GKState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2423211F1C007300BB159A /* GameSceneActiveState+GKState.swift */; };
 		8B5291991EA9ACC6001BEF68 /* SlotGridEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */; };
 		8B52919B1EA9AD28001BEF68 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B52919A1EA9AD28001BEF68 /* GridComponent.swift */; };
+		8B6DB6681F3033E200542B42 /* AdMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DB6671F3033E200542B42 /* AdMob.swift */; };
+		8B6DB66A1F3035A900542B42 /* AdBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DB6691F3035A900542B42 /* AdBuilder.swift */; };
+		8B6DB66C1F30362000542B42 /* GameViewController+GADInterstitialDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DB66B1F30362000542B42 /* GameViewController+GADInterstitialDelegate.swift */; };
+		8B6DB66E1F30367000542B42 /* GameViewController+GameSceneAdDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DB66D1F30367000542B42 /* GameViewController+GameSceneAdDelegate.swift */; };
+		8B6DB6701F30368F00542B42 /* GameSceneAdDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DB66F1F30368F00542B42 /* GameSceneAdDelegate.swift */; };
+		8B6DB6741F303B3200542B42 /* GameScene+Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DB6731F303B3200542B42 /* GameScene+Ads.swift */; };
+		8B6DB6761F303BC600542B42 /* GameScene+Ads.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DB6751F303BC600542B42 /* GameScene+Ads.spec.swift */; };
 		8B739D111F2E71BB004A39E4 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B739D101F2E71BB004A39E4 /* UserDefaultsService.swift */; };
 		8B75ED821EB6DE94000DCA4F /* GemComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */; };
 		8BB2A3A11EBEB7500015D328 /* GridComponent.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2A3A01EBEB7500015D328 /* GridComponent.spec.swift */; };
@@ -118,6 +125,13 @@
 		8B2423211F1C007300BB159A /* GameSceneActiveState+GKState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameSceneActiveState+GKState.swift"; sourceTree = "<group>"; };
 		8B5291981EA9ACC6001BEF68 /* SlotGridEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotGridEntity.swift; sourceTree = "<group>"; };
 		8B52919A1EA9AD28001BEF68 /* GridComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
+		8B6DB6671F3033E200542B42 /* AdMob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdMob.swift; sourceTree = "<group>"; };
+		8B6DB6691F3035A900542B42 /* AdBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdBuilder.swift; sourceTree = "<group>"; };
+		8B6DB66B1F30362000542B42 /* GameViewController+GADInterstitialDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController+GADInterstitialDelegate.swift"; sourceTree = "<group>"; };
+		8B6DB66D1F30367000542B42 /* GameViewController+GameSceneAdDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameViewController+GameSceneAdDelegate.swift"; sourceTree = "<group>"; };
+		8B6DB66F1F30368F00542B42 /* GameSceneAdDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneAdDelegate.swift; sourceTree = "<group>"; };
+		8B6DB6731F303B3200542B42 /* GameScene+Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+Ads.swift"; sourceTree = "<group>"; };
+		8B6DB6751F303BC600542B42 /* GameScene+Ads.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+Ads.spec.swift"; sourceTree = "<group>"; };
 		8B739D101F2E71BB004A39E4 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		8B75ED811EB6DE94000DCA4F /* GemComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GemComponent.spec.swift; sourceTree = "<group>"; };
 		8BB2A3A01EBEB7500015D328 /* GridComponent.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridComponent.spec.swift; sourceTree = "<group>"; };
@@ -239,12 +253,31 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		8B6DB6711F30383900542B42 /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				8B6DB6671F3033E200542B42 /* AdMob.swift */,
+				8B6DB6691F3035A900542B42 /* AdBuilder.swift */,
+			);
+			name = AdMob;
+			sourceTree = "<group>";
+		};
+		8B6DB6721F30384300542B42 /* SharedServices */ = {
+			isa = PBXGroup;
+			children = (
+				8B739D101F2E71BB004A39E4 /* UserDefaultsService.swift */,
+			);
+			name = SharedServices;
+			sourceTree = "<group>";
+		};
 		8B75ED7B1EB6DABF000DCA4F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				8BE134231E973EF7004B7169 /* GameViewController+GameScene.swift */,
 				8BE134051E973E69004B7169 /* GameViewController.swift */,
 				8B24231F1F1BFFAC00BB159A /* GameViewController+Config.swift */,
+				8B6DB66B1F30362000542B42 /* GameViewController+GADInterstitialDelegate.swift */,
+				8B6DB66D1F30367000542B42 /* GameViewController+GameSceneAdDelegate.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -259,6 +292,8 @@
 				8B2423061F1AE66100BB159A /* GameScene+SlotMachine.swift */,
 				8B2423021F1AE5FF00BB159A /* GameScene+Config.swift */,
 				8B2423001F1AE3A100BB159A /* GameScene+Layout.swift */,
+				8B6DB66F1F30368F00542B42 /* GameSceneAdDelegate.swift */,
+				8B6DB6731F303B3200542B42 /* GameScene+Ads.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -345,6 +380,7 @@
 			children = (
 				8BFACF0C1EBEE229009581E0 /* GameScene.spec.swift */,
 				8BE12E901EBF0B9D00B67EE0 /* GameScene+ButtonRespondable.spec.swift */,
+				8B6DB6751F303BC600542B42 /* GameScene+Ads.spec.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -382,7 +418,8 @@
 				8B75ED7B1EB6DABF000DCA4F /* ViewControllers */,
 				8BC749E61F0B3EAF00325364 /* States */,
 				8B24230C1F1AED3600BB159A /* Common */,
-				8B739D101F2E71BB004A39E4 /* UserDefaultsService.swift */,
+				8B6DB6721F30384300542B42 /* SharedServices */,
+				8B6DB6711F30383900542B42 /* AdMob */,
 			);
 			path = ShinyGemHunterSlots;
 			sourceTree = "<group>";
@@ -626,11 +663,15 @@
 				8B2422FF1F1AE19D00BB159A /* CGFloat+Extras.swift in Sources */,
 				8B2423071F1AE66100BB159A /* GameScene+SlotMachine.swift in Sources */,
 				8B1E57531EA86BB5005862A3 /* SpriteComponent.swift in Sources */,
+				8B6DB6701F30368F00542B42 /* GameSceneAdDelegate.swift in Sources */,
 				8B2423011F1AE3A100BB159A /* GameScene+Layout.swift in Sources */,
 				8B2423091F1AE6B700BB159A /* GameScene+StateMachine.swift in Sources */,
+				8B6DB66C1F30362000542B42 /* GameViewController+GADInterstitialDelegate.swift in Sources */,
 				8B1E575B1EA86F7C005862A3 /* SlotColumnEntity.swift in Sources */,
+				8B6DB6681F3033E200542B42 /* AdMob.swift in Sources */,
 				8BE134041E973E69004B7169 /* GameScene.swift in Sources */,
 				8B2423101F1AF6A500BB159A /* SlotMachine+Winnable.swift in Sources */,
+				8B6DB66E1F30367000542B42 /* GameViewController+GameSceneAdDelegate.swift in Sources */,
 				8B2423051F1AE63D00BB159A /* GameScene+Update.swift in Sources */,
 				8B24231C1F1BFED900BB159A /* ColumnComponent+Config.swift in Sources */,
 				8BE134241E973EF7004B7169 /* GameViewController+GameScene.swift in Sources */,
@@ -639,6 +680,8 @@
 				8BE1342A1E974262004B7169 /* SlotMachine.swift in Sources */,
 				8B24230E1F1AF68600BB159A /* Winnable.swift in Sources */,
 				8B1E574E1EA86A25005862A3 /* SlotEntity.swift in Sources */,
+				8B6DB66A1F3035A900542B42 /* AdBuilder.swift in Sources */,
+				8B6DB6741F303B3200542B42 /* GameScene+Ads.swift in Sources */,
 				8B2423141F1BFD9F00BB159A /* ButtonNode+ButtonRespondable.swift in Sources */,
 				8B2423161F1BFDD200BB159A /* ButtonNode+Config.swift in Sources */,
 				8B739D111F2E71BB004A39E4 /* UserDefaultsService.swift in Sources */,
@@ -684,6 +727,7 @@
 				8B1E57591EA86F2F005862A3 /* SlotColumnEntity.spec.swift in Sources */,
 				8BC749E11F0B15DB00325364 /* MockGKRandomSource.swift in Sources */,
 				8BFACF0A1EBED8B4009581E0 /* SlotMachine.spec.swift in Sources */,
+				8B6DB6761F303BC600542B42 /* GameScene+Ads.spec.swift in Sources */,
 				8BB2A3A51EBEC17B0015D328 /* ButtonNode.spec.swift in Sources */,
 				8B1E57491EA868BE005862A3 /* SlotEntity.spec.swift in Sources */,
 			);

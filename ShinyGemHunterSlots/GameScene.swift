@@ -83,9 +83,11 @@ class GameScene: SKScene {
   var stateMachine: GKStateMachine!
   let sharedRandom: GKRandomSource
   let userDefaultsService: UserDefaultsService
+  weak var adDelegate: GameSceneAdDelegate?
 
   var upButton: ButtonNode!
   var downButton: ButtonNode!
   var pullHandleButton: ButtonNode!
   var maxBetButton: ButtonNode!
+  var watchAdsButton: ButtonNode!
 }
