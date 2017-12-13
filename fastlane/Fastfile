@@ -8,7 +8,6 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    cocoapods
     scan(
       scheme: "ShinyGemHunterSlots",
       workspace: "ShinyGemHunterSlots.xcworkspace",
@@ -36,7 +35,6 @@ platform :ios do
 
   desc "Create ipa"
   lane :build do
-    cocoapods
     create_keychain(
       name: ENV["SIGNING_KEYCHAIN"],
       default_keychain: true,
