@@ -512,11 +512,13 @@
 					8BE133F91E973E69004B7169 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SNXMW75MBJ;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
 					8BE134131E973E69004B7169 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SNXMW75MBJ;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 						TestTargetID = 8BE133F91E973E69004B7169;
 					};
@@ -891,7 +893,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b636b65e-bc95-4469-9a34-6f35ff9d471c";
 				PROVISIONING_PROFILE_SPECIFIER = "com.Vantan.LLC.ShinyGemHunterSlots AppStore";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -913,7 +916,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b636b65e-bc95-4469-9a34-6f35ff9d471c";
 				PROVISIONING_PROFILE_SPECIFIER = "com.Vantan.LLC.ShinyGemHunterSlots AppStore";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -931,7 +935,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vantan.LLC.ShinyGemHunterSlotsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShinyGemHunterSlots.app/ShinyGemHunterSlots";
 			};
 			name = Debug;
@@ -948,7 +953,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vantan.LLC.ShinyGemHunterSlotsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShinyGemHunterSlots.app/ShinyGemHunterSlots";
 			};
 			name = Release;
