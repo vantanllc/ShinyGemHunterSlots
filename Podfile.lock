@@ -1,5 +1,5 @@
 PODS:
-  - Google-Mobile-Ads-SDK (7.26.0)
+  - Google-Mobile-Ads-SDK (7.27.0)
   - Nimble (7.0.3)
   - Quick (1.2.0)
 
@@ -9,7 +9,7 @@ DEPENDENCIES:
   - Quick
 
 SPEC CHECKSUMS:
-  Google-Mobile-Ads-SDK: 22d4a6fe18d526adcc12a86d8cc2d53872700966
+  Google-Mobile-Ads-SDK: 83f7f890e638ce8f1debd440ea363338c9f6be3b
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
