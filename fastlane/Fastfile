@@ -8,7 +8,9 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    cocoapods
+    cocoapods(
+      repo_update: true
+    )
     scan(
       scheme: "ShinyGemHunterSlots",
       workspace: "ShinyGemHunterSlots.xcworkspace",
