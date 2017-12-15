@@ -8,14 +8,16 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    cocoapods
+    cocoapods(
+      repo_update: true
+    )
     scan(
       scheme: "ShinyGemHunterSlots",
       workspace: "ShinyGemHunterSlots.xcworkspace",
       clean: true,
       code_coverage: true,
       skip_slack: true,
-      sdk: "iphonesimulator10.3",
+      sdk: "iphonesimulator11.2",
       devices: ["iPhone 7", "iPad Air 2"]
     )
   end
@@ -36,7 +38,6 @@ platform :ios do
 
   desc "Create ipa"
   lane :build do
-    cocoapods
     create_keychain(
       name: ENV["SIGNING_KEYCHAIN"],
       default_keychain: true,
