@@ -35,7 +35,7 @@ class ButtonFactorySpec: QuickSpec {
         }
         
         it("should be user enabled") {
-          expect(button.isUserInteractionEnabled).to(beTrue())
+          expect(button.isUserInteractionEnabled).to(beFalse())
         }
         
         it("should be named with ButtonIdentifier.retry") {
