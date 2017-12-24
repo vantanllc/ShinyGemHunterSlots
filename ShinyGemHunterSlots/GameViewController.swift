@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     super.viewDidLoad()
 
     interstitial = AdBuilder.getInterstitial(withDelegate: self)
+    GADRewardBasedVideoAd.sharedInstance().delegate = self
 
     gameScene = createGameScene(size: view.bounds.size, withAdDelegate: self)
     if let skView = view as? SKView {

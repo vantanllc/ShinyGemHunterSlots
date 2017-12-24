@@ -10,4 +10,5 @@ import Foundation
 
 protocol GameSceneAdDelegate: class {
   func showInterstitialAds()
+  func showRewardVideoAds()
 }

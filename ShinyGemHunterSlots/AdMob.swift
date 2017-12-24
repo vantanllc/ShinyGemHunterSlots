@@ -11,4 +11,5 @@ import Foundation
 struct AdMob {
   static let appID: String = "ca-app-pub-9051260803045362~4345648121"
   static let adUnitID: String = "ca-app-pub-9051260803045362/1016777209"
+  static let getMoreCoinsAdUnitId: String = "ca-app-pub-9051260803045362/1309381357"
 }
