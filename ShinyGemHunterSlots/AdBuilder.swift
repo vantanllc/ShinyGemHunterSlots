@@ -19,4 +19,10 @@ class AdBuilder {
 
     return interstitial
   }
+  
+  static func loadRewardAds(withUnitID adUnitID: String) {
+    let request = GADRequest()
+    request.testDevices = [kGADSimulatorID]
+    GADRewardBasedVideoAd.sharedInstance().load(request, withAdUnitID: adUnitID)
+  }
 }
