@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		851E2D8B19709D4360C312BA /* Pods_ShinyGemHunterSlots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29F5F5E154EDD61EBFAB54C /* Pods_ShinyGemHunterSlots.framework */; };
+		8B02D1AB1FF044CC004598DA /* GameViewController+ GADRewardBasedVideoAdDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B02D1AA1FF044CC004598DA /* GameViewController+ GADRewardBasedVideoAdDelegate.swift */; };
 		8B0988401F0D897F00B87BFB /* TLLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B09883F1F0D897F00B87BFB /* TLLabelNode.swift */; };
 		8B1E57491EA868BE005862A3 /* SlotEntity.spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */; };
 		8B1E574B1EA869EF005862A3 /* RenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1E574A1EA869EF005862A3 /* RenderComponent.swift */; };
@@ -92,6 +93,7 @@
 		2B7EEDD1A6C0039DDC204058 /* Pods-ShinyGemHunterSlotsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlotsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlotsTests/Pods-ShinyGemHunterSlotsTests.release.xcconfig"; sourceTree = "<group>"; };
 		61E228A4C0CC4566474BB13D /* Pods-ShinyGemHunterSlots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShinyGemHunterSlots.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShinyGemHunterSlots/Pods-ShinyGemHunterSlots.debug.xcconfig"; sourceTree = "<group>"; };
 		7C7C5B978199551218D5F9C3 /* Pods_ShinyGemHunterSlotsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShinyGemHunterSlotsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B02D1AA1FF044CC004598DA /* GameViewController+ GADRewardBasedVideoAdDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+ GADRewardBasedVideoAdDelegate.swift"; sourceTree = "<group>"; };
 		8B09883F1F0D897F00B87BFB /* TLLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLLabelNode.swift; sourceTree = "<group>"; };
 		8B1E57481EA868BE005862A3 /* SlotEntity.spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotEntity.spec.swift; sourceTree = "<group>"; };
 		8B1E574A1EA869EF005862A3 /* RenderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderComponent.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				8B24231F1F1BFFAC00BB159A /* GameViewController+Config.swift */,
 				8B6DB66B1F30362000542B42 /* GameViewController+GADInterstitialDelegate.swift */,
 				8B6DB66D1F30367000542B42 /* GameViewController+GameSceneAdDelegate.swift */,
+				8B02D1AA1FF044CC004598DA /* GameViewController+ GADRewardBasedVideoAdDelegate.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				8B1E57571EA86CBE005862A3 /* Gem.swift in Sources */,
 				8B2423121F1BFD6400BB159A /* ButtonRespondable.swift in Sources */,
 				8B2423201F1BFFAC00BB159A /* GameViewController+Config.swift in Sources */,
+				8B02D1AB1FF044CC004598DA /* GameViewController+ GADRewardBasedVideoAdDelegate.swift in Sources */,
 				8BC749EA1F0B443400325364 /* GameSceneIdleState.swift in Sources */,
 				8B1E575D1EA86FEA005862A3 /* ColumnComponent.swift in Sources */,
 			);
