@@ -720,6 +720,7 @@
 				8B1E57571EA86CBE005862A3 /* Gem.swift in Sources */,
 				8B2423121F1BFD6400BB159A /* ButtonRespondable.swift in Sources */,
 				8B2423201F1BFFAC00BB159A /* GameViewController+Config.swift in Sources */,
+				8B02D1AB1FF044CC004598DA /* GameViewController+ GADRewardBasedVideoAdDelegate.swift in Sources */,
 				8BC749EA1F0B443400325364 /* GameSceneIdleState.swift in Sources */,
 				8B1E575D1EA86FEA005862A3 /* ColumnComponent.swift in Sources */,
 			);
