@@ -39,7 +39,7 @@ fileprivate extension ColumnComponent {
       let verticalSpacing = UIDevice.current.userInterfaceIdiom == .phone ? Config.slotVerticalSpacingIphone : Config.slotVerticalSpacingIpad
 
       let slotRenderNode = slot.component(ofType: RenderComponent.self)!.node
-      slotRenderNode.position.y = verticalSpacing * CGFloat(index)
+      slotRenderNode.position.y = verticalSpacing * (CGFloat(index) - Config.topRowOffset)
       node.addChild(slotRenderNode)
     }
   }

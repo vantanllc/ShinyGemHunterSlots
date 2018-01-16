@@ -12,5 +12,6 @@ extension ColumnComponent {
   struct Config {
     static let slotVerticalSpacingIphone: CGFloat = -80
     static let slotVerticalSpacingIpad: CGFloat = -200
+    static let topRowOffset: CGFloat = 1
   }
 }
