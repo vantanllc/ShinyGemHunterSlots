@@ -31,11 +31,11 @@ class GameScene: SKScene {
     } else {
       wallet = userDefaultsService.getPlayerWallet()
     }
+    
+    let column: [Gem] = [.ruby, .diamond, .diamond, .diamond, .ruby]
 
     let gems: [[Gem]] = [
-      [.diamond, .diamond, .diamond],
-      [.diamond, .diamond, .diamond],
-      [.diamond, .diamond, .diamond]
+      column, column, column
     ]
     slotMachine = SlotMachine(columns: gems, randomSource: sharedRandom)
     resetSlotGridEntity(withColumns: gems)
