@@ -32,7 +32,7 @@ class GameScene: SKScene {
       wallet = userDefaultsService.getPlayerWallet()
     }
     
-    let column: [Gem] = [.ruby, .diamond, .diamond, .diamond, .ruby]
+    let column: [Gem] = [.diamond, .diamond, .diamond]
 
     let gems: [[Gem]] = [
       column, column, column

@@ -48,9 +48,9 @@ class ColumnComponentSpec: QuickSpec {
       it("should have expected vertical spacing between slots") {
         let verticalSpacing = UIDevice.current.userInterfaceIdiom == .phone ? ColumnComponent.Config.slotVerticalSpacingIphone : ColumnComponent.Config.slotVerticalSpacingIpad
         let expectedYPositions = [
-          verticalSpacing * -1,
           verticalSpacing * 0,
           verticalSpacing * 1,
+          verticalSpacing * 2,
         ]
         let slotYPositions = column.slots.map { slot in
           return slot.component(ofType: RenderComponent.self)?.node.position.y

@@ -14,7 +14,7 @@ extension SlotMachine {
 
     for _ in stride(from: 0, to: 3, by: 1) {
       var column: [Gem] = []
-      for _ in stride(from: 0, to: 5, by: 1) {
+      for _ in stride(from: 0, to: 3, by: 1) {
         column.append(Gem.getRandom(randomSource: sharedRandom))
       }
 

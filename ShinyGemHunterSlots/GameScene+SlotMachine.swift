@@ -9,6 +9,12 @@
 import GameplayKit
 
 extension GameScene {
+  func animateColumns() {
+    let gridComponent = slotGridEntity?.component(ofType: GridComponent.self)
+    let columnEntities = gridComponent?.slotColumns
+    columnEntities?.first?.component(ofType: ColumnComponent.self)?.rollSlots()
+  }
+  
   func resetSlotGridEntity(withColumns columns: [[Gem]]) {
     slotGridEntity?.component(ofType: RenderComponent.self)?.node.removeFromParent()
 

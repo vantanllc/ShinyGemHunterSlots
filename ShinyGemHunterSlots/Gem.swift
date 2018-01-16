@@ -21,7 +21,7 @@ enum Gem: String {
     return SKSpriteNode(imageNamed: self.rawValue)
   }
 
-  static func getRandom(randomSource: GKRandomSource) -> Gem {
+  static func getRandom(randomSource: GKRandomSource = GKRandomSource.sharedRandom()) -> Gem {
     let gem: Gem
 
     switch randomSource.nextInt(upperBound: all.count) {
