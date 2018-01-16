@@ -12,8 +12,25 @@ extension GameScene {
   func animateColumns() {
     let gridComponent = slotGridEntity?.component(ofType: GridComponent.self)
     let columns: [SlotColumnEntity] = gridComponent!.slotColumns.flatMap {$0}
+    let duration: TimeInterval = 0.2
     for column in columns {
-      column.component(ofType: ColumnComponent.self)?.rollSlots()
+      column.component(ofType: ColumnComponent.self)?.rollSlots(duration: duration)
+    }
+    rollSlots(duration: duration)
+  }
+  
+  func rollSlots(duration: TimeInterval) {
+    let gridComponent = slotGridEntity?.component(ofType: GridComponent.self)
+    let columns: [SlotColumnEntity] = gridComponent!.slotColumns.flatMap {$0}
+    let when = DispatchTime.now() + duration
+    DispatchQueue.main.asyncAfter(deadline: when) {
+      for column in columns {
+        column.component(ofType: ColumnComponent.self)?.rollSlots(duration: duration)
+      }
+      if duration <= 1 {
+        let newDuration = duration + 0.1
+        self.rollSlots(duration: newDuration)
+      }
     }
   }
   

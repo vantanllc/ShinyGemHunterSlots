@@ -41,8 +41,9 @@ extension ColumnComponent {
     return newSlot
   }
   
-  func rollSlots() {
-    let move = SKAction.moveBy(x: 0, y: Config.slotVerticalSpacingIpad, duration: 1)
+  func rollSlots(duration: TimeInterval) {
+    let move = SKAction.moveBy(x: 0, y: Config.slotVerticalSpacingIpad, duration: duration)
+    move.timingMode = .linear
     let newSlot = addNewSlot()
     let addNewSlotty = SKAction.run {
       self.slots.popLast()?.component(ofType: RenderComponent.self)?.node.removeFromParent()
