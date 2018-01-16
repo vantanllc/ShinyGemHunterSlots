@@ -13,6 +13,7 @@ class TLLabelNode: SKSpriteNode {
   init(text: String) {
     self.text = text
     label = SKLabelNode(text: text)
+    label.zPosition = NodeZPosition.label
     label.fontSize = UIDevice.current.userInterfaceIdiom == .phone ? iPhoneConfig.fontSize : iPadConfig.fontSize
     label.verticalAlignmentMode = .bottom
     super.init(texture: nil, color: .clear, size: label.frame.size)

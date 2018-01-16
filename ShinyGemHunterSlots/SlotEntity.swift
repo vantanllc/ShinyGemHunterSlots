@@ -18,6 +18,7 @@ class SlotEntity: GKEntity {
     addComponent(render)
 
     let sprite = SpriteComponent(node: gem.getNode())
+    sprite.node.zPosition = NodeZPosition.entity
     render.node.addChild(sprite.node)
     addComponent(sprite)
 
