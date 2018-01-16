@@ -36,15 +36,7 @@ class GameSceneButtonRespondableSpec: QuickSpec {
           beforeEach {
             button = buttonFactory.createButton(withIdentifier: .pullHandle)
           }
-          
-          it("should update slotMachine columns with new randomized gems") {
-            let expectedGem: Gem = Gem.getRandom(randomSource: mockSharedSource)
-            scene.buttonTriggered(button: button)
-            _ = scene.slotMachine.columns.flatMap{$0}.map{ gem in
-              expect(gem).to(equal(expectedGem))
-            }
-          }
-          
+
           it("should update resultDisplay label") {
             let previousText = scene.resultDisplay.text
             
@@ -62,14 +54,6 @@ class GameSceneButtonRespondableSpec: QuickSpec {
           }
           
           context("slotGridEntity") {
-            it("should create new slotGridEntity") {
-              let previousSlotGridEntity = scene.slotGridEntity
-              
-              scene.buttonTriggered(button: button)
-              
-              expect(scene.slotGridEntity).toNot(be(previousSlotGridEntity))
-            }
-            
             it("should have new slotGridEntity node be in scene") {
               scene.buttonTriggered(button: button)
               

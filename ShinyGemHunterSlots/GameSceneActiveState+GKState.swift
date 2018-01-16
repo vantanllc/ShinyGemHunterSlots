@@ -41,9 +41,7 @@ extension GameSceneActiveState {
   }
 
   private func handlePullHandle() {
-      gameScene.slotMachine.updateColumns()
-      gameScene.resetSlotGridEntity(withColumns: gameScene.slotMachine.columns)
-      gameScene.animateColumns()
-      gameScene.evaluateSlotReel()
+    gameScene.animateColumns()
+    gameScene.evaluateSlotReel()
   }
 }

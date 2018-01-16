@@ -45,8 +45,7 @@ extension ColumnComponent {
     let move = SKAction.moveBy(x: 0, y: Config.slotVerticalSpacingIpad, duration: 1)
     let newSlot = addNewSlot()
     let addNewSlotty = SKAction.run {
-      self.addNewSlot()
-      let lastSlot = self.slots.popLast()?.component(ofType: RenderComponent.self)?.node.removeFromParent()
+      self.slots.popLast()?.component(ofType: RenderComponent.self)?.node.removeFromParent()
     }
     let seq = SKAction.sequence([move, addNewSlotty])
     newSlot.component(ofType: RenderComponent.self)?.node.run(seq)
