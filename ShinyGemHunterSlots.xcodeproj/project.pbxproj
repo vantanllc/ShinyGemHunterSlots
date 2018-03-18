@@ -902,7 +902,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 270;
 				DEVELOPMENT_TEAM = SNXMW75MBJ;
 				INFOPLIST_FILE = ShinyGemHunterSlots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -926,7 +926,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Vantan LLC (SNXMW75MBJ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 270;
 				DEVELOPMENT_TEAM = SNXMW75MBJ;
 				INFOPLIST_FILE = ShinyGemHunterSlots/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

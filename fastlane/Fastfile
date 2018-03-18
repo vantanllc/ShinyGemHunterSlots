@@ -27,37 +27,9 @@ platform :ios do
 
   desc "Create ipa"
   lane :build do
-    create_keychain(
-      name: ENV["SIGNING_KEYCHAIN"],
-      default_keychain: true,
-      unlock: true,
-      timeout: 3600,
-      lock_when_sleeps: true,
-      password: ENV["SIGNING_KEYCHAIN_PASSWORD"],
-      add_to_search_list: true
-    )
-
-    import_certificate(
-      certificate_path: "vantan.llc.ios.distribution.p12",
-      certificate_password: ENV["DISTRIBUTION_CERTIFICATE_PASSWORD"],
-      keychain_name: ENV["SIGNING_KEYCHAIN"]
-    )
-
-    sh("security set-key-partition-list -S apple-tool:,apple: -s -k $SIGNING_KEYCHAIN_PASSWORD $SIGNING_KEYCHAIN")
-
-    sigh
-
     current_build_number = latest_testflight_build_number(initial_build_number: 1)
     increment_build_number(build_number: current_build_number + 1)
-
-    gym(
-      scheme: "ShinyGemHunterSlots",
-      clean: true,
-      include_bitcode: false,
-      include_symbols: true,
-    )
-
-    delete_keychain(name: ENV["SIGNING_KEYCHAIN"])
+    gym
   end
 
   desc "Upload to App Store"

@@ -2,3 +2,5 @@ ShinyGemHunterSlots.xcworkspace/xcuserdata/*
 fastlane/test_output/*
 fastlane/report.xml
 *.swp
+*.ipa
+*.dSYM.zip
