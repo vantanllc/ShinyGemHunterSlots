@@ -8,18 +8,7 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    cocoapods(
-      repo_update: true
-    )
-    scan(
-      scheme: "ShinyGemHunterSlots",
-      workspace: "ShinyGemHunterSlots.xcworkspace",
-      clean: true,
-      code_coverage: true,
-      skip_slack: true,
-      sdk: "iphonesimulator11.2",
-      devices: ["iPhone 7", "iPad Air 2"]
-    )
+    scan
   end
 
   desc "Creating a code signing certificate and provisioning profile"
