@@ -12,4 +12,6 @@ clean(true)
 code_coverage(true)
 skip_slack(true)
 devices(["iPhone 7"])
+output_types("html")
+open_report(true)
 
